@@ -1,0 +1,117 @@
+# Ranking Weights Configuration
+# All weights must sum to 1.0
+
+ranking_weights:
+  research_fit: 0.25
+  method_fit: 0.15
+  supervisor_fit: 0.12
+  lab_fit: 0.10
+  eligibility: 0.08
+  funding: 0.08
+  career_alignment: 0.07
+  freshness: 0.05
+  opportunity_strength: 0.05
+  institutional_fit: 0.05
+
+# Research Fit Scoring (PI level)
+research_fit_criteria:
+  motor_control: 25
+  biomechanics: 20
+  sensorimotor_control: 20
+  human_movement: 10
+  machine_learning: 10
+  neuroscience: 10
+  methods_overlap: 5
+
+research_fit_thresholds:
+  exceptional: 90
+  strong: 80
+  good: 70
+  reject_below: 70
+
+# Method Fit Scoring
+method_fit_keywords:
+  motion_capture: 15
+  force_platforms: 15
+  signal_processing: 10
+  matlab: 10
+  python: 10
+  lstm: 10
+  grnn: 10
+  mlp: 10
+  cnn: 10
+  emg: 10
+  imu: 10
+  wearable_sensing: 10
+  deep_learning: 10
+
+# Supervisor Fit
+supervisor_fit_criteria:
+  publication_recency: 30
+  grant_activity: 25
+  phd_students_count: 20
+  collaboration_network: 15
+  hiring_signals: 10
+
+# Lab Fit
+lab_fit_criteria:
+  equipment_match: 40
+  data_access: 30
+  team_size: 20
+  international_collaboration: 10
+
+# Eligibility
+eligibility_criteria:
+  degree_match: 40
+  language_requirement: 30
+  citizenship_residency: 20
+  documentation_ready: 10
+
+# Funding
+funding_criteria:
+  explicit_funding: 50
+  likely_funded: 30
+  partial_funding: 15
+  unknown: 5
+
+# Career Alignment
+career_alignment_criteria:
+  academic_research: 40
+  industry_r_and_d: 30
+  postdoc_pathway: 20
+  other: 10
+
+# Freshness (days since discovered)
+freshness_decay:
+  half_life_days: 30
+  max_score: 1.0
+  min_score: 0.1
+
+# Opportunity Strength
+opportunity_strength_criteria:
+  new_grant: 30
+  lab_expansion: 25
+  recurring_recruitment: 20
+  infrastructure_match: 15
+  strong_funding_evidence: 10
+
+# Institutional Fit
+institutional_fit_criteria:
+  university_ranking: 40
+  department_reputation: 30
+  research_infrastructure: 20
+  international_environment: 10
+
+# Contact Priority Thresholds
+contact_priority_thresholds:
+  high: 85
+  medium: 70
+  low: 0
+
+# Verification Thresholds
+verification:
+  email_confidence_high: 0.9
+  email_confidence_medium: 0.7
+  position_verification_strong: 2
+  position_verification_medium: 1
+  min_signals_for_strong: 2

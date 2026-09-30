@@ -1,0 +1,1 @@
+"""PhDiscover Web Interface — Streamlit app."""

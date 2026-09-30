@@ -1,0 +1,54 @@
+# Core Dependencies
+pydantic>=2.8
+pydantic-settings>=2.3
+python-dotenv>=1.0
+structlog>=24.1
+httpx>=0.27
+tenacity>=8.3
+
+# Async Database
+asyncpg>=0.29
+sqlalchemy>=2.0
+alembic>=1.13
+aioredis>=2.0
+
+# Vector/Embeddings
+pgvector>=0.2
+sentence-transformers>=3.0
+torch>=2.3 --index-url https://download.pytorch.org/whl/cpu
+
+# Crawling
+crawlee>=3.7
+playwright>=1.45
+beautifulsoup4>=4.12
+lxml>=5.2
+crawl4ai>=0.4
+
+# Research APIs
+pyalex>=3.0
+semantic-scholar>=0.3
+ddgs>=4.0
+
+# Telegram
+python-telegram-bot>=21.0
+
+# Scheduling
+apscheduler>=3.10
+
+# Export
+openpyxl>=3.1
+pandas>=2.2
+
+# Semantic Matching
+rapidfuzz>=3.9
+
+# Config
+pyyaml>=6.0
+
+# CLI
+typer>=0.12
+rich>=13.7
+
+# Utilities
+python-dateutil>=2.9
+email-validator>=2.1

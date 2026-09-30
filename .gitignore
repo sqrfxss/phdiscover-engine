@@ -1,0 +1,211 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.tox/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.secrets
+
+# Logs
+logs/
+*.log
+
+# Database
+*.sqlite
+*.db
+# Crawl output is large and regenerable; the site's copy of it is the one that
+# must ship, because a GitHub Pages deploy reads straight from the repo.
+data/
+!web/data/
+web/data/*.tmp
+
+# Newsletter subscriber list is personal data — never commit it.
+data/subscribers.json
+data/email_log.jsonl
+
+# Exports
+exports/
+content/
+
+# Docker
+docker-compose.override.yml
+
+# IDE specific
+*.pyc
+*.pyo
+*.pyd
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Local development
+.local/
+*.local.*
+
+# Profiler
+*.prof
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+# MkDocs
+site/
+
+# Translations
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx
+docs/_build/
+
+# PyBuilder
+target/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder
+.spyderproject
+.spyproject
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython
+*.so
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Vim
+*.swp
+*.swo
+
+# Weights & Biases
+wandb/
+
+# MLflow
+mlruns/
+
+# DVC
+# `data/` is already ignored above, with `web/data/` re-included after it.
+# Repeating the rule here would re-ignore web/data and leave a Pages deploy
+# with no positions to show.
+.dvc/
+models/
+
+# Jupyter
+.ipynb_checkpoints
+
+# PyTest
+.pytest_cache/
+
+# Coverage
+coverage.xml
+.coverage
+
+# Hypothesis
+.hypothesis/
+
+# Ruff
+.ruff_cache/
+
+# Black
+.black_cache/
+
+# Isort
+.isort.cfg
+
+# Pre-commit
+.pre-commit-config.yaml

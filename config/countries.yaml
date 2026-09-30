@@ -1,0 +1,185 @@
+# Target Countries for PhD Discovery
+# Priority order for crawling
+
+countries:
+  - code: "CA"
+    name: "Canada"
+    priority: 1
+    language: "en"
+    funding_keywords: ["NSERC", "Vanier", "Banting", "Canada Research Chair", "fully funded", "stipend"]
+    university_portals: [
+      "https://www.universitystudy.ca",
+      "https://www.educanada.ca",
+    ]
+    known_universities: [
+      "University of Toronto",
+      "University of British Columbia",
+      "McGill University",
+      "University of Alberta",
+      "University of Waterloo",
+      "Western University",
+      "University of Calgary",
+      "McMaster University",
+      "University of Ottawa",
+      "Queen's University",
+      "Dalhousie University",
+      "Simon Fraser University",
+      "University of Victoria",
+      "University of Guelph",
+      "University of Manitoba",
+      "University of Saskatchewan",
+      "Memorial University",
+      "University of New Brunswick",
+      "University of Regina",
+      "Lakehead University",
+      "Laurentian University",
+      "Nipissing University",
+      "Ontario Tech University",
+      "Toronto Metropolitan University",
+      "Trent University",
+      "University of Windsor",
+      "Wilfrid Laurier University",
+      "York University",
+      "Brock University",
+      "Carleton University",
+      "Concordia University",
+      "Laval University",
+      "Universite de Montreal",
+      "Universite de Sherbrooke",
+      "Universite du Quebec",
+      "HEC Montreal",
+      "Polytechnique Montreal",
+      "Ecole de Technologie Superieure",
+    ]
+
+  - code: "NL"
+    name: "Netherlands"
+    priority: 2
+    language: "en"
+    funding_keywords: ["NWO", "PhD position", "fully funded", "4-year", "salary", "Dutch Research Council"]
+    university_portals: [
+      "https://www.academictransfer.com",
+      "https://www.phdpositions.eu",
+      "https://www.findaphd.com/phds/netherlands/",
+    ]
+    known_universities: [
+      "Delft University of Technology",
+      "University of Amsterdam",
+      "Erasmus University Rotterdam",
+      "Leiden University",
+      "Maastricht University",
+      "Radboud University",
+      "University of Groningen",
+      "University of Twente",
+      "Utrecht University",
+      "Vrije Universiteit Amsterdam",
+      "Wageningen University & Research",
+      "Eindhoven University of Technology",
+      "Tilburg University",
+      "Open University Netherlands",
+    ]
+
+  - code: "DE"
+    name: "Germany"
+    priority: 3
+    language: "en"
+    funding_keywords: ["TV-L E13", "DFG", "DAAD", "Graduiertenkolleg", "Research Training Group", "PhD position", "wissenschaftlicher Mitarbeiter"]
+    university_portals: [
+      "https://www.phdgermany.de",
+      "https://www.academicpositions.de",
+      "https://www.euraxess.de",
+    ]
+    known_universities: [
+      "Technical University of Munich",
+      "Ludwig Maximilian University of Munich",
+      "Heidelberg University",
+      "Humboldt University of Berlin",
+      "Free University of Berlin",
+      "Charite - Universitatsmedizin Berlin",
+      "University of Bonn",
+      "University of Cologne",
+      "University of Freiburg",
+      "University of Gottingen",
+      "University of Hamburg",
+      "University of Mannheim",
+      "RWTH Aachen University",
+      "Karlsruhe Institute of Technology",
+      "University of Stuttgart",
+      "TU Dresden",
+      "University of Tubingen",
+      "University of Wurzburg",
+      "University of Munster",
+      "University of Erlangen-Nuremberg",
+      "German Sport University Cologne",
+      "Johannes Gutenberg University Mainz",
+      "University of Regensburg",
+      "University of Ulm",
+      "University of Konstanz",
+      "University of Bielefeld",
+      "University of Bremen",
+      "University of Darmstadt",
+      "University of Duisburg-Essen",
+      "University of Giessen",
+      "University of Halle-Wittenberg",
+      "University of Hanover",
+      "University of Jena",
+      "University of Kiel",
+      "University of Leipzig",
+      "University of Magdeburg",
+      "University of Marburg",
+      "University of Paderborn",
+      "University of Passau",
+      "University of Potsdam",
+      "University of Rostock",
+      "University of Saarland",
+      "University of Siegen",
+      "University of Trier",
+      "University of Witten/Herdecke",
+    ]
+
+  - code: "FI"
+    name: "Finland"
+    priority: 4
+    language: "en"
+    funding_keywords: ["PhD position", "fully funded", "salary", "University of Helsinki", "Aalto", "Tampere", "Turku", "Oulu", "Jyvaskyla", "Eastern Finland"]
+    university_portals: [
+      "https://www.research.fi",
+      "https://www.phd.fi",
+      "https://studyinfo.fi",
+    ]
+    known_universities: [
+      "University of Helsinki",
+      "Aalto University",
+      "University of Turku",
+      "Tampere University",
+      "University of Oulu",
+      "University of Jyvaskyla",
+      "University of Eastern Finland",
+      "LUT University",
+      "Hanken School of Economics",
+      "University of Vaasa",
+      "University of Lapland",
+      "Abo Akademi University",
+      "National Defence University",
+      "Police University College",
+    ]
+
+  - code: "NZ"
+    name: "New Zealand"
+    priority: 5
+    language: "en"
+    funding_keywords: ["PhD scholarship", "fully funded", "stipend", "Marsden Fund", "University of Auckland", "University of Otago", "Victoria University of Wellington", "University of Canterbury", "Massey University", "University of Waikato", "Auckland University of Technology", "Lincoln University"]
+    university_portals: [
+      "https://www.universitiesnz.ac.nz",
+      "https://www.royalsociety.org.nz",
+    ]
+    known_universities: [
+      "University of Auckland",
+      "University of Otago",
+      "Victoria University of Wellington",
+      "University of Canterbury",
+      "Massey University",
+      "University of Waikato",
+      "Auckland University of Technology",
+      "Lincoln University",
+    ]

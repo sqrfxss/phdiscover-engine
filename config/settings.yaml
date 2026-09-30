@@ -1,0 +1,78 @@
+# Application Settings
+
+app:
+  name: "PhDiscover Engine"
+  version: "0.1.0"
+  environment: "development"
+  debug: true
+  timezone: "Asia/Tehran"
+  language: "fa"
+
+database:
+  pool_size: 5
+  max_overflow: 10
+  pool_timeout: 30
+  pool_recycle: 3600
+  echo: false
+
+redis:
+  max_connections: 10
+  socket_timeout: 5
+  socket_connect_timeout: 5
+  decode_responses: true
+
+crawling:
+  default_timeout: 30
+  max_retries: 3
+  retry_backoff_base: 2
+  max_concurrent: 5
+  respect_robots_txt: true
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  proxy_enabled: false
+  proxy_list: []
+
+semantic_matching:
+  embedding_model: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  embedding_dimension: 384
+  cheap_filter_threshold: 0.3
+  embedding_top_k: 500
+  rerank_top_k: 150
+  llm_review_top_k: 50
+  cross_encoder_model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+scheduler:
+  crawl_schedule: "0 2 * * *"  # Daily at 02:00 UTC
+  alert_schedule: "0 9 * * *"  # Daily at 09:00 IRST
+  cleanup_schedule: "0 3 * * 0"  # Weekly Sunday 03:00 UTC
+  max_crawl_duration_hours: 6
+
+telegram:
+  max_message_length: 4096
+  parse_mode: "HTML"
+  disable_web_page_preview: true
+  rate_limit_per_second: 20
+
+export:
+  excel_max_rows: 10000
+  chunk_size: 1000
+  date_format: "%Y-%m-%d"
+  datetime_format: "%Y-%m-%d %H:%M:%S"
+
+content:
+  seo_base_url: "https://phdiscover.io"
+  auto_generate: true
+  languages: ["en", "fa"]
+  sitemap_enabled: true
+
+recovery:
+  max_attempts: 3
+  backoff_multiplier: 2
+  max_backoff_seconds: 300
+  sqlite_path: "data/recovery.db"
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/phdiscover.log"
+  max_bytes: 10485760
+  backup_count: 5

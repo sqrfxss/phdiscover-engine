@@ -1,0 +1,102 @@
+# Git
+.git
+.gitignore
+
+# Documentation
+README.md
+CHANGELOG.md
+LICENSE
+docs/
+
+# Development
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+.secrets
+
+# Logs
+logs/
+*.log
+
+# Database
+*.sqlite
+*.db
+data/
+
+# Exports
+exports/
+content/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test files
+tests/
+*.test.py
+*_test.py
+
+# Scripts
+scripts/
+
+# Docker
+docker-compose.override.yml
+docker-compose.prod.yml
+Dockerfile*
+.dockerignore
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Pre-commit
+.pre-commit-config.yaml
+
+# Makefile
+Makefile
+
+# Requirements
+requirements-dev.txt
+requirements-test.txt
+
+# Build
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Cache
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Temporary
+tmp/
+temp/
+*.tmp
+*.temp

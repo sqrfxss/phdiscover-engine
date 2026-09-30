@@ -1,0 +1,72 @@
+# .github/workflows/deploy.yml
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: true
+        type: choice
+        options: [staging, production]
+
+env:
+  PYTHON_VERSION: "3.11"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment: ${{ github.event.inputs.environment || 'staging' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to Docker Hub
+        if: github.event.inputs.environment == 'production'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: docker/Dockerfile
+          push: ${{ github.event.inputs.environment == 'production' }}
+          tags: |
+            phdiscover-engine:latest
+            phdiscover-engine:${{ github.sha }}
+            ${{ secrets.DOCKERHUB_USERNAME }}/phdiscover-engine:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Deploy to Railway
+        if: github.event.inputs.environment == 'staging'
+        run: |
+          echo "Deploying to Railway staging"
+          # railway up --service phdiscover --detach
+
+      - name: Deploy to Production
+        if: github.event.inputs.environment == 'production'
+        run: |
+          echo "Deploying to production"
+          # Add production deployment commands
+
+      - name: Run migrations
+        run: |
+          echo "Running database migrations"
+          # python scripts/migrate_db.py
+
+      - name: Health check
+        run: |
+          echo "Waiting for health check..."
+          sleep 10
+          # curl -f https://your-domain/health || exit 1

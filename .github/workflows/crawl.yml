@@ -1,0 +1,122 @@
+# PhDiscover — scheduled crawl
+#
+# Runs on GitHub's runners, outside the Iranian network. That matters: several
+# boards here are unreachable or throttled from Iran but respond normally from
+# a US or EU runner, so this workflow is strictly more reliable than the local
+# pipeline. The local one is still useful — it is where a new source gets
+# debugged — but the published data comes from here.
+#
+# Required repository setting:
+#   Settings -> Actions -> General -> Workflow permissions -> Read and write
+# The job commits web/data/, so it needs write access to the repository.
+#
+# Security note: no untrusted input reaches a `run:` block. workflow_dispatch
+# inputs are booleans only, and nothing interpolates a title, body, or branch.
+
+name: Crawl and publish
+
+on:
+  schedule:
+    # 03:17 UTC. Off the hour on purpose: scheduled workflows queue behind
+    # everyone else's, and the top of the hour is the worst slot to pick.
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+    inputs:
+      probe_only:
+        description: 'Only probe reachability, do not crawl'
+        type: boolean
+        default: false
+
+concurrency:
+  # Never let two crawls write web/data/ at once. The last one to finish wins
+  # otherwise, and half a dataset is worse than a late one.
+  group: crawl
+  cancel-in-progress: false
+
+env:
+  PYTHON_VERSION: '3.11'
+  PYTHONUNBUFFERED: '1'
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install httpx[http2] beautifulsoup4 lxml pyyaml playwright
+
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
+      - name: Self-test before crawling
+        # If the retry/cache logic is broken, the crawl output is not
+        # trustworthy. Fail here rather than publishing bad data.
+        run: python scripts/test_reliability.py
+
+      - name: Probe source health
+        run: python scripts/probe_sources.py
+
+      - name: Crawl all boards
+        run: python scripts/crawl_v2.py
+
+      - name: Filter to doctoral biomechanics positions
+        run: python scripts/filter_and_merge.py
+
+      - name: Enrich from detail pages
+        run: python scripts/enrich_positions.py
+
+      - name: Publish to web/data
+        run: python scripts/publish_site.py
+
+      - name: Regenerate coverage report
+        run: python scripts/coverage_report.py
+
+      - name: Sanity check the result
+        # A run that publishes zero positions is almost always a bug, not an
+        # empty market. Refuse to overwrite good data in that case.
+        run: |
+          python - <<'PY'
+          import json, sys, pathlib
+          p = pathlib.Path("web/data/ranked_opportunities.json")
+          n = len(json.loads(p.read_text(encoding="utf-8")))
+          print(f"positions published: {n}")
+          if n == 0:
+              print("::error::crawl produced 0 positions; keeping previous data")
+              sys.exit(1)
+          PY
+
+      - name: Commit updated data
+        run: |
+          git config user.name  'phdiscover-bot'
+          git config user.email 'actions@github.com'
+          git add web/data/ data/COVERAGE.md data/coverage_report.json || true
+          if git diff --staged --quiet; then
+            echo "no change"
+            exit 0
+          fi
+          git commit -m "crawl: update positions"
+          git push
+
+      - name: Upload artefacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-data
+          path: |
+            data/crawl_v2.json
+            data/coverage_report.json
+            data/COVERAGE.md
+          retention-days: 30
+          if-no-files-found: ignore

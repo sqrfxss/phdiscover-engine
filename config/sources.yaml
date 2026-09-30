@@ -1,0 +1,812 @@
+source_types:
+- name: official_university
+  tier: 1
+  priority: 1.0
+  role: verification
+- name: official_doctoral_school
+  tier: 2
+  priority: 0.98
+  role: verification
+- name: official_pi
+  tier: 3
+  priority: 0.95
+  role: verification
+- name: university_directory
+  tier: 4
+  priority: 0.95
+  role: verification
+- name: official_euraxess
+  tier: 5
+  priority: 0.9
+  role: primary
+- name: government
+  tier: 6
+  priority: 0.92
+  role: primary
+- name: research_graph
+  tier: 7
+  priority: 0.88
+  role: discovery
+- name: official_national
+  tier: 8
+  priority: 0.85
+  role: primary
+- name: professional_association
+  tier: 9
+  priority: 0.6
+  role: discovery
+- name: aggregator
+  tier: 10
+  priority: 0.3
+  role: discovery
+parser_versions:
+  euraxess: v1
+  msca: v1
+  generic_http: v1
+  generic_browser: v1
+  openalex: v1
+  university_portal: v1
+  findaphd: v1
+  academicpositions: v1
+  scholarshipdb: v1
+sources:
+- name: euraxess
+  label: EURAXESS (EU main portal)
+  url: https://euraxess.ec.europa.eu/jobs/search
+  search_url: https://euraxess.ec.europa.eu/jobs/search
+  region: EU
+  country: ''
+  tier: primary
+  source_type: official_euraxess
+  needs_browser: true
+  rate_limit_per_min: 6
+  status: verified_200
+  notes: Angular SPA. Playwright + keyboard.type() required; fill() does not bind.
+    Already working.
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: msca
+  label: MSCA Doctoral Networks (Marie Sklodowska-Curie)
+  url: https://marie-sklodowska-curie-actions.ec.europa.eu/jobs
+  search_url: https://marie-sklodowska-curie-actions.ec.europa.eu/jobs
+  region: EU
+  country: ''
+  tier: primary
+  source_type: government
+  needs_browser: true
+  rate_limit_per_min: 6
+  status: verified_200
+  notes: Official EU fellowship programme. Salaried positions — premium targets.
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: phdjobs
+  label: PhD Jobs
+  url: https://www.phdjobs.com/
+  search_url: https://www.phdjobs.com/
+  region: GLOBAL
+  country: ''
+  tier: primary
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Plain HTML, no bot protection. Reliable HTTP crawl.
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: researchjobseurope
+  label: ResearchJobsEurope
+  url: https://www.researchjobseurope.com/
+  search_url: https://www.researchjobseurope.com/jobs
+  region: EU
+  country: ''
+  tier: primary
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Pagination via ?page=N. 5+ pages of doctoral posts.
+  is_board: true
+  max_pages: 8
+  stale_page_run: 4
+- name: academictransfer
+  label: AcademicTransfer (Netherlands)
+  url: https://www.academictransfer.com/en/
+  search_url: https://www.academictransfer.com/en/jobs
+  region: EU
+  country: Netherlands
+  tier: primary
+  source_type: official_national
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Official Dutch academic board. Many EURAXESS items syndicate from it.
+  is_board: true
+  max_pages: 4
+  stale_page_run: 4
+- name: jobs_ac_uk
+  label: Jobs.ac.uk (UK)
+  url: https://www.jobs.ac.uk/
+  search_url: https://www.jobs.ac.uk/jobs/phd
+  region: UK
+  country: United Kingdom
+  tier: primary
+  source_type: official_national
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Times Higher Education job board.
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: prospects
+  label: Prospects (UK)
+  url: https://www.prospects.ac.uk/
+  search_url: https://www.prospects.ac.uk/jobs-and-work-experience
+  region: UK
+  country: United Kingdom
+  tier: primary
+  source_type: official_national
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: jobs-and-work-experience hub renders its list client-side; 200 but no extractable
+    vacancy links without a JS search session.
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: jobs_ch
+  label: Jobs.ch (Switzerland)
+  url: https://www.jobs.ch/
+  search_url: https://www.jobs.ch/en/vacancies/?term=phd
+  region: CH
+  country: Switzerland
+  tier: primary
+  source_type: official_national
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Vacancy search with a term parameter; the bare homepage lists no PhD roles.
+  is_board: true
+  max_pages: 4
+  stale_page_run: 4
+- name: daad
+  label: DAAD (German Academic Exchange Service)
+  url: https://www.daad.de/en/
+  search_url: https://www.daad.de/en/studying-in-germany/phd-studies-research/
+  region: EU
+  country: Germany
+  tier: primary
+  source_type: government
+  rate_limit_per_min: 6
+  status: not_a_board
+  notes: 'DAAD: scholarship database, doctoral study grants rather than posts.'
+  is_board: false
+- name: academicjobs
+  label: Academic Jobs (Canada)
+  url: https://www.academicjobs.com/en-ca/jobs
+  search_url: https://www.academicjobs.com/en-ca/research-jobs
+  region: CA
+  country: Canada
+  tier: primary
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 4
+  status: verified_200
+  notes: Reachable via Playwright, but /research-jobs/phd-jobs is 404 and the board
+    is an employer directory rather than a vacancy index. The 7 extracted links are
+    navigation pages, so yield is near zero.
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: jobbank
+  label: Job Bank (Government of Canada)
+  url: https://www.jobbank.gc.ca/jobsearch
+  search_url: https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=phd
+  region: CA
+  country: Canada
+  tier: primary
+  source_type: government
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Official federal job board. Spine of Canadian discovery.
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: eluta
+  label: Eluta (Canada matching system)
+  url: https://www.eluta.ca/jobs
+  search_url: https://www.eluta.ca/jobs/search?keywords=phd+biomechanics
+  region: CA
+  country: Canada
+  tier: primary
+  source_type: government
+  rate_limit_per_min: 10
+  status: requires_login
+  notes: 'Renders a 55 KB shell with 7 anchors and zero job mentions: the search results
+    require a Canadian Job Bank account. Reachable but not crawlable.'
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: openalex
+  label: OpenAlex (research graph API)
+  url: https://api.openalex.org/
+  search_url: https://api.openalex.org/works
+  region: GLOBAL
+  country: ''
+  tier: primary
+  source_type: research_graph
+  rate_limit_per_min: 100
+  status: not_a_board
+  notes: 'Bibliographic API: authors and works, not positions. Retained as PI data.'
+  is_board: false
+- name: workinginholland
+  label: Working in Holland
+  url: https://www.workinginholland.nl/
+  search_url: https://www.workinginholland.nl/
+  region: EU
+  country: Netherlands
+  tier: national
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Government portal: search needs a session cookie we cannot mint.'
+  is_board: false
+- name: jobindex
+  label: Jobindex (Denmark)
+  url: https://www.jobindex.dk/
+  search_url: https://www.jobindex.dk/jobsoegning?q=phd
+  region: EU
+  country: Denmark
+  tier: national
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: ''
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: forskning_fi
+  label: Forskning.fi (Finland)
+  url: https://www.forskning.fi/
+  search_url: https://www.forskning.fi/en/jobs/
+  region: EU
+  country: Finland
+  tier: national
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Academy of Finland: grants, not a vacancy index.'
+  is_board: false
+- name: eures
+  label: EURES (EU job mobility)
+  url: https://eures.europa.eu/index_en
+  search_url: https://eures.europa.eu/index_en
+  region: EU
+  country: ''
+  tier: national
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'EU employment portal: heavy JS, no crawlable vacancy index for research.'
+  is_board: false
+- name: research_in_germany
+  label: Research in Germany
+  url: https://www.research-in-germany.org/
+  search_url: https://www.research-in-germany.org/en/jobs/
+  region: EU
+  country: Germany
+  tier: national
+  source_type: government
+  rate_limit_per_min: 6
+  status: not_a_board
+  notes: 'DAAD portal: search wraps an external engine.'
+  is_board: false
+- name: four_tu
+  label: 4TU (Dutch technical universities)
+  url: https://www.4tu.nl/en/
+  search_url: https://www.4tu.nl/en
+  region: EU
+  country: Netherlands
+  tier: national
+  source_type: official_national
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Dutch 4TU alliance homepage: no vacancy index of its own.'
+  is_board: false
+- name: uu_nl
+  label: Utrecht University
+  url: https://www.uu.nl/en
+  search_url: https://www.uu.nl/en
+  region: EU
+  country: Netherlands
+  tier: national
+  source_type: official_university
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Utrecht University homepage: vacancies live on a separate system.'
+  is_board: false
+- name: kth
+  label: KTH Royal Institute of Technology
+  url: https://www.kth.se/en
+  search_url: https://www.kth.se/en
+  region: EU
+  country: Sweden
+  tier: national
+  source_type: official_university
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: KTH homepage; the one hit was a news item, not a posting.
+  is_board: false
+- name: dfg
+  label: DFG (Deutsche Forschungsgemeinschaft)
+  url: https://www.dfg.de/en/
+  search_url: https://www.dfg.de/en/research-funding
+  region: EU
+  country: Germany
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Research-funding agency: lists calls and schemes, not individual vacancies.'
+  is_board: false
+- name: nwo
+  label: NWO (Dutch research council)
+  url: https://www.nwo.nl/en
+  search_url: https://www.nwo.nl/en/researchprogrammes
+  region: EU
+  country: Netherlands
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Dutch Research Council: funding programmes; no public vacancy index.'
+  is_board: false
+- name: snf
+  label: SNF (Swiss National Science Foundation)
+  url: https://www.snf.ch/en/
+  search_url: https://www.snf.ch/en/funding
+  region: CH
+  country: Switzerland
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Swiss National Science Foundation: funding schemes, not a job board.'
+  is_board: false
+- name: fwo
+  label: FWO (Research Foundation Flanders)
+  url: https://www.fwo.be/en
+  search_url: https://www.fwo.be/en/research-projects
+  region: EU
+  country: Belgium
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: TCP connect timeout to 194.78.23.107 on every attempt.
+  is_board: false
+- name: fwf
+  label: FWF (Austrian Science Fund)
+  url: https://www.fwf.ac.at/en
+  search_url: https://www.fwf.ac.at/en
+  region: EU
+  country: Austria
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Austrian Science Fund: grants and calls, not individual positions.'
+  is_board: false
+- name: mol_fi
+  label: Ministry of Education Finland
+  url: https://www.mol.fi/en/
+  search_url: https://www.mol.fi/en/working-in-finland
+  region: EU
+  country: Finland
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Ministry of Education and Research: programmes, not vacancies.'
+  is_board: false
+- name: gdch
+  label: GDCh Stellenlisten (Germany)
+  url: https://www.gdch.de/jobboerse
+  search_url: https://www.gdch.de/
+  region: EU
+  country: Germany
+  tier: funder
+  source_type: professional_association
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'German Chemical Society: society site, no vacancy index.'
+  is_board: false
+- name: nserc
+  label: NSERC / CRSNG
+  url: https://www.nserc-crsng.gc.ca/
+  search_url: https://www.nserc-crsng.gc.ca/Professors-Professeurs/index_eng.asp
+  region: CA
+  country: Canada
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'NSERC: grants and awards discovery platform, no public PhD board.'
+  is_board: false
+- name: mitacs
+  label: Mitacs
+  url: https://www.mitacs.ca/
+  search_url: https://www.mitacs.ca/our-programs/
+  region: CA
+  country: Canada
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Keep: 5 valid doctoral fellowship postings.'
+  is_board: false
+- name: nrc_canada
+  label: NRC Canada
+  url: https://www.nrc.canada.ca/
+  search_url: https://www.nrc.canada.ca/en/research-development/research-collaboration/research-contracts
+  region: CA
+  country: Canada
+  tier: funder
+  source_type: government
+  needs_browser: true
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Research-collaboration / contracts page, not a vacancy list. Funding programme
+    portal.
+  is_board: false
+  max_pages: 3
+  stale_page_run: 4
+- name: postsecondary
+  label: Postsecondary (Federal Canada)
+  url: https://www.postsecondary.ca/
+  search_url: https://www.postsecondary.ca/
+  region: CA
+  country: Canada
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Canadian language-education board: teaching jobs, not research.'
+  is_board: false
+- name: canada_research_chairs
+  label: Canada Research Chairs
+  url: https://www.canadaresearchchairs.gc.ca/
+  search_url: https://www.canadaresearchchairs.gc.ca/
+  region: CA
+  country: Canada
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Vanier CGS-D sunset; an award, not a job board.
+  is_board: false
+- name: banting
+  label: Banting Fellowships
+  url: https://www.bantingfellowships.ca/
+  search_url: https://www.bantingfellowships.ca/
+  region: CA
+  country: Canada
+  tier: funder
+  source_type: government
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Programme sunset after 2025; folded into Tri-Agency programmes.
+  is_board: false
+- name: abg
+  label: ABG (France)
+  url: https://www.abg.asso.fr/
+  search_url: https://www.abg.asso.fr/
+  region: EU
+  country: France
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'French association: an association homepage, not a vacancy board.'
+  is_board: false
+- name: postdocjobs
+  label: PostDocJobs
+  url: https://www.postdocjobs.com/
+  search_url: https://www.postdocjobs.com/
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: 'Homepage IS the listing (12 posts). Pager: /job/job/index?page=N.'
+  is_board: true
+  max_pages: 8
+  stale_page_run: 4
+- name: thepostdoc
+  label: ThePostDoc
+  url: https://www.thepostdoc.com/
+  search_url: https://www.thepostdoc.com/jobs
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Pagination via ?page=N.
+  is_board: true
+  max_pages: 8
+  stale_page_run: 4
+- name: jobrxiv
+  label: JobRxiv — Europe
+  url: https://jobrxiv.org/job-region/europe/
+  search_url: https://jobrxiv.org/job-region/europe/
+  region: EU
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: ''
+  is_board: true
+  max_pages: 8
+  stale_page_run: 4
+- name: eurekalert
+  label: EurekAlert Jobs
+  url: https://www.eurekalert.org/jobs
+  search_url: https://www.eurekalert.org/jobs
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Science press-release wire, not a board (the 2 hits are news items).
+  is_board: false
+- name: biosciencecareers
+  label: BioScience Careers
+  url: https://www.biosciencecareers.com/
+  search_url: https://www.biosciencecareers.com/jobs
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: ''
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: postgraduatejobs
+  label: PostgraduateJobs
+  url: https://www.postgraduatejobs.com/
+  search_url: https://www.postgraduatejobs.com/
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Loads a 330-byte stub with no listings.
+  is_board: false
+- name: nature_careers
+  label: Nature Careers
+  url: https://www.nature.com/careers
+  search_url: https://www.nature.com/careers
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: false
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: ''
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: studyportals
+  label: StudyPortals
+  url: https://www.studyportals.com/
+  search_url: https://www.studyportals.com/
+  region: EU
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Programme directory, not a vacancy board.
+  is_board: false
+- name: applykite
+  label: ApplyKite
+  url: https://www.applykite.com/search/positions/all/canada
+  search_url: https://www.applykite.com/search/positions/all/canada
+  region: CA
+  country: Canada
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 4
+  status: verified_200
+  notes: Cloudflare blocks plain HTTP (403). Playwright returns 19 real Canadian position
+    listings. Working.
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: future_ready
+  label: Future Ready (Career Services)
+  url: https://www.futureready.ca/
+  search_url: https://www.futureready.ca/
+  region: CA
+  country: Canada
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: 'Canadian career board: teaching and TESL, not research.'
+  is_board: false
+- name: sciencecareers
+  label: ScienceCareers
+  url: https://www.sciencecareers.org/
+  search_url: https://www.sciencecareers.org/jobs
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 4
+  status: not_a_board
+  notes: 'AAAS careers: employer directory, positions are employer-side.'
+  is_board: false
+- name: academicpositions
+  label: AcademicPositions
+  url: https://www.academicpositions.com/
+  search_url: https://academicpositions.com/jobs/position/phd
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 4
+  status: verified_200
+  notes: Unlocked by verify=False — 410 KB with 31 /jobs/position/phd links. Previously
+    mis-classified as permanently Cloudflare-walled.
+  verify_tls: false
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: mastersportal
+  label: MastersPortal
+  url: https://www.mastersportal.com/
+  search_url: https://www.mastersportal.com/search/universities
+  region: EU
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 4
+  status: not_a_board
+  notes: Masters and PhD programme directory, not a vacancy board. Kept for programme
+    discovery.
+  is_board: false
+- name: findapostdoc
+  label: FindAPostDoc
+  url: https://www.findapostdoc.com/
+  search_url: https://www.findapostdoc.com/
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 4
+  status: excluded_bot_wall
+  notes: 'Same operator and bot wall as findaphd: 403 with a 28 KB body and no anchors.
+    Unreachable without an account.'
+  is_board: false
+- name: findaphd
+  label: FindAPhD
+  url: https://www.findaphd.com/
+  search_url: https://www.findaphd.com/phds/
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 10
+  status: excluded_bot_wall
+  notes: Cloudflare returns 403 even after the challenge with a 907 KB body containing
+    zero extractable anchors. The bot wall is server-side and fingerprint-based; no
+    amount of waiting or scrolling clears it. The domain is registered to the University
+    of Sheffield and blocks datacenter and Iranian IPs alike.
+  is_board: false
+- name: scholarshipdb
+  label: ScholarshipDB
+  url: https://scholarshipdb.net/
+  search_url: https://scholarshipdb.net/PhD-scholarships-in-Canada
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Cloudflare + no resolution; unreachable from this network.
+  is_board: false
+- name: researchjobs_com
+  label: ResearchJobs.com
+  url: https://www.researchjobs.com/
+  search_url: https://www.researchjobs.com/
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Certificate hostname does not match. Reachable only with verify=False (46
+    KB of real content).
+  verify_tls: false
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: vacancy_job_board
+  label: VacancyJobBoard
+  url: https://www.vacancyjobboard.com/
+  search_url: https://www.vacancyjobboard.com/
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Host does not resolve from this network.
+  is_board: false
+- name: findajob_eu
+  label: FindAJob.eu
+  url: https://www.findajob.eu/
+  search_url: https://www.findajob.eu/
+  region: EU
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: Certificate hostname mismatch; verify=False returns 200 but only 352 bytes
+    — a stub.
+  verify_tls: false
+  is_board: true
+  max_pages: 3
+  stale_page_run: 4
+- name: canadian_research
+  label: CanadianResearch.org
+  url: http://www.canadianresearch.org/
+  search_url: http://www.canadianresearch.org/
+  region: CA
+  country: Canada
+  tier: aggregator
+  source_type: aggregator
+  needs_browser: true
+  rate_limit_per_min: 10
+  status: verified_200
+  notes: HTTP ReadTimeout; Playwright loads it (155 KB). Browser-only.
+  is_board: true
+  max_pages: 6
+  stale_page_run: 4
+- name: pro_fund_your_phd
+  label: ProFundYourPhD
+  url: https://www.profundyourphd.com/
+  search_url: https://www.profundyourphd.com/
+  region: GLOBAL
+  country: ''
+  tier: aggregator
+  source_type: aggregator
+  rate_limit_per_min: 10
+  status: not_a_board
+  notes: Reachability failed; redirect-only host.
+  is_board: false
