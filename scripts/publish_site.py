@@ -11,7 +11,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parent.parent
 ENRICHED = ROOT / "data" / "enriched_positions.json"
 WEB = ROOT / "web" / "data"
 HEALTH_IN = ROOT / "data" / "source_health.json"

@@ -14,7 +14,7 @@ from pathlib import Path
 
 import yaml
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parent.parent
 SOURCES = ROOT / "config" / "sources.yaml"
 CRAWL = ROOT / "data" / "crawl_v2.json"
 HEALTH = ROOT / "data" / "source_health.json"

@@ -1,8 +1,11 @@
 """Debug: inspect what EURAXESS actually returns for a biomechanics search."""
 import asyncio
 import sys
+from pathlib import Path
 
-sys.path.insert(0, "F:/hermes/phdiscover-engine/src")
+ROOT = Path(__file__).resolve().parent.parent
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from phdiscover.crawlers.browser_crawler import BrowserCrawler
 

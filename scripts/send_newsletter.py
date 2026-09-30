@@ -14,11 +14,14 @@ import os
 import sys
 from pathlib import Path
 
-sys.path.insert(0, "F:/hermes/phdiscover-engine/src")
+ROOT = Path(__file__).resolve().parent.parent
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from dotenv import load_dotenv
 
-load_dotenv("F:/hermes/phdiscover-engine/.env")
+load_dotenv(ROOT / ".env")
 
 from phdiscover.email import (
     EmailService,

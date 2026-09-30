@@ -78,6 +78,21 @@ BROWSE_RX = re.compile(
     r"stellenangebote|search jobs|more (jobs|vacancies)|back to|"
     r"sign up|job alerts|employment opportunities)", re.I)
 
+# Student-support pages that a careers nav bar links to. Measured: Imperial's
+# /careers/about/supporting-you/services-for-students is titled "Doctoral
+# students (PhDs)" and was accepted as a vacancy. The word "PhD" in a link is
+# not evidence of a job posting; the surrounding support vocabulary is.
+STUDENT_SUPPORT_RX = re.compile(
+    r"(services? for students|support for students|student (services?|"
+    r"support|life|welfare|handbook|portal|accommodation)|"
+    r"career (planning|guidance|advice|development|journey)|"
+    r"phd careers journey|careers? (for|of) (students|our students|"
+    r"alumni|members)|employer (information|resources)|"
+    r"equality|diversity|inclusion|pledge|award[s]?/?$|"
+    r"how to (apply|find)|application (guide|process|instructions)|"
+    r"pay and benefits|holiday|leave|pension|staff handbook|"
+    r"organisational chart|directory|contact us)", re.I)
+
 # PhD-shaped titles matter most for this project; keep the subtype.
 OPPORTUNITY_RX = re.compile(
     r"(ph\.?\s?d\.?|phd|doctoral|postdoc|post-?doctoral|studentship|"
@@ -125,6 +140,8 @@ def score_vacancies(html: str, base_url: str) -> Tuple[List[Vacancy], int]:
         if len(text) < 15 or len(text) > 240:
             continue
         if BROWSE_RX.search(text):
+            continue
+        if STUDENT_SUPPORT_RX.search(text):
             continue
         href = a.get("href") or ""
         if not href.startswith("http"):
@@ -177,7 +194,15 @@ class UniversityPortalCrawler:
         self,
         countries: Optional[List[str]] = None,
         limit: Optional[int] = None,
+        per_country: Optional[int] = None,
     ) -> List[Dict[str, Any]]:
+        """Load universities from the verified registry.
+
+        `limit` is the GLOBAL cap and `per_country` caps each country. Using
+        `limit` alone silently returns mostly one country, because the rows are
+        sorted by paper count and Germany/France dominate that ordering -- a
+        12-row run covered 6 GB universities and zero NL/FI/AT/CH.
+        """
         if not self.registry_path.exists():
             return []
         data = json.loads(self.registry_path.read_text(encoding="utf-8"))
@@ -185,18 +210,38 @@ class UniversityPortalCrawler:
         for cc, v in data.items():
             if countries and cc not in countries:
                 continue
-            for u in v.get("universities", []):
-                if not u.get("official_url"):
-                    continue
-                rows.append({
-                    "name": u["name"],
-                    "country_code": cc,
-                    "url": u["official_url"],
-                    "openalex_id": u.get("openalex_id"),
-                    "papers": u.get("student_count") or 0,
-                })
-        rows.sort(key=lambda r: -(r.get("papers") or 0))
-        return rows[:limit] if limit else rows
+            cand = [{
+                "name": u["name"],
+                "country_code": cc,
+                "url": u["official_url"],
+                "openalex_id": u.get("openalex_id"),
+                "papers": u.get("student_count") or 0,
+            } for u in v.get("universities", []) if u.get("official_url")]
+            cand.sort(key=lambda r: -(r.get("papers") or 0))
+            if per_country:
+                cand = cand[:per_country]
+            rows += cand
+        if limit:
+            # keep the global cap but re-interleave by country so a small
+            # limit still covers every requested country
+            by_cc: Dict[str, List[Dict[str, Any]]] = {}
+            for r in rows:
+                by_cc.setdefault(r["country_code"], []).append(r)
+            round_no, out = 0, []
+            while len(out) < limit:
+                added = False
+                for cc in (countries or sorted(by_cc)):
+                    lst = by_cc.get(cc) or []
+                    if round_no < len(lst):
+                        out.append(lst[round_no])
+                        added = True
+                        if len(out) >= limit:
+                            break
+                if not added:
+                    break
+                round_no += 1
+            rows = out
+        return rows
 
     # -- HTTP -------------------------------------------------------------
 
@@ -308,8 +353,9 @@ class UniversityPortalCrawler:
         self,
         countries: Optional[List[str]] = None,
         limit: Optional[int] = None,
+        per_country: Optional[int] = None,
     ) -> List[PortalResult]:
-        unis = self.load_universities(countries, limit)
+        unis = self.load_universities(countries, limit, per_country)
         out: List[PortalResult] = []
         async with httpx.AsyncClient(
             timeout=self.timeout, follow_redirects=True, trust_env=False,

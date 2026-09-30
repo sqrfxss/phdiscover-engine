@@ -8,7 +8,7 @@ import yaml
 sys.path.insert(0, str(Path(__file__).parent))
 from crawl_v2 import crawl_browser, open_browser  # noqa: E402
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parent.parent
 NAMES = sys.argv[1:] or ["euraxess", "academicpositions", "eluta", "nwo", "kth"]
 
 

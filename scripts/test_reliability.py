@@ -3,11 +3,14 @@ import asyncio
 import sys
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parent.parent
+from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 from phdiscover.cache import PositionCache
 from phdiscover.reliability import RetryPolicy, is_transient, retry_async
 
-CACHE = Path("F:/hermes/phdiscover-engine/data/cache/test_cache.json")
+CACHE = ROOT / "data" / "cache" / "test_cache.json"
 
 
 def check(label, got, want):

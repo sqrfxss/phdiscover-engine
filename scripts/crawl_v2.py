@@ -42,7 +42,7 @@ from phdiscover.deadlines import (  # noqa: E402
 )
 from phdiscover.reliability import RetryPolicy, retry_async  # noqa: E402
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parent.parent
 SOURCES_YAML = ROOT / "config" / "sources.yaml"
 OUT = ROOT / "data" / "crawl_v2.json"
 

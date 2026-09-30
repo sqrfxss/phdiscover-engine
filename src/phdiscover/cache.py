@@ -20,7 +20,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parents[2]
 CACHE = ROOT / "data" / "cache" / "positions_by_source.json"
 
 # A cached record older than this is shown but flagged, never silently served.

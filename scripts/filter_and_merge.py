@@ -24,7 +24,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 from phdiscover.deadlines import DeadlineStatus, extract_deadline  # noqa: E402
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parent.parent
 WEB_OUT = ROOT / "web" / "data" / "ranked_opportunities.json"
 OUT = ROOT / "data" / "filtered_positions.json"
 

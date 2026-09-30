@@ -22,7 +22,7 @@ from typing import Any
 import httpx
 import yaml
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parent.parent
 SOURCES_YAML = ROOT / "config" / "sources.yaml"
 OUT_JSON = ROOT / "data" / "source_health.json"
 

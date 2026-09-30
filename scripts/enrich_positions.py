@@ -23,7 +23,7 @@ from phdiscover.deadlines import (  # noqa: E402
     DeadlineStatus, extract_deadline, is_rolling,
 )
 
-ROOT = Path("F:/hermes/phdiscover-engine")
+ROOT = Path(__file__).resolve().parent.parent
 INP = ROOT / "data" / "filtered_positions.json"
 OUT = ROOT / "data" / "enriched_positions.json"
 

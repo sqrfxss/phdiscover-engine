@@ -1,16 +1,16 @@
 # .github/workflows/deploy.yml
+#
+# Disabled. Every step here is a placeholder echo, and it ran on every push
+# only to fail while adding noise to the Actions tab. The site is deployed by
+# GitHub Pages (the `pages-build-deployment` workflow, configured from the
+# repository's Pages settings) and the crawl is `crawl.yml` — neither needs
+# this file. Re-enable it when there is a real target: a Docker registry with
+# credentials set, a Railway project, and a migrations step that exists.
 name: Deploy
 
 on:
-  push:
-    branches: [main]
+  # Left for when this workflow has something real to do.
   workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Deployment environment'
-        required: true
-        type: choice
-        options: [staging, production]
 
 env:
   PYTHON_VERSION: "3.11"

@@ -3,9 +3,12 @@ import asyncio
 import json
 import os
 import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
-sys.path.insert(0, "F:/hermes/phdiscover-engine/src")
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 
 from phdiscover.crawlers.browser_crawler import BrowserCrawler
 
@@ -43,7 +46,7 @@ async def main():
         print(f"    URL: {p.url}")
 
     # Save
-    out = "F:/hermes/phdiscover-engine/data/browser_positions.json"
+    out = str(ROOT / "data" / "browser_positions.json")
     crawler = BrowserCrawler()
     crawler.save(positions, out)
 
@@ -80,7 +83,7 @@ async def main():
             }],
         })
     web_data.sort(key=lambda x: -x["research_fit_score"])
-    with open("F:/hermes/phdiscover-engine/web/data/ranked_opportunities.json", "w", encoding="utf-8") as f:
+    with open(str(ROOT / "web" / "data" / "ranked_opportunities.json"), "w", encoding="utf-8") as f:
         json.dump(web_data, f, ensure_ascii=False, indent=2)
     print(f"Updated web data with {len(web_data)} positions (sorted by fit score)")
 
