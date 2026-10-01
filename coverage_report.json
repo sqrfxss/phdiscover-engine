@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-01T04:04:02.509999+00:00",
+  "generated_at": "2026-10-01T04:29:14.847176+00:00",
   "totals": {
     "sources_in_registry": 56,
     "job_boards": 22,
     "not_job_boards": 34,
-    "boards_returning_data": 17,
-    "boards_returning_nothing": 5,
-    "distinct_postings_found": 412
+    "boards_returning_data": 16,
+    "boards_returning_nothing": 6,
+    "distinct_postings_found": 381
   },
   "boards_with_data": [
     {
@@ -31,8 +31,8 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 84,
-      "last_note": "200 84 postings, 8 page(s) (secure)",
+      "last_returned": 53,
+      "last_note": "200 53 postings, 6 page(s) (secure), pager exhausted",
       "http_status": 200,
       "bytes": 46903,
       "url": "https://www.postdocjobs.com/"
@@ -52,20 +52,6 @@
       "url": "https://www.jobs.ac.uk/jobs/phd"
     },
     {
-      "name": "canadian_research",
-      "label": "CanadianResearch.org",
-      "kind": "job_board",
-      "status": "verified_200",
-      "status_reason": "Crawlable",
-      "reach": "Playwright (Cloudflare / client-rendered)",
-      "tls_verify": true,
-      "last_returned": 25,
-      "last_note": "browser 200, 25 postings",
-      "http_status": 200,
-      "bytes": 156605,
-      "url": "http://www.canadianresearch.org/"
-    },
-    {
       "name": "academicpositions",
       "label": "AcademicPositions",
       "kind": "job_board",
@@ -75,8 +61,8 @@
       "tls_verify": false,
       "last_returned": 24,
       "last_note": "insecure-tls 200, 24 postings",
-      "http_status": 403,
-      "bytes": 5761,
+      "http_status": 200,
+      "bytes": 410299,
       "url": "https://academicpositions.com/jobs/position/phd"
     },
     {
@@ -102,9 +88,9 @@
       "reach": "Plain HTTP",
       "tls_verify": true,
       "last_returned": 21,
-      "last_note": "200 21 postings, 1 page(s) (secure), pager exhausted",
+      "last_note": "200 21 postings, 2 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 451522,
+      "bytes": 450078,
       "url": "https://jobrxiv.org/job-region/europe/"
     },
     {
@@ -118,7 +104,7 @@
       "last_returned": 14,
       "last_note": "browser 200, 14 postings",
       "http_status": 200,
-      "bytes": 566648,
+      "bytes": 566605,
       "url": "https://www.applykite.com/search/positions/all/canada"
     },
     {
@@ -260,7 +246,7 @@
       "last_returned": 0,
       "last_note": "browser 200, 0 postings",
       "http_status": 200,
-      "bytes": 44839,
+      "bytes": 44761,
       "url": "https://www.phdjobs.com/"
     },
     {
@@ -286,7 +272,7 @@
       "reach": "Plain HTTP",
       "tls_verify": true,
       "last_returned": 0,
-      "last_note": "ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake f (secure)",
+      "last_note": "ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake (secure)",
       "http_status": null,
       "bytes": 0,
       "url": "https://www.eluta.ca/jobs/search?keywords=phd+biomechanics"
@@ -318,6 +304,20 @@
       "http_status": null,
       "bytes": 0,
       "url": "https://www.findajob.eu/"
+    },
+    {
+      "name": "canadian_research",
+      "label": "CanadianResearch.org",
+      "kind": "job_board",
+      "status": "verified_200",
+      "status_reason": "Crawlable",
+      "reach": "Playwright (Cloudflare / client-rendered)",
+      "tls_verify": true,
+      "last_returned": 0,
+      "last_note": "browser goto TimeoutError: Page.goto: Timeout 60000ms exceeded.\nCall log:\n  -",
+      "http_status": null,
+      "bytes": 0,
+      "url": "http://www.canadianresearch.org/"
     }
   ],
   "not_job_boards": [
