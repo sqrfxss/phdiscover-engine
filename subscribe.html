@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خبرنامه PhDiscover — پوزیشن‌های دکتری بیومکانیک</title>
+<style>
+:root { --primary:#2563eb; --bg:#f8fafc; --card:#fff; --border:#e2e8f0; --muted:#64748b; }
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI',Tahoma,sans-serif; background:var(--bg); color:#1e293b; line-height:1.7; }
+.container { max-width:640px; margin:0 auto; padding:24px 16px; }
+header { background:var(--primary); color:#fff; padding:28px; border-radius:14px; margin-bottom:20px; }
+header h1 { font-size:22px; margin-bottom:6px; }
+header p { font-size:14px; opacity:.92; }
+.card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:28px; margin-bottom:16px; }
+h2 { font-size:18px; margin-bottom:14px; color:#0f172a; }
+label { display:block; font-size:14px; font-weight:600; margin-bottom:6px; color:#334155; }
+input, select { width:100%; padding:11px 13px; border:1px solid var(--border); border-radius:9px; font-size:15px; font-family:inherit; margin-bottom:16px; background:#fff; }
+input:focus, select:focus { outline:2px solid var(--primary); outline-offset:-1px; border-color:var(--primary); }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+.chip { padding:7px 14px; border:1px solid var(--border); border-radius:20px; font-size:13px; cursor:pointer; background:#fff; user-select:none; transition:all .15s; }
+.chip:hover { border-color:var(--primary); color:var(--primary); }
+.chip.on { background:var(--primary); color:#fff; border-color:var(--primary); }
+button { width:100%; padding:13px; background:var(--primary); color:#fff; border:0; border-radius:9px; font-size:16px; font-weight:600; cursor:pointer; font-family:inherit; }
+button:hover { background:#1d4ed8; }
+button:disabled { background:#94a3b8; cursor:not-allowed; }
+.msg { padding:13px 16px; border-radius:9px; font-size:14px; margin-top:14px; display:none; }
+.msg.ok { background:#dcfce7; color:#15803d; display:block; }
+.msg.err { background:#fee2e2; color:#b91c1c; display:block; }
+.benefit { display:flex; gap:10px; margin-bottom:12px; font-size:14px; color:#334155; }
+.benefit span:first-child { color:#16a34a; font-weight:700; }
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:20px; }
+.stat { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:16px; text-align:center; }
+.stat b { display:block; font-size:24px; color:var(--primary); }
+.stat small { color:var(--muted); font-size:12px; }
+footer { text-align:center; color:var(--muted); font-size:12px; padding:20px; }
+a { color:var(--primary); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>🎓 خبرنامه PhDiscover</h1>
+  <p>پوزیشن‌های دکتری بیومکانیک، کنترل حرکتی و علوم حرکت — هفته‌ای یک‌بار</p>
+</header>
+
+<div class="stats">
+  <div class="stat"><b id="s-p">0</b><small>پوزیشن فعال</small></div>
+  <div class="stat"><b id="s-c">0</b><small>کشور</small></div>
+  <div class="stat"><b id="s-f">0</b><small>منبع رسمی</small></div>
+</div>
+
+<div class="card">
+  <h2>چه دریافت می‌کنید؟</h2>
+  <div class="benefit"><span>✓</span><span>فقط پوزیشن‌های <b>PhD</b> — نه پست‌دک، نه تدریس، نه مهندسی</span></div>
+  <div class="benefit"><span>✓</span><span>همه با لینک به <b>منبع رسمی</b> (EURAXESS و پورتال دانشگاه‌ها)</span></div>
+  <div class="benefit"><span>✓</span><span>امتیاز تناسب با پروفایل شما (بیومکانیک + ML)</span></div>
+  <div class="benefit"><span>✓</span><span>هیچ ایمیل ساختگی، هیچ پوزیشن جعلی</span></div>
+  <div class="benefit"><span>✓</span><span>هر زمان خواستید یک کلیک لغو اشتراک</span></div>
+</div>
+
+<div class="card">
+  <h2>ثبت‌نام</h2>
+  <form id="f" onsubmit="return sub(event)">
+    <label for="email">ایمیل شما *</label>
+    <input id="email" type="email" required placeholder="you@example.com" dir="ltr">
+
+    <label for="name">نام (اختیاری)</label>
+    <input id="name" type="text" placeholder="Saeid" dir="ltr">
+
+    <label for="country">کشور هدف</label>
+    <select id="country">
+      <option value="">همه کشورها</option>
+      <option>Netherlands</option><option>Germany</option><option>Denmark</option>
+      <option>Norway</option><option>Sweden</option><option>Switzerland</option>
+      <option>Canada</option><option>Finland</option><option>New Zealand</option>
+      <option>United Kingdom</option><option>Australia</option>
+    </select>
+
+    <label>علایق (چند مورد انتخاب کنید)</label>
+    <div class="chips" id="chips">
+      <div class="chip" data-v="biomechanics">بیومکانیک</div>
+      <div class="chip" data-v="motor control">کنترل حرکتی</div>
+      <div class="chip" data-v="gait">تحلیل گیت</div>
+      <div class="chip" data-v="wearable">حسگر پوشیدنی</div>
+      <div class="chip" data-v="ml">یادگیری ماشین</div>
+      <div class="chip" data-v="rehabilitation">توان‌بخشی</div>
+      <div class="chip" data-v="sensorimotor">سنسوریموتور</div>
+      <div class="chip" data-v="sports">ورزش</div>
+    </div>
+
+    <button type="submit" id="btn">ثبت‌نام در خبرنامه</button>
+    <div class="msg" id="msg"></div>
+  </form>
+</div>
+
+<footer>
+  <a href="index.html">بازگشت به جستجوی پوزیشن‌ها</a><br>
+  <span>ساخته‌شده توسط یک پژوهشگر بیومکانیک — <a href="https://orcid.org/0009-0002-6074-1022">Saeid Soraghi</a></span>
+</footer>
+
+</div>
+
+<script>
+const KEY = 'phdiscover_api_url';
+let API = localStorage.getItem(KEY) || '';
+
+// Point this at wherever the API is hosted (Cloudflare Worker / free tier).
+// Leave empty to collect locally in the browser and export the list manually.
+const $ = id => document.getElementById(id);
+
+// Live stats from the positions data file
+fetch('data/ranked_opportunities.json').then(r => r.json()).then(d => {
+  $('s-p').textContent = d.length;
+  $('s-c').textContent = new Set(d.map(p => p.country)).size;
+  $('s-f').textContent = 1; // EURAXESS
+}).catch(() => {});
+
+// Interest chips
+document.querySelectorAll('.chip').forEach(c => {
+  c.onclick = () => c.classList.toggle('on');
+});
+
+async function sub(e) {
+  e.preventDefault();
+  const btn = $('btn'), msg = $('msg');
+  const email = $('email').value.trim();
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    msg.className = 'msg err'; msg.textContent = 'ایمیل معتبر نیست.'; return false;
+  }
+  const interests = [...document.querySelectorAll('.chip.on')].map(c => c.dataset.v);
+
+  btn.disabled = true; btn.textContent = 'در حال ثبت...';
+  try {
+    if (API) {
+      const r = await fetch(API + '/subscribe', {
+        method: 'POST', headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          email, name: $('name').value.trim(),
+          country: $('country').value, interests
+        })
+      });
+      if (!r.ok) throw new Error(await r.text());
+    } else {
+      // Local fallback: persist in-browser and offer CSV export.
+      const out = JSON.parse(localStorage.getItem('phdiscover_subs') || '[]');
+      if (!out.find(s => s.email === email)) out.push({
+        email, name: $('name').value.trim(), country: $('country').value,
+        interests, at: new Date().toISOString()
+      });
+      localStorage.setItem('phdiscover_subs', JSON.stringify(out));
+    }
+    msg.className = 'msg ok';
+    // Static copy only — no user input reaches innerHTML, so this is XSS-safe.
+    msg.textContent = API
+      ? 'ثبت شد! ایمیل تأیید برایتان ارسال می‌شود — لطفاً صندوق ورودی را چک کنید.'
+      : 'ثبت شد (محلی). برای ارسال انبوه، فایل خروجی بگیرید یا آدرس API را تنظیم کنید.';
+    $('f').reset();
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  } catch (err) {
+    msg.className = 'msg err'; msg.textContent = 'خطا: ' + err.message;
+  } finally {
+    btn.disabled = false; btn.textContent = 'ثبت‌نام در خبرنامه';
+  }
+  return false;
+}
+</script>
+</body>
+</html>
