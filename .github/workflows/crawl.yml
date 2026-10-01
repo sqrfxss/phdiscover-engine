@@ -97,17 +97,38 @@ jobs:
               sys.exit(1)
           PY
 
-      - name: Commit updated data
+      - name: Publish the site
+        # gh-pages holds the site at its root (index.html, data/, ...), so the
+        # worktree receives the freshly crawled data/ and the reports, not a
+        # copy of web/. Copying web/ over would nest the site one level down and
+        # break every relative path in index.html.
         run: |
+          set -euo pipefail
           git config user.name  'phdiscover-bot'
           git config user.email 'actions@github.com'
-          git add web/data/ data/COVERAGE.md data/coverage_report.json || true
-          if git diff --staged --quiet; then
-            echo "no change"
-            exit 0
+
+          git fetch --depth=1 origin gh-pages
+          git worktree add ../ghpages gh-pages
+
+          # web/data/ is what the crawl produced; the page markup is unchanged
+          # and already lives on gh-pages.
+          rm -rf ../ghpages/data
+          cp -R web/data ../ghpages/data
+          if [ -f data/COVERAGE.md ]; then cp data/COVERAGE.md ../ghpages/COVERAGE.md; fi
+          if [ -f data/coverage_report.json ]; then cp data/coverage_report.json ../ghpages/coverage_report.json; fi
+
+          # Guard against publishing an empty site.
+          test -f ../ghpages/data/ranked_opportunities.json
+          test "$(python -c 'import json;print(len(json.load(open("../ghpages/data/ranked_opportunities.json"))))')" -gt 0
+
+          git -C ../ghpages add -A
+          if git -C ../ghpages diff --staged --quiet; then
+            echo "site unchanged"
+          else
+            git -C ../ghpages commit -m "crawl: update positions"
+            git -C ../ghpages push origin gh-pages
           fi
-          git commit -m "crawl: update positions"
-          git push
+          git worktree remove ../ghpages --force
 
       - name: Upload artefacts
         if: always()
