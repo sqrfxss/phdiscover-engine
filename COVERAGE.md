@@ -1,24 +1,25 @@
 # PhDiscover — Source Coverage
 
-_Generated 2026-10-01T03:44:47.229532+00:00_
+_Generated 2026-10-01T04:04:02.509999+00:00_
 
 | Metric | Value |
 |---|---|
 | Sources in registry | 56 |
 | Real job boards | 22 |
-| Boards returning data | 16 |
-| Boards returning nothing | 6 |
+| Boards returning data | 17 |
+| Boards returning nothing | 5 |
 | Not job boards (funding schemes, portals) | 34 |
-| Distinct postings harvested | 357 |
+| Distinct postings harvested | 412 |
 
 ## Boards returning data
 
 | Source | Postings | Reached via |
 |---|---|---|
 | ResearchJobsEurope | 137 | Plain HTTP |
-| PostDocJobs | 53 | Plain HTTP |
+| PostDocJobs | 84 | Plain HTTP |
 | Jobs.ac.uk (UK) | 42 | Plain HTTP |
 | CanadianResearch.org | 25 | Playwright (Cloudflare / client-rendered) |
+| AcademicPositions | 24 | Playwright (Cloudflare / client-rendered) |
 | Academic Jobs (Canada) | 22 | Playwright (Cloudflare / client-rendered) |
 | JobRxiv — Europe | 21 | Plain HTTP |
 | ApplyKite | 14 | Playwright (Cloudflare / client-rendered) |
@@ -39,7 +40,6 @@ _Generated 2026-10-01T03:44:47.229532+00:00_
 | PhD Jobs | `verified_200` | Crawlable |
 | Prospects (UK) | `verified_200` | Crawlable |
 | Eluta (Canada matching system) | `requires_login` | requires_login |
-| AcademicPositions | `verified_200` | Crawlable |
 | ResearchJobs.com | `verified_200` | Crawlable |
 | FindAJob.eu | `verified_200` | Crawlable |
 
