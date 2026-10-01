@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-30T15:34:35.191985+00:00",
-  "position_count": 23,
+  "generated_at": "2026-10-01T04:29:14.657193+00:00",
+  "position_count": 28,
   "sources_contributing": [
     "AcademicPositions",
     "ApplyKite",
@@ -10,7 +10,7 @@
     "Jobs.ac.uk (UK)",
     "ResearchJobsEurope"
   ],
-  "with_deadline": 11,
-  "with_country": 16,
-  "enriched": 22
+  "with_deadline": 14,
+  "with_country": 20,
+  "enriched": 27
 }

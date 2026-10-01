@@ -12,7 +12,15 @@ ROOT="$(pwd)"
 WEB="$ROOT/web"
 BRANCH="${BRANCH:-gh-pages}"
 REMOTE="${REMOTE:-origin}"
-WORK="$(dirname "$ROOT")/.ghpages-$(date +%s)"
+
+# Resolve the repo root to a native path. Under git-bash `pwd` prints
+# /f/hermes/phdiscover-engine, and git then creates the worktree at
+# F:/f/hermes/... — a directory that does not exist as far as the shell is
+# concerned, so files copied there never reach the branch and the publish step
+# reports "unchanged" forever.
+NATIVE_ROOT="$(cygpath -w "$ROOT" 2>/dev/null || echo "$ROOT")"
+NATIVE_PARENT="$(dirname "$NATIVE_ROOT")"
+WORK="$NATIVE_PARENT/.ghpages-$(date +%s)"
 
 # ── refuse to publish an empty site ────────────────────────────────
 SITE_JSON="$WEB/data/ranked_opportunities.json"
@@ -20,7 +28,21 @@ if [ ! -f "$SITE_JSON" ]; then
   echo "No $SITE_JSON — run scripts/run_pipeline.sh first." >&2
   exit 1
 fi
-COUNT=$(python -c "import json,sys; print(len(json.load(open(sys.argv[1], encoding='utf-8'))))" "$SITE_JSON")
+
+# Same interpreter choice as run_pipeline.sh: the system python may be missing
+# the project's dependencies. Absolute paths, because the counting step below
+# changes directory and a relative .venv path would no longer resolve.
+PY="$ROOT/.venv/Scripts/python.exe"
+[ -x "$PY" ] || PY="$ROOT/.venv/bin/python"
+[ -x "$PY" ] || PY="python"
+
+# Native separators: the runner may be git-bash, which reports /f/hermes/...,
+# and the Python interpreter then cannot open that path. Hence a relative path
+# plus os.path.join rather than an absolute /f/... argument.
+COUNT=$(cd "$WEB" && "$PY" -c "
+import json, os
+print(len(json.load(open(os.path.join('data', 'ranked_opportunities.json'), encoding='utf-8'))))
+")
 if [ "$COUNT" -eq 0 ]; then
   echo "The site has 0 positions; keeping what is live." >&2
   exit 1
@@ -29,7 +51,15 @@ echo "==> $COUNT positions to publish"
 
 # ── stage the site at the branch root ──────────────────────────────
 rm -rf "$WORK"
-mkdir -p "$WORK"
+git fetch "$REMOTE" "$BRANCH" >/dev/null 2>&1 || true
+if git rev-parse --verify --quiet "refs/heads/$BRANCH" >/dev/null; then
+  git worktree add "$WORK" "$BRANCH" >/dev/null
+else
+  git worktree add --detach "$WORK" "origin/$BRANCH" >/dev/null
+fi
+
+# `git worktree add` already took the native path, so the shell must not hand
+# it an MSYS /f/... one.
 for item in "$WEB"/*; do
   cp -R "$item" "$WORK/"
 done
@@ -39,15 +69,12 @@ done
 # Never ship the crawl cache.
 rm -rf "$WORK/data/cache"
 
-# ── commit on the branch, leaving the working tree untouched ───────
-git worktree add -B "$BRANCH" "$WORK" 2>/dev/null || git worktree add "$WORK" "$BRANCH"
-
 git -C "$WORK" add -A
 if git -C "$WORK" diff --staged --quiet; then
   echo "==> Site unchanged; nothing to publish."
 else
   git -C "$WORK" commit -q -m "site: update positions ($(date +%Y-%m-%d))"
-  git -C "$WORK" push "$REMOTE" "$BRANCH"
+  git -C "$WORK" push "$REMOTE" "HEAD:$BRANCH"
   echo "==> Pushed to $REMOTE/$BRANCH"
 fi
 
