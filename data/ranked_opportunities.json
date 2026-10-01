@@ -1,51 +1,6 @@
 [
   {
     "id": "pd-001",
-    "title": "Doctoral Student in Neuromotor Interfaces for Dexterous Robot Teleoperation (multimodal egocentric vision + EMG)",
-    "university": "EURAXESS",
-    "country": "Switzerland",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 85,
-    "contact_priority": "HIGH",
-    "url": "https://euraxess.ec.europa.eu/jobs/464267",
-    "source_url": "https://euraxess.ec.europa.eu/jobs/464267",
-    "posted": "8 September 2026",
-    "description": "Working, teaching and research at ETH Zurich We value diversity and sustainabilityIn line with our values , ETH Zurich encourages an inclusive culture. We promote equality of opportunity, value diversity and nurture a working and learning environment in which the rights and dignity of all our staff and students are respected. Visit our Equal Opportunities and Diversity website to find out how we ensure a fair and ope",
-    "source": "EURAXESS (EU official)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on EURAXESS (EU official)",
-        "value": "Doctoral Student in Neuromotor Interfaces for Dexterous Robot Teleoperation (multimodal egocentric vision + EMG)",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/464267",
-        "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "598 chars of description, country=Switzerland",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/464267",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/464267",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-002",
     "title": "PhD position in probabilistic machine learning and statistics (307053) | University of Oslo",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -90,128 +45,7 @@
     ]
   },
   {
-    "id": "pd-003",
-    "title": "DPhil Studentship – Investigating and Modelling Brain Dynamics Across Species",
-    "university": "Jobs.ac.uk",
-    "country": "United Kingdom",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 78,
-    "contact_priority": "HIGH",
-    "url": "https://www.jobs.ac.uk/job/DTB928/dphil-studentship-investigating-and-modelling-brain-dynamics-across-species",
-    "source_url": "https://www.jobs.ac.uk/job/DTB928/dphil-studentship-investigating-and-modelling-brain-dynamics-across-species",
-    "posted": "",
-    "description": "You will join Dr Andrea Luppi's research group, which charts how cognitive disorders, pharmacological interventions, and brain stimulation reposition the brain within a shared functional space, revealing principles for prediction and control. We combine multi-modal neuroimaging and consciousness science with information theory, network science, and whole-brain biophysical modelling. We triangulate fMRI data across hu",
-    "source": "Jobs.ac.uk (UK)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on Jobs.ac.uk (UK)",
-        "value": "DPhil Studentship – Investigating and Modelling Brain Dynamics Across Species",
-        "source_url": "https://www.jobs.ac.uk/job/DTB928/dphil-studentship-investigating-and-modelling-brain-dynamics-across-species",
-        "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "781 chars of description, country=United Kingdom",
-        "source_url": "https://www.jobs.ac.uk/job/DTB928/dphil-studentship-investigating-and-modelling-brain-dynamics-across-species",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://www.jobs.ac.uk/job/DTB928/dphil-studentship-investigating-and-modelling-brain-dynamics-across-species",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-004",
-    "title": "PhD Candidate in Rehabilitation Medicine – Biological Age and Biomarkers",
-    "university": "EURAXESS",
-    "country": "Netherlands",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 77,
-    "contact_priority": "HIGH",
-    "url": "https://euraxess.ec.europa.eu/jobs/467850",
-    "source_url": "https://euraxess.ec.europa.eu/jobs/467850",
-    "posted": "24 September 2026",
-    "description": "Introduction to the vacant position:The Quasi-Living Materials Research Group is looking for an outstanding polymer chemist or organic chemist to join as a PhD student. The contract will be within the framework of the Project PhagoSynCell (ERC Consolidator Grant), in which our ambition is to create...",
-    "source": "EURAXESS (EU official)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on EURAXESS (EU official)",
-        "value": "PhD Candidate in Rehabilitation Medicine – Biological Age and Biomarkers",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/467850",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "302 chars of description, country=Netherlands",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/467850",
-        "source_type": "official",
-        "confidence": 0.9
-      }
-    ]
-  },
-  {
-    "id": "pd-005",
-    "title": "Doctoral Positions in Robot Learning and Soft, Musculoskeletal, and Biohybrid Robotics",
-    "university": "EURAXESS",
-    "country": "Switzerland",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 77,
-    "contact_priority": "HIGH",
-    "url": "https://euraxess.ec.europa.eu/jobs/461683",
-    "source_url": "https://euraxess.ec.europa.eu/jobs/461683",
-    "posted": "26 August 2026",
-    "description": "Dexterous manipulation and robot learning. We build hands and the policies that run them. One of our initial hand designs is now commercialized through our spin-off Mimic Robotics . ORCA is our open-source, reliable, and cost-effective anthropomorphic hand for uninterrupted dexterous task learning ( IROS 2025 ). On that hardware we work on imitation learning and diffusion policies, cross-embodiment skill transfer thr",
-    "source": "EURAXESS (EU official)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on EURAXESS (EU official)",
-        "value": "Doctoral Positions in Robot Learning and Soft, Musculoskeletal, and Biohybrid Robotics",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/461683",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "1146 chars of description, country=Switzerland",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/461683",
-        "source_type": "official",
-        "confidence": 0.9
-      }
-    ]
-  },
-  {
-    "id": "pd-006",
+    "id": "pd-002",
     "title": "Doctoral student in Neuronics",
     "university": "ResearchJobsEurope",
     "country": "Sweden",
@@ -263,7 +97,7 @@
     ]
   },
   {
-    "id": "pd-007",
+    "id": "pd-003",
     "title": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
     "university": "ResearchJobsEurope",
     "country": "Denmark",
@@ -308,7 +142,7 @@
     ]
   },
   {
-    "id": "pd-008",
+    "id": "pd-004",
     "title": "PhD Candidate in Modelling and Executing Cascading Effects within a Cyber Range",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -353,54 +187,9 @@
     ]
   },
   {
-    "id": "pd-009",
-    "title": "PhD Position Video-based Hand Motion-tracking for Patients with Rheumatoid Arthritis",
-    "university": "EURAXESS",
-    "country": "Netherlands",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 72,
-    "contact_priority": "MEDIUM",
-    "url": "https://euraxess.ec.europa.eu/jobs/468173",
-    "source_url": "https://euraxess.ec.europa.eu/jobs/468173",
-    "posted": "25 September 2026",
-    "description": "Are you passionate about human movement and developing clinical tools for understanding human movement disorders? Job description Challenge: Over a quarter of a million people in the Netherlands alone have rheumatoid arthritis (RA) with a majority suffering from debilitating pain and inflammation that makes hand dexterity and work, at times, impossible. While anti-inflammatory and analgesic drugs are the main line of",
-    "source": "EURAXESS (EU official)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on EURAXESS (EU official)",
-        "value": "PhD Position Video-based Hand Motion-tracking for Patients with Rheumatoid Arthritis",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/468173",
-        "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "2500 chars of description, country=Netherlands",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/468173",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/468173",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-010",
+    "id": "pd-005",
     "title": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech",
-    "university": "Jobindex (Denmark)",
+    "university": "DTU Jobs side",
     "country": "Denmark",
     "department": "N/A",
     "pi_name": "See official posting",
@@ -424,102 +213,19 @@
         "value": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech",
         "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
         "source_type": "aggregator",
-        "confidence": 0.5
-      }
-    ]
-  },
-  {
-    "id": "pd-011",
-    "title": "PhD positions in Human-Centred Artificial Intelligence - HCC",
-    "university": "EURAXESS",
-    "country": "Denmark",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 64,
-    "contact_priority": "MEDIUM",
-    "url": "https://euraxess.ec.europa.eu/jobs/468588",
-    "source_url": "https://euraxess.ec.europa.eu/jobs/468588",
-    "posted": "26 September 2026",
-    "description": "The project: Safeguarding Users’ Cognitive Autonomy in Human-AI Interaction Cognitive autonomy, our fundamental ability to think independently, is under threat from growing reliance on artificial intelligence (AI) technology. While designed to assist, AI recommendations may inadvertently impede cognitive reasoning and steer decision making. This raises novel questions about designing systems that assist users while s",
-    "source": "EURAXESS (EU official)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on EURAXESS (EU official)",
-        "value": "PhD positions in Human-Centred Artificial Intelligence - HCC",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/468588",
-        "source_type": "official",
-        "confidence": 0.95
+        "confidence": 0.7
       },
       {
         "claim": "Detail page fetched and parsed",
-        "value": "634 chars of description, country=Denmark",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/468588",
+        "value": "0 chars of description, country=Denmark",
+        "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
         "source_type": "official",
         "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://euraxess.ec.europa.eu/jobs/468588",
-        "source_type": "official",
-        "confidence": 0.6
       }
     ]
   },
   {
-    "id": "pd-012",
-    "title": "PhD positions in Human-Centred Artificial Intelligence - HCC",
-    "university": "Aalborg University",
-    "country": "Denmark",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 64,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.vacancies.aau.dk/phd-positions/show-vacancy/vacancyId/972965",
-    "source_url": "https://www.vacancies.aau.dk/phd-positions/show-vacancy/vacancyId/972965",
-    "posted": "",
-    "description": "The project: Safeguarding Users’ Cognitive Autonomy in Human-AI Interaction Cognitive autonomy, our fundamental ability to think independently, is under threat from growing reliance on artificial intelligence (AI) technology. While designed to assist, AI recommendations may inadvertently impede cognitive reasoning and steer decision making. This raises novel questions about designing systems that assist users while s",
-    "source": "Jobindex (Denmark)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on Jobindex (Denmark)",
-        "value": "PhD positions in Human-Centred Artificial Intelligence - HCC",
-        "source_url": "https://www.vacancies.aau.dk/phd-positions/show-vacancy/vacancyId/972965",
-        "source_type": "aggregator",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "634 chars of description, country=Denmark",
-        "source_url": "https://www.vacancies.aau.dk/phd-positions/show-vacancy/vacancyId/972965",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://www.vacancies.aau.dk/phd-positions/show-vacancy/vacancyId/972965",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-013",
+    "id": "pd-006",
     "title": "PhD position on Modelling of turbidity current fluxes in submarine canyons",
     "university": "ResearchJobsEurope",
     "country": "Netherlands",
@@ -571,7 +277,7 @@
     ]
   },
   {
-    "id": "pd-014",
+    "id": "pd-007",
     "title": "PhD Candidate in Machine Learning & Signal Processing for Industrial Applications",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -616,7 +322,38 @@
     ]
   },
   {
-    "id": "pd-015",
+    "id": "pd-008",
+    "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
+    "university": "AcademicPositions",
+    "country": "N/A",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 60,
+    "contact_priority": "MEDIUM",
+    "url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "posted": "",
+    "description": "ETH Zürich Zurich, Switzerland Doctoral Position for Synthetic Biology-Inspired Therapies PhD developing synthetic biology-inspired cell therapies: engineer human cells with gene circuits/biosensors, build programmable implants. Strong molecular & cell biology; primary human cells; Basel. Published 1 week ago PhD",
+    "source": "AcademicPositions",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on AcademicPositions",
+        "value": "Doctoral Position for Synthetic Biology-Inspired Therapies",
+        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+        "source_type": "official",
+        "confidence": 0.7
+      }
+    ]
+  },
+  {
+    "id": "pd-009",
     "title": "Phd opportunity in artificial intelligence for pet imaging and medical image analysis",
     "university": "Apply Kite",
     "country": "Canada",
@@ -654,7 +391,7 @@
     ]
   },
   {
-    "id": "pd-016",
+    "id": "pd-010",
     "title": "PhD position: Safe and efficient coordination of mixed traffic with automated vehicles",
     "university": "ResearchJobsEurope",
     "country": "Belgium",
@@ -699,7 +436,7 @@
     ]
   },
   {
-    "id": "pd-017",
+    "id": "pd-011",
     "title": "PhD in Fast Controlled Photonic Integrated Switches for High Performance Artificial Intelligence Compute Clusters",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -744,7 +481,7 @@
     ]
   },
   {
-    "id": "pd-018",
+    "id": "pd-012",
     "title": "Doctoral Researcher / Väitöskirjatutkija (Deep Learning for High-Frequency Financial Data Modeling)",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -789,14 +526,14 @@
     ]
   },
   {
-    "id": "pd-019",
+    "id": "pd-013",
     "title": "PhD Position in Generative Modeling of Human Development and Disease",
     "university": "AcademicPositions",
-    "country": "Belgium",
+    "country": "N/A",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
-    "funding": "Funding evidence on page",
+    "funding": "See official posting",
     "application_deadline": "See official posting",
     "deadline_date": "",
     "deadline_status": "unknown",
@@ -807,7 +544,7 @@
     "url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
     "source_url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
     "posted": "",
-    "description": "Jobs by employer University of Luxembourg 81 KTH Royal Institute of Techno... 72 KU Leuven 63 Université catholique de Louv... 60 ETH Zürich 58 Free University of Bozen - Bo... 57 Mohammed VI Polytechnic Unive... 49 University of Cologne 46 Eindhoven University of Techn... 46 Chalmers University of Techno... 38",
+    "description": "University of Basel Basel, Switzerland PhD Position in Generative Modeling of Human Development and Disease Fully funded 4-year PhD: build generative models on single-cell & spatial genomics to study development/disease. Need quantitative MSc, strong Python + PyTorch/JAX, GitHub. Published 1 week ago Closing on: 2026-10-16 (Europe/Zurich) PhD",
     "source": "AcademicPositions",
     "evidence": [
       {
@@ -815,71 +552,12 @@
         "value": "PhD Position in Generative Modeling of Human Development and Disease",
         "source_url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
         "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "312 chars of description, country=Belgium",
-        "source_url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
-        "source_type": "official",
-        "confidence": 0.6
+        "confidence": 0.7
       }
     ]
   },
   {
-    "id": "pd-020",
-    "title": "PhD Candidate to conduct research on Artificial Intelligence for managing Shipbuilding Supply Chains",
-    "university": "ResearchJobsEurope",
-    "country": "Norway",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "Deadline 1 Oct 2026",
-    "deadline_date": "2026-10-01",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 59,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.researchjobseurope.com/jobs/phd-candidate-to-conduct-research-on-artificial-intelligence-for-managing-shipbuilding-supply-chains",
-    "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-to-conduct-research-on-artificial-intelligence-for-managing-shipbuilding-supply-chains",
-    "posted": "",
-    "description": "The research partners are the Norwegian University of Science and Technology (NTNU), University of Oslo, Oslo School of Architecture and Design, Royal Norwegian Naval Academy, Norwegian Mapping Authority, MET and SINTEF Nordvest. There are about 30 user partners from the maritime sector, in addition to hundreds of members of the Maritime Forum, Blue Maritime, Ocean Autonomy, and Maritime CleanTech clusters. The cente",
-    "source": "ResearchJobsEurope",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "PhD Candidate to conduct research on Artificial Intelligence for managing Shipbuilding Supply Chains",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-to-conduct-research-on-artificial-intelligence-for-managing-shipbuilding-supply-chains",
-        "source_type": "aggregator",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "809 chars of description, country=Norway",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-to-conduct-research-on-artificial-intelligence-for-managing-shipbuilding-supply-chains",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "Deadline 1 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-to-conduct-research-on-artificial-intelligence-for-managing-shipbuilding-supply-chains",
-        "source_type": "official",
-        "confidence": 0.75
-      }
-    ]
-  },
-  {
-    "id": "pd-021",
+    "id": "pd-014",
     "title": "Doctoral (Phd) position in Real Time simulation for electrified flexible industry",
     "university": "ResearchJobsEurope",
     "country": "Sweden",
@@ -924,60 +602,8 @@
     ]
   },
   {
-    "id": "pd-022",
-    "title": "PhD position (4-year funded) Full-time brain Cellular neuroscience clinical neuroscience Hospital del Mar Research Institute, Barcelona Spain Barcelona on 18 Se",
-    "university": "jobRxiv",
-    "country": "N/A",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "18 September 2026",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 46,
-    "contact_priority": "LOW",
-    "url": "https://jobrxiv.org/job/hospital-del-mar-research-institute-barcelona-27778-neuroscience-phd-position-4-year-funded/",
-    "source_url": "https://jobrxiv.org/job/hospital-del-mar-research-institute-barcelona-27778-neuroscience-phd-position-4-year-funded/",
-    "posted": "",
-    "description": "The position: We are accepting applications for a 4-year predoctoral position (PhD student) to investigate the properties of human circuits using surgical brain tissue samples. The selected candidate will apply either advanced imaging or patch-clamp electrophysiology techniques directly to surgically resected human brain tissue, working to understand how human neural circuits function and how they are altered in epil",
-    "source": "JobRxiv — Europe",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on JobRxiv — Europe",
-        "value": "PhD position (4-year funded) Full-time brain Cellular neuroscience clinical neuroscience Hospital del Mar Research Institute, Barcelona Spain Barcelona on 18 Se",
-        "source_url": "https://jobrxiv.org/job/hospital-del-mar-research-institute-barcelona-27778-neuroscience-phd-position-4-year-funded/",
-        "source_type": "aggregator",
-        "confidence": 0.8
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "515 chars of description",
-        "source_url": "https://jobrxiv.org/job/hospital-del-mar-research-institute-barcelona-27778-neuroscience-phd-position-4-year-funded/",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "18 September 2026",
-        "source_url": "https://jobrxiv.org/job/hospital-del-mar-research-institute-barcelona-27778-neuroscience-phd-position-4-year-funded/",
-        "source_type": "official",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://jobrxiv.org/job/hospital-del-mar-research-institute-barcelona-27778-neuroscience-phd-position-4-year-funded/",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-023",
-    "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
+    "id": "pd-015",
+    "title": "Doctoral Position in Advanced Bioelectronic & Electrical Conversion Research",
     "university": "AcademicPositions",
     "country": "N/A",
     "department": "N/A",
@@ -989,32 +615,25 @@
     "deadline_status": "unknown",
     "opportunity_type": "FUNDED_PHD",
     "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 41,
+    "research_fit_score": 52,
     "contact_priority": "LOW",
-    "url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-    "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-in-advanced-bioelectronic-electrical-conversion-research/253254",
+    "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-in-advanced-bioelectronic-electrical-conversion-research/253254",
     "posted": "",
-    "description": "The D-BSSE is the first truly interdisciplinary research department, uniting theoretical and experimental biology with advanced bioengineering and fostering close collaborations with leaders in material science, physics, and chemistry to drive transformative advances in systems biology, biotechnology, and synthetic biology. Situated in Basel, Switzerland, at the heart of the BioValley, a tri-national region that host",
+    "description": "ETH Zürich Zurich, Switzerland Doctoral Position in Advanced Bioelectronic & Electrical Conversion Research PhD: develop bioelectronic interfaces for closed-loop control of engineered human cells—catalyst engineering, simulations, bioelectrode fabrication, software; Basel. Published 1 week ago PhD",
     "source": "AcademicPositions",
     "evidence": [
       {
         "claim": "Listed as a doctoral opening on AcademicPositions",
-        "value": "Doctoral Position for Synthetic Biology-Inspired Therapies",
-        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+        "value": "Doctoral Position in Advanced Bioelectronic & Electrical Conversion Research",
+        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-in-advanced-bioelectronic-electrical-conversion-research/253254",
         "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "647 chars of description",
-        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-        "source_type": "official",
-        "confidence": 0.9
+        "confidence": 0.7
       }
     ]
   },
   {
-    "id": "pd-024",
+    "id": "pd-016",
     "title": "PhD in Computational Geometry and Computational Topology",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -1059,7 +678,7 @@
     ]
   },
   {
-    "id": "pd-025",
+    "id": "pd-017",
     "title": "Phd opening in neuroscience photonics and mental health at cervo brain research centre",
     "university": "Apply Kite",
     "country": "Canada",
@@ -1097,59 +716,14 @@
     ]
   },
   {
-    "id": "pd-026",
-    "title": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
+    "id": "pd-018",
+    "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
     "university": "AcademicPositions",
     "country": "N/A",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 41,
-    "contact_priority": "LOW",
-    "url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-    "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-    "posted": "",
-    "description": "Bioinformatics , , Biostatistics , , Cell Biology , , Chronobiology , , Computational Biology , and 27 more Developmental Biology , Genetics , Human Biology , Molecular Biology , Neuroscience , Systems Biology , Computing in Mathematics, Natural Science, Engineering and Medicine , Medical Imaging , Addiction Medicine , Biomedicine , Clinical Sciences , Endocrinology , Epidemiology , Molecular Medicine , Neurology , O",
-    "source": "AcademicPositions",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on AcademicPositions",
-        "value": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
-        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-        "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "678 chars of description",
-        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-027",
-    "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
-    "university": "AcademicPositions",
-    "country": "Sweden",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
+    "funding": "See official posting",
     "application_deadline": "See official posting",
     "deadline_date": "",
     "deadline_status": "unknown",
@@ -1160,7 +734,7 @@
     "url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
     "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
     "posted": "",
-    "description": "A creative and inspiring environment full of expertise and curiosity. Karolinska Institutet is one of the world's leading medical universities. Our vision is to pursue the development of knowledge about life and to promote a better health for all. At Karolinska Institutet, we conduct successful medical research and hold the largest range of medical education in Sweden. As a doctoral student you are offered an individ",
+    "description": "Karolinska Institutet Stockholm, Sweden PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors Funded PhD in computational neuroscience: model large-scale neural recordings during natural behaviors using ML, graph theory & dynamical systems. Python/MATLAB/Julia. Stockholm. Published 10 months ago Closing on: 2026-10-30 (Europe/Stockholm) PhD",
     "source": "AcademicPositions",
     "evidence": [
       {
@@ -1168,73 +742,7 @@
         "value": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
         "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
         "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "903 chars of description, country=Sweden",
-        "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-028",
-    "title": "PhD positions in Germany Full-time AI applied mathematics behavioral neuroscience $70,000 - $75,000 MAX PLANCK Institute for Human Cognitive and Brain Sciences Germa",
-    "university": "jobRxiv",
-    "country": "N/A",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "December 1",
-    "deadline_date": "2026-12-01",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 41,
-    "contact_priority": "LOW",
-    "url": "https://jobrxiv.org/job/max-planck-institute-for-human-cognitive-and-brain-sciences-27778-fully-financed-phd-positions-in-germany/",
-    "source_url": "https://jobrxiv.org/job/max-planck-institute-for-human-cognitive-and-brain-sciences-27778-fully-financed-phd-positions-in-germany/",
-    "posted": "",
-    "description": "The Max Planck School of Cognition invites highly motivated  and talented candidates from around  the world to apply for our fully funded PhD program. The application phase for the program start in fall 2026 is now open until December 1.",
-    "source": "JobRxiv — Europe",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on JobRxiv — Europe",
-        "value": "PhD positions in Germany Full-time AI applied mathematics behavioral neuroscience $70,000 - $75,000 MAX PLANCK Institute for Human Cognitive and Brain Sciences Germa",
-        "source_url": "https://jobrxiv.org/job/max-planck-institute-for-human-cognitive-and-brain-sciences-27778-fully-financed-phd-positions-in-germany/",
-        "source_type": "aggregator",
-        "confidence": 0.8
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "237 chars of description",
-        "source_url": "https://jobrxiv.org/job/max-planck-institute-for-human-cognitive-and-brain-sciences-27778-fully-financed-phd-positions-in-germany/",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "December 1",
-        "source_url": "https://jobrxiv.org/job/max-planck-institute-for-human-cognitive-and-brain-sciences-27778-fully-financed-phd-positions-in-germany/",
-        "source_type": "official",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://jobrxiv.org/job/max-planck-institute-for-human-cognitive-and-brain-sciences-27778-fully-financed-phd-positions-in-germany/",
-        "source_type": "official",
-        "confidence": 0.6
+        "confidence": 0.7
       }
     ]
   }
