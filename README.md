@@ -154,6 +154,40 @@ Two consumers:
 Depth is per source: `max_pages` in `config/sources.yaml` (8 for the deep boards, 3 by default),
 capped by the stale-page rule above.
 
+## Live site
+
+```
+https://sqrfxss.github.io/phdiscover-engine/
+```
+
+The repository root is **not** the site — `index.html` lives in `web/`. GitHub Pages therefore
+serves the `gh-pages` branch, whose root holds the deployed copy: `index.html`, `subscribe.html`
+and `data/`. The daily crawl pushes there, not to `main`.
+
+To publish by hand after a local crawl:
+
+```bash
+cd F:/hermes/phdiscover-engine
+bash scripts/run_pipeline.sh
+bash scripts/deploy_site.sh          # copies web/ to gh-pages and pushes
+```
+
+## Deploying the site
+
+`scripts/deploy_site.sh` mirrors what the workflow does, so a local crawl and a scheduled one
+produce the same result. It refuses to publish an empty `ranked_opportunities.json`.
+
+Pages and the crawl both need write access, set once from the repository API:
+
+```bash
+gh api -X PUT repos/:owner/:repo/actions/permissions/workflow \
+  -H 'Content-Type: application/json' \
+  --input - <<< '{"default_workflow_permissions":"write"}'
+```
+
+Without it the crawl's push fails with `403 Permission denied for github-actions[bot]` after the
+crawl has already succeeded — the work is lost, not the run.
+
 ## Layout
 
 ```
