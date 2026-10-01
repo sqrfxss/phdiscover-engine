@@ -476,18 +476,47 @@ async def crawl_browser(src: dict[str, Any], browser) -> tuple[list[Found], str]
         await ctx.close()
 
 
+# Playwright's bundled Chromium comes from cdn.playwright.dev, which answers
+# "this service is not available in your location" from this network. Chrome is
+# already installed on Windows, so use it via channel="chrome" and only fall
+# back to the bundled build where that is not available (Linux CI).
+CHROME_PATHS = [
+    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+    r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+    "/usr/bin/google-chrome",
+    "/usr/bin/chromium",
+    "/usr/bin/chromium-browser",
+]
+
+
+def _installed_browser() -> str | None:
+    for p in CHROME_PATHS:
+        if Path(p).exists():
+            return p
+    return None
+
+
 async def open_browser():
     from playwright.async_api import async_playwright
     pw = await async_playwright().start()
-    b = await pw.chromium.launch(
-        headless=True,
-        args=[
-            "--no-sandbox",
-            "--disable-blink-features=AutomationControlled",
-            "--disable-dev-shm-usage",
-        ],
-    )
-    return pw, b
+    args = [
+        "--no-sandbox",
+        "--disable-blink-features=AutomationControlled",
+        "--disable-dev-shm-usage",
+    ]
+
+    installed = _installed_browser()
+    if installed:
+        # executable_path works on every platform and needs no channel name.
+        try:
+            b = await pw.chromium.launch(headless=True, executable_path=installed,
+                                          args=args)
+            return pw, b
+        except Exception:  # noqa: BLE001
+            pass
+
+    return pw, await pw.chromium.launch(headless=True, args=args)
 
 
 # ═══════════════════════════════════════════════════════════════════

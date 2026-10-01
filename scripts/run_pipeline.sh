@@ -10,7 +10,45 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
-PY="${PYTHON:-python}"
+# Prefer the project's own virtualenv. A stale or partial .venv shadows the
+# system interpreter, and the run then dies on `ModuleNotFoundError: bs4`
+# several steps in — after the probe has already rewritten the health report.
+# Fall back to the system python only when .venv is absent or lacks the deps.
+pick_python() {
+  local candidates=()
+  [ -x ".venv/Scripts/python.exe" ] && candidates+=(".venv/Scripts/python.exe")
+  [ -x ".venv/bin/python" ] && candidates+=(".venv/bin/python")
+  candidates+=("${PYTHON:-}" python python3)
+
+  for c in "${candidates[@]}"; do
+    [ -n "$c" ] || continue
+    command -v "$c" >/dev/null 2>&1 || [ -x "$c" ] || continue
+    if "$c" -c "import bs4, httpx, yaml, lxml, playwright" >/dev/null 2>&1; then
+      echo "$c"
+      return 0
+    fi
+  done
+  echo "${PYTHON:-python}"
+}
+
+PY="$(pick_python)"
+
+# Say so when the chosen interpreter cannot import what the pipeline needs,
+# instead of letting it fail three steps in.
+if ! "$PY" -c "import bs4, httpx, yaml, lxml" >/dev/null 2>&1; then
+  cat >&2 <<EOF
+Missing dependencies for: $PY
+
+  $PY -m pip install -e .
+
+or activate the project venv:
+
+  source .venv/Scripts/activate    # Windows
+  source .venv/bin/activate        # Linux/macOS
+EOF
+  exit 1
+fi
+echo "==> interpreter: $PY"
 
 # A second concurrent run would have two crawlers writing the same
 # data/crawl_v2.json, and the later write would silently discard the earlier
