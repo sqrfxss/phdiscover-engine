@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-30T15:34:35.417284+00:00",
+  "generated_at": "2026-10-01T03:44:47.229532+00:00",
   "totals": {
     "sources_in_registry": 56,
     "job_boards": 22,
     "not_job_boards": 34,
     "boards_returning_data": 16,
     "boards_returning_nothing": 6,
-    "distinct_postings_found": 373
+    "distinct_postings_found": 357
   },
   "boards_with_data": [
     {
@@ -17,10 +17,10 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 135,
-      "last_note": "200 135 postings, 8 page(s) (secure)",
+      "last_returned": 137,
+      "last_note": "200 137 postings, 8 page(s) (secure)",
       "http_status": 200,
-      "bytes": 243876,
+      "bytes": 242813,
       "url": "https://www.researchjobseurope.com/jobs"
     },
     {
@@ -31,10 +31,10 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 55,
-      "last_note": "200 55 postings, 6 page(s) (secure), pager exhausted",
+      "last_returned": 53,
+      "last_note": "200 53 postings, 6 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 46700,
+      "bytes": 46903,
       "url": "https://www.postdocjobs.com/"
     },
     {
@@ -45,10 +45,10 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 39,
-      "last_note": "200 39 postings, 6 page(s) (secure)",
+      "last_returned": 42,
+      "last_note": "200 42 postings, 6 page(s) (secure)",
       "http_status": 200,
-      "bytes": 447843,
+      "bytes": 442339,
       "url": "https://www.jobs.ac.uk/jobs/phd"
     },
     {
@@ -61,8 +61,8 @@
       "tls_verify": true,
       "last_returned": 25,
       "last_note": "browser 200, 25 postings",
-      "http_status": null,
-      "bytes": 0,
+      "http_status": 200,
+      "bytes": 156605,
       "url": "http://www.canadianresearch.org/"
     },
     {
@@ -76,7 +76,7 @@
       "last_returned": 22,
       "last_note": "browser 200, 22 postings",
       "http_status": 403,
-      "bytes": 5830,
+      "bytes": 5851,
       "url": "https://www.academicjobs.com/en-ca/research-jobs"
     },
     {
@@ -87,25 +87,11 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 22,
-      "last_note": "200 22 postings, 2 page(s) (secure), pager exhausted",
+      "last_returned": 21,
+      "last_note": "200 21 postings, 1 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 452309,
+      "bytes": 451522,
       "url": "https://jobrxiv.org/job-region/europe/"
-    },
-    {
-      "name": "academicpositions",
-      "label": "AcademicPositions",
-      "kind": "job_board",
-      "status": "verified_200",
-      "status_reason": "Crawlable",
-      "reach": "Playwright (Cloudflare / client-rendered)",
-      "tls_verify": false,
-      "last_returned": 22,
-      "last_note": "insecure-tls 200, 22 postings",
-      "http_status": 403,
-      "bytes": 5740,
-      "url": "https://academicpositions.com/jobs/position/phd"
     },
     {
       "name": "applykite",
@@ -115,11 +101,25 @@
       "status_reason": "Crawlable",
       "reach": "Playwright (Cloudflare / client-rendered)",
       "tls_verify": true,
+      "last_returned": 14,
+      "last_note": "browser 200, 14 postings",
+      "http_status": 200,
+      "bytes": 566605,
+      "url": "https://www.applykite.com/search/positions/all/canada"
+    },
+    {
+      "name": "jobindex",
+      "label": "Jobindex (Denmark)",
+      "kind": "job_board",
+      "status": "verified_200",
+      "status_reason": "Crawlable",
+      "reach": "Plain HTTP",
+      "tls_verify": true,
       "last_returned": 13,
       "last_note": "browser 200, 13 postings",
       "http_status": 200,
-      "bytes": 565175,
-      "url": "https://www.applykite.com/search/positions/all/canada"
+      "bytes": 364036,
+      "url": "https://www.jobindex.dk/jobsoegning?q=phd"
     },
     {
       "name": "jobs_ch",
@@ -132,22 +132,8 @@
       "last_returned": 11,
       "last_note": "200 11 postings, 4 page(s) (secure)",
       "http_status": 200,
-      "bytes": 454239,
+      "bytes": 441181,
       "url": "https://www.jobs.ch/en/vacancies/?term=phd"
-    },
-    {
-      "name": "thepostdoc",
-      "label": "ThePostDoc",
-      "kind": "job_board",
-      "status": "verified_200",
-      "status_reason": "Crawlable",
-      "reach": "Plain HTTP",
-      "tls_verify": true,
-      "last_returned": 10,
-      "last_note": "200 10 postings, 2 page(s) (secure), pager exhausted",
-      "http_status": 200,
-      "bytes": 47580,
-      "url": "https://www.thepostdoc.com/jobs"
     },
     {
       "name": "euraxess",
@@ -157,10 +143,10 @@
       "status_reason": "Crawlable",
       "reach": "Playwright (Cloudflare / client-rendered)",
       "tls_verify": true,
-      "last_returned": 7,
-      "last_note": "browser 200, 7 postings",
+      "last_returned": 9,
+      "last_note": "browser 200, 9 postings",
       "http_status": 200,
-      "bytes": 180200,
+      "bytes": 177524,
       "url": "https://euraxess.ec.europa.eu/jobs/search"
     },
     {
@@ -171,25 +157,25 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 3,
-      "last_note": "200 3 postings, 1 page(s) (secure), pager exhausted",
+      "last_returned": 4,
+      "last_note": "200 4 postings, 1 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 249485,
+      "bytes": 229625,
       "url": "https://www.academictransfer.com/en/jobs"
     },
     {
-      "name": "biosciencecareers",
-      "label": "BioScience Careers",
+      "name": "thepostdoc",
+      "label": "ThePostDoc",
       "kind": "job_board",
       "status": "verified_200",
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 3,
-      "last_note": "200 3 postings, 2 page(s) (secure), pager exhausted",
+      "last_returned": 4,
+      "last_note": "200 4 postings, 2 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 37646,
-      "url": "https://www.biosciencecareers.com/jobs"
+      "bytes": 47777,
+      "url": "https://www.thepostdoc.com/jobs"
     },
     {
       "name": "msca",
@@ -216,8 +202,22 @@
       "last_returned": 1,
       "last_note": "200 1 postings, 2 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 292046,
+      "bytes": 292342,
       "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=phd"
+    },
+    {
+      "name": "biosciencecareers",
+      "label": "BioScience Careers",
+      "kind": "job_board",
+      "status": "verified_200",
+      "status_reason": "Crawlable",
+      "reach": "Plain HTTP",
+      "tls_verify": true,
+      "last_returned": 1,
+      "last_note": "200 1 postings, 2 page(s) (secure), pager exhausted",
+      "http_status": 200,
+      "bytes": 37662,
+      "url": "https://www.biosciencecareers.com/jobs"
     },
     {
       "name": "nature_careers",
@@ -230,7 +230,7 @@
       "last_returned": 1,
       "last_note": "200 1 postings, 3 page(s) (secure)",
       "http_status": 200,
-      "bytes": 199032,
+      "bytes": 199859,
       "url": "https://www.nature.com/careers"
     }
   ],
@@ -244,9 +244,9 @@
       "reach": "Plain HTTP",
       "tls_verify": true,
       "last_returned": 0,
-      "last_note": "browser goto Error: Page.goto: net::ERR_PROXY_CONNECTION_FAILED at htt",
+      "last_note": "browser 200, 0 postings",
       "http_status": 200,
-      "bytes": 44836,
+      "bytes": 44842,
       "url": "https://www.phdjobs.com/"
     },
     {
@@ -272,24 +272,24 @@
       "reach": "Plain HTTP",
       "tls_verify": true,
       "last_returned": 0,
-      "last_note": "ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake (secure)",
+      "last_note": "ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake f (secure)",
       "http_status": null,
       "bytes": 0,
       "url": "https://www.eluta.ca/jobs/search?keywords=phd+biomechanics"
     },
     {
-      "name": "jobindex",
-      "label": "Jobindex (Denmark)",
+      "name": "academicpositions",
+      "label": "AcademicPositions",
       "kind": "job_board",
       "status": "verified_200",
       "status_reason": "Crawlable",
-      "reach": "Plain HTTP",
-      "tls_verify": true,
+      "reach": "Playwright (Cloudflare / client-rendered)",
+      "tls_verify": false,
       "last_returned": 0,
-      "last_note": "browser goto Error: Page.goto: net::ERR_TIMED_OUT at https://www.jobin",
-      "http_status": 200,
-      "bytes": 362458,
-      "url": "https://www.jobindex.dk/jobsoegning?q=phd"
+      "last_note": "insecure-tls 403, 0 postings",
+      "http_status": 403,
+      "bytes": 5761,
+      "url": "https://academicpositions.com/jobs/position/phd"
     },
     {
       "name": "researchjobs_com",
@@ -596,9 +596,9 @@
       "reach": "Playwright (Cloudflare / client-rendered)",
       "tls_verify": true,
       "last_returned": 0,
-      "last_note": "browser 403, 0 postings",
-      "http_status": 403,
-      "bytes": 199,
+      "last_note": "Not crawled: not_a_board",
+      "http_status": null,
+      "bytes": null,
       "url": "https://www.nrc.canada.ca/en/research-development/research-collaboration/research-contracts"
     },
     {

@@ -1,6 +1,6 @@
 # PhDiscover — Source Coverage
 
-_Generated 2026-09-30T15:34:35.417284+00:00_
+_Generated 2026-10-01T03:44:47.229532+00:00_
 
 | Metric | Value |
 |---|---|
@@ -9,27 +9,27 @@ _Generated 2026-09-30T15:34:35.417284+00:00_
 | Boards returning data | 16 |
 | Boards returning nothing | 6 |
 | Not job boards (funding schemes, portals) | 34 |
-| Distinct postings harvested | 373 |
+| Distinct postings harvested | 357 |
 
 ## Boards returning data
 
 | Source | Postings | Reached via |
 |---|---|---|
-| ResearchJobsEurope | 135 | Plain HTTP |
-| PostDocJobs | 55 | Plain HTTP |
-| Jobs.ac.uk (UK) | 39 | Plain HTTP |
+| ResearchJobsEurope | 137 | Plain HTTP |
+| PostDocJobs | 53 | Plain HTTP |
+| Jobs.ac.uk (UK) | 42 | Plain HTTP |
 | CanadianResearch.org | 25 | Playwright (Cloudflare / client-rendered) |
 | Academic Jobs (Canada) | 22 | Playwright (Cloudflare / client-rendered) |
-| JobRxiv — Europe | 22 | Plain HTTP |
-| AcademicPositions | 22 | Playwright (Cloudflare / client-rendered) |
-| ApplyKite | 13 | Playwright (Cloudflare / client-rendered) |
+| JobRxiv — Europe | 21 | Plain HTTP |
+| ApplyKite | 14 | Playwright (Cloudflare / client-rendered) |
+| Jobindex (Denmark) | 13 | Plain HTTP |
 | Jobs.ch (Switzerland) | 11 | Plain HTTP |
-| ThePostDoc | 10 | Plain HTTP |
-| EURAXESS (EU main portal) | 7 | Playwright (Cloudflare / client-rendered) |
-| AcademicTransfer (Netherlands) | 3 | Plain HTTP |
-| BioScience Careers | 3 | Plain HTTP |
+| EURAXESS (EU main portal) | 9 | Playwright (Cloudflare / client-rendered) |
+| AcademicTransfer (Netherlands) | 4 | Plain HTTP |
+| ThePostDoc | 4 | Plain HTTP |
 | MSCA Doctoral Networks (Marie Sklodowska-Curie) | 2 | Playwright (Cloudflare / client-rendered) |
 | Job Bank (Government of Canada) | 1 | Plain HTTP |
+| BioScience Careers | 1 | Plain HTTP |
 | Nature Careers | 1 | Plain HTTP |
 
 ## Boards that return nothing
@@ -39,7 +39,7 @@ _Generated 2026-09-30T15:34:35.417284+00:00_
 | PhD Jobs | `verified_200` | Crawlable |
 | Prospects (UK) | `verified_200` | Crawlable |
 | Eluta (Canada matching system) | `requires_login` | requires_login |
-| Jobindex (Denmark) | `verified_200` | Crawlable |
+| AcademicPositions | `verified_200` | Crawlable |
 | ResearchJobs.com | `verified_200` | Crawlable |
 | FindAJob.eu | `verified_200` | Crawlable |
 
