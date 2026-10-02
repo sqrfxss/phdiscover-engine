@@ -11,14 +11,14 @@
     "http_status": 200,
     "http_bytes": 178276,
     "http_error": "",
-    "http_ms": 675,
+    "http_ms": 483,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "Error: BrowserType.launch: Executable doesn't exist at C:\\Users\\user\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
     "candidate_links": 160,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 160 candidate links",
-    "checked_at": "2026-10-02T02:28:15.553261+00:00"
+    "checked_at": "2026-10-02T02:59:05.415241+00:00"
   },
   {
     "name": "msca",
@@ -32,14 +32,14 @@
     "http_status": 200,
     "http_bytes": 117147,
     "http_error": "",
-    "http_ms": 605,
+    "http_ms": 428,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "Error: BrowserType.launch: Executable doesn't exist at C:\\Users\\user\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
     "candidate_links": 15,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 15 candidate links",
-    "checked_at": "2026-10-02T02:28:15.592324+00:00"
+    "checked_at": "2026-10-02T02:59:05.457839+00:00"
   },
   {
     "name": "phdjobs",
@@ -51,16 +51,16 @@
     "source_type": "aggregator",
     "region": "GLOBAL",
     "http_status": 200,
-    "http_bytes": 44979,
+    "http_bytes": 44972,
     "http_error": "",
-    "http_ms": 1165,
+    "http_ms": 864,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 13,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 13 candidate links",
-    "checked_at": "2026-10-02T02:28:15.593569+00:00"
+    "checked_at": "2026-10-02T02:59:05.459399+00:00"
   },
   {
     "name": "researchjobseurope",
@@ -74,14 +74,14 @@
     "http_status": 200,
     "http_bytes": 243048,
     "http_error": "",
-    "http_ms": 2152,
+    "http_ms": 908,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 130,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 130 candidate links",
-    "checked_at": "2026-10-02T02:28:15.594538+00:00"
+    "checked_at": "2026-10-02T02:59:05.460706+00:00"
   },
   {
     "name": "academictransfer",
@@ -95,14 +95,14 @@
     "http_status": 200,
     "http_bytes": 215705,
     "http_error": "",
-    "http_ms": 5511,
+    "http_ms": 3583,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 33,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 33 candidate links",
-    "checked_at": "2026-10-02T02:28:15.595675+00:00"
+    "checked_at": "2026-10-02T02:59:05.461887+00:00"
   },
   {
     "name": "jobs_ac_uk",
@@ -116,14 +116,14 @@
     "http_status": 200,
     "http_bytes": 445695,
     "http_error": "",
-    "http_ms": 5303,
+    "http_ms": 4263,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 43,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 43 candidate links",
-    "checked_at": "2026-10-02T02:28:15.596913+00:00"
+    "checked_at": "2026-10-02T02:59:05.462904+00:00"
   },
   {
     "name": "prospects",
@@ -137,14 +137,14 @@
     "http_status": 200,
     "http_bytes": 33752,
     "http_error": "",
-    "http_ms": 1079,
+    "http_ms": 807,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 50,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 50 candidate links",
-    "checked_at": "2026-10-02T02:28:15.597882+00:00"
+    "checked_at": "2026-10-02T02:59:05.463905+00:00"
   },
   {
     "name": "jobs_ch",
@@ -156,16 +156,16 @@
     "source_type": "official_national",
     "region": "CH",
     "http_status": 200,
-    "http_bytes": 441686,
+    "http_bytes": 441541,
     "http_error": "",
-    "http_ms": 1457,
+    "http_ms": 1181,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 171,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 171 candidate links",
-    "checked_at": "2026-10-02T02:28:15.598662+00:00"
+    "checked_at": "2026-10-02T02:59:05.464613+00:00"
   },
   {
     "name": "academicjobs",
@@ -179,14 +179,14 @@
     "http_status": 403,
     "http_bytes": 5830,
     "http_error": "",
-    "http_ms": 1084,
+    "http_ms": 847,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "Error: BrowserType.launch: Executable doesn't exist at C:\\Users\\user\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
     "candidate_links": 0,
     "verdict": "cloudflare_403",
     "verdict_reason": "Site healthy, bot blocked — needs Playwright",
-    "checked_at": "2026-10-02T02:28:15.599374+00:00"
+    "checked_at": "2026-10-02T02:59:05.465297+00:00"
   },
   {
     "name": "jobbank",
@@ -198,16 +198,16 @@
     "source_type": "government",
     "region": "CA",
     "http_status": 200,
-    "http_bytes": 295205,
+    "http_bytes": 292663,
     "http_error": "",
-    "http_ms": 3086,
+    "http_ms": 1688,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
-    "candidate_links": 92,
+    "candidate_links": 91,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 92 candidate links",
-    "checked_at": "2026-10-02T02:28:15.600104+00:00"
+    "verdict_reason": "200 OK, 91 candidate links",
+    "checked_at": "2026-10-02T02:59:05.466024+00:00"
   },
   {
     "name": "eluta",
@@ -228,7 +228,7 @@
     "candidate_links": 0,
     "verdict": "failed",
     "verdict_reason": "ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] ssl/tls alert handshake failure (_ssl.c:1082)",
-    "checked_at": "2026-10-02T02:28:15.600812+00:00"
+    "checked_at": "2026-10-02T02:59:05.466855+00:00"
   },
   {
     "name": "jobindex",
@@ -242,14 +242,14 @@
     "http_status": 200,
     "http_bytes": 364052,
     "http_error": "",
-    "http_ms": 2335,
+    "http_ms": 1940,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 164,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 164 candidate links",
-    "checked_at": "2026-10-02T02:28:15.601494+00:00"
+    "checked_at": "2026-10-02T02:59:05.467606+00:00"
   },
   {
     "name": "postdocjobs",
@@ -263,14 +263,14 @@
     "http_status": 200,
     "http_bytes": 46895,
     "http_error": "",
-    "http_ms": 2300,
+    "http_ms": 1897,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 25,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 25 candidate links",
-    "checked_at": "2026-10-02T02:28:15.602360+00:00"
+    "checked_at": "2026-10-02T02:59:05.468334+00:00"
   },
   {
     "name": "thepostdoc",
@@ -284,14 +284,14 @@
     "http_status": 200,
     "http_bytes": 47757,
     "http_error": "",
-    "http_ms": 3859,
+    "http_ms": 2840,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 26,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 26 candidate links",
-    "checked_at": "2026-10-02T02:28:15.603267+00:00"
+    "checked_at": "2026-10-02T02:59:05.469016+00:00"
   },
   {
     "name": "jobrxiv",
@@ -305,14 +305,14 @@
     "http_status": 200,
     "http_bytes": 450014,
     "http_error": "",
-    "http_ms": 2408,
+    "http_ms": 1735,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 343,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 343 candidate links",
-    "checked_at": "2026-10-02T02:28:15.604031+00:00"
+    "checked_at": "2026-10-02T02:59:05.469702+00:00"
   },
   {
     "name": "biosciencecareers",
@@ -326,14 +326,14 @@
     "http_status": 200,
     "http_bytes": 37825,
     "http_error": "",
-    "http_ms": 4437,
+    "http_ms": 3444,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 14,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 14 candidate links",
-    "checked_at": "2026-10-02T02:28:15.604751+00:00"
+    "checked_at": "2026-10-02T02:59:05.470400+00:00"
   },
   {
     "name": "nature_careers",
@@ -347,14 +347,14 @@
     "http_status": 200,
     "http_bytes": 199825,
     "http_error": "",
-    "http_ms": 4415,
+    "http_ms": 3479,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 15,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 15 candidate links",
-    "checked_at": "2026-10-02T02:28:15.605440+00:00"
+    "checked_at": "2026-10-02T02:59:05.471091+00:00"
   },
   {
     "name": "applykite",
@@ -368,14 +368,14 @@
     "http_status": 200,
     "http_bytes": 570706,
     "http_error": "",
-    "http_ms": 3057,
+    "http_ms": 2284,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "Error: BrowserType.launch: Executable doesn't exist at C:\\Users\\user\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
     "candidate_links": 132,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 132 candidate links",
-    "checked_at": "2026-10-02T02:28:15.606127+00:00"
+    "checked_at": "2026-10-02T02:59:05.471781+00:00"
   },
   {
     "name": "academicpositions",
@@ -389,14 +389,14 @@
     "http_status": 403,
     "http_bytes": 5740,
     "http_error": "",
-    "http_ms": 2815,
+    "http_ms": 1990,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "Error: BrowserType.launch: Executable doesn't exist at C:\\Users\\user\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
     "candidate_links": 0,
     "verdict": "cloudflare_403",
     "verdict_reason": "Site healthy, bot blocked — needs Playwright",
-    "checked_at": "2026-10-02T02:28:15.606837+00:00"
+    "checked_at": "2026-10-02T02:59:05.472454+00:00"
   },
   {
     "name": "researchjobs_com",
@@ -417,7 +417,7 @@
     "candidate_links": 0,
     "verdict": "failed",
     "verdict_reason": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.researchjobs.com'. (_ssl.c:1082)",
-    "checked_at": "2026-10-02T02:28:15.607534+00:00"
+    "checked_at": "2026-10-02T02:59:05.473812+00:00"
   },
   {
     "name": "findajob_eu",
@@ -438,7 +438,7 @@
     "candidate_links": 0,
     "verdict": "failed",
     "verdict_reason": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.findajob.eu'. (_ssl.c:1082)",
-    "checked_at": "2026-10-02T02:28:15.608218+00:00"
+    "checked_at": "2026-10-02T02:59:05.475382+00:00"
   },
   {
     "name": "canadian_research",
@@ -452,14 +452,14 @@
     "http_status": 200,
     "http_bytes": 156605,
     "http_error": "",
-    "http_ms": 3594,
+    "http_ms": 2550,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "Error: BrowserType.launch: Executable doesn't exist at C:\\Users\\user\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1243\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔════════════════════════════════════════════════════════════╗\n║ Looks like Playwright was just installed or updated.       ║\n║ Please run the following command to download new browsers: ║\n║                                                            ║\n║     playwright install                                     ║\n║                                                            ║\n║ <3 Playwright Team                                         ║\n╚════════════════════════════════════════════════════════════╝",
     "candidate_links": 196,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 196 candidate links",
-    "checked_at": "2026-10-02T02:28:15.608915+00:00"
+    "checked_at": "2026-10-02T02:59:05.476438+00:00"
   },
   {
     "name": "daad",
