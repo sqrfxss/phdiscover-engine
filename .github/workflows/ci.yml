@@ -1,5 +1,5 @@
 name: CI
-true:
+'on':
   push:
     branches:
     - main
@@ -43,6 +43,8 @@ jobs:
         '
     - name: University board detection
       run: python scripts/test_university_boards.py
+    - name: Workflow shape
+      run: python scripts/test_workflows.py
     - name: End-to-end crawl against a local fake board
       run: python scripts/test_stale_stop.py
     - name: Config and published-data sanity
@@ -90,14 +92,6 @@ jobs:
         \  print(f\"lock is complete: {len(IMPORT_TO_DIST)} required packages pinned\"\
         )\nsys.exit(1 if (missing or unpinned or drifted) else 0)\nPY\n"
     - name: The checks pass on the locked environment
-      run: 'python scripts/test_reliability.py
-
-        python scripts/test_pagination.py
-
-        python scripts/test_deadlines.py
-
-        python scripts/test_stale_stop.py
-
-        python scripts/check_published.py
-
-        '
+      run: "python scripts/test_reliability.py\npython scripts/test_pagination.py\n\
+        python scripts/test_deadlines.py\npython scripts/test_stale_stop.py\npython\
+        \ scripts/check_published.py\n\n          python scripts/test_workflows.py"
