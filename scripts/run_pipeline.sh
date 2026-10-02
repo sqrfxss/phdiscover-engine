@@ -130,15 +130,23 @@ if [ -f data/crawl_github_run.json ]; then
 fi
 
 echo
-echo "=== [4/6] Filtering to doctoral biomechanics positions ==="
+echo "=== [4/7] Rescuing university postings with uninformative titles ==="
+# Between crawl and filter. A university board lists every vacancy it has, so a
+# fifth of the cards name no discipline at all ("PhD Researcher") and the topic
+# gate cannot judge them from the card. Reading their detail pages first is what
+# keeps them from being dropped on a title, not on their subject.
+$PY scripts/rescue_university_candidates.py || true
+
+echo
+echo "=== [5/7] Filtering to doctoral biomechanics positions ==="
 $PY scripts/filter_and_merge.py
 
 echo
-echo "=== [5/6] Enriching each position detail page ==="
+echo "=== [6/7] Enriching each position detail page ==="
 $PY scripts/enrich_positions.py
 
 echo
-echo "=== [6/6] Publishing to web/data ==="
+echo "=== [7/7] Publishing to web/data ==="
 $PY scripts/publish_site.py
 $PY scripts/coverage_report.py
 

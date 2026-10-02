@@ -29,6 +29,10 @@ WEB_OUT = ROOT / "web" / "data" / "ranked_opportunities.json"
 OUT = ROOT / "data" / "filtered_positions.json"
 
 INPUTS = [
+    # Read after the crawl: every row here was judged on its detail page
+    # instead of on a title that named no discipline.
+    ("data/university_candidates.json", "university_board",
+     "University board, resolved from the detail page"),
     ("data/university_crawl.json", "university_board", "University careers board"),
     ("data/browser_positions.json", "browser_crawler", "EURAXESS (EU official)"),
     ("data/crawl_v2.json", "crawl_v2", ""),

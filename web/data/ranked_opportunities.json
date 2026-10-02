@@ -187,37 +187,6 @@
   },
   {
     "id": "pd-7",
-    "title": "PhD position on Modelling of turbidity current fluxes in submarine canyons",
-    "university": "Utrecht University",
-    "country": "Netherlands",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "PhD position — see official posting",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 59,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
-    "source_url": "https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
-    "posted": "",
-    "description": "PhD position on Modelling of turbidity current fluxes in submarine canyons Join the DEEP-FLUX team! Model turbidity current fluxes and quantify carbon & microplastic transport from land to the deep ocean! PhD|Education|Research, development, innovation Faculty of Geosciences",
-    "source": "Utrecht University",
-    "evidence": [
-      {
-        "claim": "Position listed on Utrecht University",
-        "value": "PhD position on Modelling of turbidity current fluxes in submarine canyons",
-        "source_url": "https://www.uu.nl/en/organisation/working-at-utrecht-university/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
-        "source_type": "aggregator",
-        "confidence": 0.65
-      }
-    ]
-  },
-  {
-    "id": "pd-8",
     "title": "Phd opportunity in artificial intelligence for pet imaging and medical image analysis",
     "university": "Top university Just Landed University",
     "country": "Canada",
@@ -248,7 +217,7 @@
     ]
   },
   {
-    "id": "pd-9",
+    "id": "pd-8",
     "title": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
     "university": "Currents - DTU Space Technical University",
     "country": "N/A",
@@ -279,7 +248,7 @@
     ]
   },
   {
-    "id": "pd-10",
+    "id": "pd-9",
     "title": "PhD position on Modelling of turbidity current fluxes in submarine canyons",
     "university": "Utrecht University",
     "country": "N/A",
@@ -310,7 +279,7 @@
     ]
   },
   {
-    "id": "pd-11",
+    "id": "pd-10",
     "title": "PhD in Fast Controlled Photonic Integrated Switches for High Performance Artificial Intelligence Compute Clusters",
     "university": "Compute Clusters Eindhoven University",
     "country": "N/A",
@@ -341,7 +310,7 @@
     ]
   },
   {
-    "id": "pd-12",
+    "id": "pd-11",
     "title": "Doctoral Researcher / Väitöskirjatutkija (Deep Learning for High-Frequency Financial Data Modeling)",
     "university": "Tampere University",
     "country": "N/A",
@@ -372,7 +341,7 @@
     ]
   },
   {
-    "id": "pd-13",
+    "id": "pd-12",
     "title": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
     "university": "Animal and Herd Level University",
     "country": "N/A",
@@ -403,7 +372,7 @@
     ]
   },
   {
-    "id": "pd-14",
+    "id": "pd-13",
     "title": "PhD Position in Generative Modeling of Human Development and Disease",
     "university": "University of Basel Basel",
     "country": "N/A",
@@ -434,7 +403,7 @@
     ]
   },
   {
-    "id": "pd-15",
+    "id": "pd-14",
     "title": "PhD Candidate in Modelling and Executing Cascading Effects within a Cyber Range",
     "university": "Cyber Range Norwegian University",
     "country": "N/A",
@@ -465,7 +434,7 @@
     ]
   },
   {
-    "id": "pd-16",
+    "id": "pd-15",
     "title": "PhD position in probabilistic machine learning and statistics (307053) | University of Oslo",
     "university": "University of Oslo University of Oslo Oslo",
     "country": "N/A",
@@ -496,7 +465,7 @@
     ]
   },
   {
-    "id": "pd-17",
+    "id": "pd-16",
     "title": "DPhil Studentship – Investigating and Modelling Brain Dynamics Across Species",
     "university": "Department of Psychiatry University",
     "country": "United Kingdom",
@@ -527,7 +496,7 @@
     ]
   },
   {
-    "id": "pd-18",
+    "id": "pd-17",
     "title": "PhD Position Video-based Hand Motion-tracking for Patients with Rheumatoid Arthritis",
     "university": "EURAXESS (EU official)",
     "country": "Netherlands",
@@ -554,6 +523,37 @@
         "source_url": "https://euraxess.ec.europa.eu/jobs/468173",
         "source_type": "official",
         "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-18",
+    "title": "PHD Program Admissions",
+    "university": "MODUL University Vienna",
+    "country": "Austria",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "PhD position — see official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 52,
+    "contact_priority": "LOW",
+    "url": "https://apply.modul.ac.at/login",
+    "source_url": "https://apply.modul.ac.at/login",
+    "posted": "",
+    "description": "PHD Program Admissions When applying to Modul University Vienna for a PhD, you will need to meet the following admissions entry requirements and provide your  documents in English through our online portal . Curriculum Vitae Motivation Statement Research Proposal* Bachelor (3-year) and Master (2-year) diploma Bachelor and Master Transcripts including supplements One example of a research publicati",
+    "source": "MODUL University Vienna",
+    "evidence": [
+      {
+        "claim": "Position listed on MODUL University Vienna",
+        "value": "PHD Program Admissions",
+        "source_url": "https://apply.modul.ac.at/login",
+        "source_type": "aggregator",
+        "confidence": 0.65
       }
     ]
   },
@@ -590,6 +590,68 @@
   },
   {
     "id": "pd-20",
+    "title": "PhD Program Mental Health and Neuroscience",
+    "university": "Karl Landsteiner University of Health Sciences",
+    "country": "Austria",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "PhD position — see official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 41,
+    "contact_priority": "LOW",
+    "url": "https://www.kl.ac.at/de/studium-weiterbildung/phd-program-mental-health-and-neuroscience",
+    "source_url": "https://www.kl.ac.at/de/studium-weiterbildung/phd-program-mental-health-and-neuroscience",
+    "posted": "",
+    "description": "PhD Program Mental Health and Neuroscience",
+    "source": "Karl Landsteiner University of Health Sciences",
+    "evidence": [
+      {
+        "claim": "Position listed on Karl Landsteiner University of Health Sciences",
+        "value": "PhD Program Mental Health and Neuroscience",
+        "source_url": "https://www.kl.ac.at/de/studium-weiterbildung/phd-program-mental-health-and-neuroscience",
+        "source_type": "aggregator",
+        "confidence": 0.65
+      }
+    ]
+  },
+  {
+    "id": "pd-21",
+    "title": "PhD Programme \"Systems Neuroscience\"",
+    "university": "University of Veterinary Medicine Hannover",
+    "country": "Germany",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "PhD position — see official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 41,
+    "contact_priority": "LOW",
+    "url": "https://www.tiho-hannover.de/studium-lehre/phd-graduate-school/phd-programme-systems-neuroscience",
+    "source_url": "https://www.tiho-hannover.de/studium-lehre/phd-graduate-school/phd-programme-systems-neuroscience",
+    "posted": "",
+    "description": "PhD Programme \"Systems Neuroscience\"",
+    "source": "University of Veterinary Medicine Hannover",
+    "evidence": [
+      {
+        "claim": "Position listed on University of Veterinary Medicine Hannover",
+        "value": "PhD Programme \"Systems Neuroscience\"",
+        "source_url": "https://www.tiho-hannover.de/studium-lehre/phd-graduate-school/phd-programme-systems-neuroscience",
+        "source_type": "aggregator",
+        "confidence": 0.65
+      }
+    ]
+  },
+  {
+    "id": "pd-22",
     "title": "PhD in Computational Geometry and Computational Topology",
     "university": "Topology Eindhoven University",
     "country": "N/A",
@@ -620,7 +682,7 @@
     ]
   },
   {
-    "id": "pd-21",
+    "id": "pd-23",
     "title": "PhD Positions in Neurosciences and Translational Psychiatry research, including a residency/PhD track option for medical doctors",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -651,7 +713,7 @@
     ]
   },
   {
-    "id": "pd-22",
+    "id": "pd-24",
     "title": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -682,7 +744,7 @@
     ]
   },
   {
-    "id": "pd-23",
+    "id": "pd-25",
     "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
     "university": "Karolinska Institute",
     "country": "N/A",
@@ -713,7 +775,7 @@
     ]
   },
   {
-    "id": "pd-24",
+    "id": "pd-26",
     "title": "PhD position (4-year funded) Full-time brain Cellular neuroscience clinical neuroscience Hospital del Mar Research Institute, Barcelona Spain Barcelona on 18 Se",
     "university": "Hospital del Mar Research Institute",
     "country": "N/A",
@@ -744,7 +806,7 @@
     ]
   },
   {
-    "id": "pd-25",
+    "id": "pd-27",
     "title": "PhD positions in Germany Full-time AI applied mathematics behavioral neuroscience $70,000 - $75,000 MAX PLANCK Institute for Human Cognitive and Brain Sciences Germa",
     "university": "MAX PLANCK Institute",
     "country": "N/A",
@@ -775,7 +837,7 @@
     ]
   },
   {
-    "id": "pd-26",
+    "id": "pd-28",
     "title": "Doctoral Fellow at Waypoint Research Institute",
     "university": "Fellow at Waypoint Research Institute",
     "country": "Canada",
@@ -806,7 +868,7 @@
     ]
   },
   {
-    "id": "pd-27",
+    "id": "pd-29",
     "title": "Doctoral Fellow at Waypoint Research Institute",
     "university": "Fellow at Waypoint Research Institute",
     "country": "Canada",
