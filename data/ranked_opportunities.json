@@ -46,58 +46,6 @@
   },
   {
     "id": "pd-002",
-    "title": "Doctoral student in Neuronics",
-    "university": "ResearchJobsEurope",
-    "country": "Sweden",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "Funding evidence on page",
-    "application_deadline": "2026-10-01",
-    "deadline_date": "2026-10-01",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 76,
-    "contact_priority": "HIGH",
-    "url": "https://www.researchjobseurope.com/jobs/doctoral-student-in-neuronics",
-    "source_url": "https://www.researchjobseurope.com/jobs/doctoral-student-in-neuronics",
-    "posted": "",
-    "description": "This project develops an AI-driven platform to personalize finite element Human Body Models (HBMs) and automatically position them in realistic occupant postures. The project addresses a key challenge in the transition toward HBM-based vehicle safety assessment in consumer ratings and future regulations, where efficient and accurate methods are needed to personalize and position HBMs for industrial deployment. The pr",
-    "source": "ResearchJobsEurope",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "Doctoral student in Neuronics",
-        "source_url": "https://www.researchjobseurope.com/jobs/doctoral-student-in-neuronics",
-        "source_type": "aggregator",
-        "confidence": 0.8
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "1031 chars of description, country=Sweden",
-        "source_url": "https://www.researchjobseurope.com/jobs/doctoral-student-in-neuronics",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "2026-10-01",
-        "source_url": "https://www.researchjobseurope.com/jobs/doctoral-student-in-neuronics",
-        "source_type": "official",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://www.researchjobseurope.com/jobs/doctoral-student-in-neuronics",
-        "source_type": "official",
-        "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-003",
     "title": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
     "university": "ResearchJobsEurope",
     "country": "Denmark",
@@ -142,7 +90,7 @@
     ]
   },
   {
-    "id": "pd-004",
+    "id": "pd-003",
     "title": "PhD Candidate in Modelling and Executing Cascading Effects within a Cyber Range",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -187,45 +135,7 @@
     ]
   },
   {
-    "id": "pd-005",
-    "title": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech",
-    "university": "DTU Jobs side",
-    "country": "Denmark",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 70,
-    "contact_priority": "MEDIUM",
-    "url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
-    "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
-    "posted": "",
-    "description": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech Kgs. Lyngby Se rejsetid We are looking for an ambitious PhD student to work at the intersection of digital health, artificial intelligence, large language models (LLMs), and human-computer interaction. The PhD project will investigate how LLMs and interactive AI can help researchers explore complex health data collected from smartph",
-    "source": "Jobindex (Denmark)",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on Jobindex (Denmark)",
-        "value": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech",
-        "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
-        "source_type": "aggregator",
-        "confidence": 0.7
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "0 chars of description, country=Denmark",
-        "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
-        "source_type": "official",
-        "confidence": 0.9
-      }
-    ]
-  },
-  {
-    "id": "pd-006",
+    "id": "pd-004",
     "title": "PhD position on Modelling of turbidity current fluxes in submarine canyons",
     "university": "ResearchJobsEurope",
     "country": "Netherlands",
@@ -277,52 +187,7 @@
     ]
   },
   {
-    "id": "pd-007",
-    "title": "PhD Candidate in Machine Learning & Signal Processing for Industrial Applications",
-    "university": "ResearchJobsEurope",
-    "country": "N/A",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "Deadline 1 Oct 2026",
-    "deadline_date": "2026-10-01",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 64,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.researchjobseurope.com/jobs/phd-candidate-in-machine-learning-signal-processing-for-industrial-applications",
-    "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-in-machine-learning-signal-processing-for-industrial-applications",
-    "posted": "",
-    "description": "The position is linked to the project LAIFA (Leveraging AI in Flow Assurance), funded by the Research Council of Norway and in collaboration with SINTEF, Equinor, and Total. The main objectives of the project include the development and the integration of signal processing and machine learning methodologies aiming to improve flow assurance via field data for safe and efficient petroleum production. The focus for the ",
-    "source": "ResearchJobsEurope",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "PhD Candidate in Machine Learning & Signal Processing for Industrial Applications",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-in-machine-learning-signal-processing-for-industrial-applications",
-        "source_type": "aggregator",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "642 chars of description",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-in-machine-learning-signal-processing-for-industrial-applications",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "Deadline 1 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-candidate-in-machine-learning-signal-processing-for-industrial-applications",
-        "source_type": "official",
-        "confidence": 0.75
-      }
-    ]
-  },
-  {
-    "id": "pd-008",
+    "id": "pd-005",
     "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -353,7 +218,7 @@
     ]
   },
   {
-    "id": "pd-009",
+    "id": "pd-006",
     "title": "Phd opportunity in artificial intelligence for pet imaging and medical image analysis",
     "university": "Apply Kite",
     "country": "Canada",
@@ -391,52 +256,7 @@
     ]
   },
   {
-    "id": "pd-010",
-    "title": "PhD position: Safe and efficient coordination of mixed traffic with automated vehicles",
-    "university": "ResearchJobsEurope",
-    "country": "Belgium",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "Deadline 1 Oct 2026",
-    "deadline_date": "2026-10-01",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 59,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.researchjobseurope.com/jobs/phd-position-safe-and-efficient-coordination-of-mixed-traffic-with-automated-vehicles",
-    "source_url": "https://www.researchjobseurope.com/jobs/phd-position-safe-and-efficient-coordination-of-mixed-traffic-with-automated-vehicles",
-    "posted": "",
-    "description": "KU Leuven strives for an inclusive, respectful and socially safe environment. We embrace diversity among individuals and groups as an asset. Open dialogue and differences in perspective are essential for an ambitious research and educational environment. In our commitment to equal opportunity, we recognize the consequences of historical inequalities. We do not accept any form of discrimination based on, but not limit",
-    "source": "ResearchJobsEurope",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "PhD position: Safe and efficient coordination of mixed traffic with automated vehicles",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-position-safe-and-efficient-coordination-of-mixed-traffic-with-automated-vehicles",
-        "source_type": "aggregator",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "743 chars of description, country=Belgium",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-position-safe-and-efficient-coordination-of-mixed-traffic-with-automated-vehicles",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "Deadline 1 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-position-safe-and-efficient-coordination-of-mixed-traffic-with-automated-vehicles",
-        "source_type": "official",
-        "confidence": 0.75
-      }
-    ]
-  },
-  {
-    "id": "pd-011",
+    "id": "pd-007",
     "title": "PhD in Fast Controlled Photonic Integrated Switches for High Performance Artificial Intelligence Compute Clusters",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -481,7 +301,7 @@
     ]
   },
   {
-    "id": "pd-012",
+    "id": "pd-008",
     "title": "Doctoral Researcher / Väitöskirjatutkija (Deep Learning for High-Frequency Financial Data Modeling)",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -526,7 +346,52 @@
     ]
   },
   {
-    "id": "pd-013",
+    "id": "pd-009",
+    "title": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
+    "university": "ResearchJobsEurope",
+    "country": "Denmark",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "Deadline 7 Oct 2026",
+    "deadline_date": "2026-10-07",
+    "deadline_status": "open",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+    "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+    "posted": "",
+    "description": "Aalto University is a community of bold thinkers where science and art meet technology and business. We are committed to identifying and solving grand societal challenges and building an innovative future. Aalto has six schools with 14 000 students and a staff of 5000, of which more than 400 are professors. Our main campus is located in Espoo, Finland. Diversity is part of who we are, and we actively work to ensure o",
+    "source": "ResearchJobsEurope",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
+        "value": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+        "source_type": "aggregator",
+        "confidence": 0.75
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "560 chars of description, country=Denmark",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Application deadline found on the page",
+        "value": "Deadline 7 Oct 2026",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+        "source_type": "official",
+        "confidence": 0.75
+      }
+    ]
+  },
+  {
+    "id": "pd-010",
     "title": "PhD Position in Generative Modeling of Human Development and Disease",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -557,52 +422,7 @@
     ]
   },
   {
-    "id": "pd-014",
-    "title": "Doctoral (Phd) position in Real Time simulation for electrified flexible industry",
-    "university": "ResearchJobsEurope",
-    "country": "Sweden",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "Deadline 1 Oct 2026",
-    "deadline_date": "2026-10-01",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 52,
-    "contact_priority": "LOW",
-    "url": "https://www.researchjobseurope.com/jobs/doctoral-phd-position-in-real-time-simulation-for-electrified-flexible-industry",
-    "source_url": "https://www.researchjobseurope.com/jobs/doctoral-phd-position-in-real-time-simulation-for-electrified-flexible-industry",
-    "posted": "",
-    "description": "Electrification and digitalisation are among the major areas for the future transition to sustainable societies. The Department of Electrical Engineering conducts successful research and education in these areas - including renewable energy sources, electric vehicles, industrial IoT, 6G communication, and wireless sensor networks, as well as research and education in Life Science, health technology, smart electronic ",
-    "source": "ResearchJobsEurope",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "Doctoral (Phd) position in Real Time simulation for electrified flexible industry",
-        "source_url": "https://www.researchjobseurope.com/jobs/doctoral-phd-position-in-real-time-simulation-for-electrified-flexible-industry",
-        "source_type": "aggregator",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "636 chars of description, country=Sweden",
-        "source_url": "https://www.researchjobseurope.com/jobs/doctoral-phd-position-in-real-time-simulation-for-electrified-flexible-industry",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "Deadline 1 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/doctoral-phd-position-in-real-time-simulation-for-electrified-flexible-industry",
-        "source_type": "official",
-        "confidence": 0.75
-      }
-    ]
-  },
-  {
-    "id": "pd-015",
+    "id": "pd-011",
     "title": "Doctoral Position in Advanced Bioelectronic & Electrical Conversion Research",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -633,7 +453,7 @@
     ]
   },
   {
-    "id": "pd-016",
+    "id": "pd-012",
     "title": "PhD in Computational Geometry and Computational Topology",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -678,10 +498,10 @@
     ]
   },
   {
-    "id": "pd-017",
-    "title": "Phd opening in neuroscience photonics and mental health at cervo brain research centre",
-    "university": "Apply Kite",
-    "country": "Canada",
+    "id": "pd-013",
+    "title": "PhD Positions in Neurosciences and Translational Psychiatry research, including a residency/PhD track option for medical doctors",
+    "university": "AcademicPositions",
+    "country": "N/A",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
@@ -693,30 +513,54 @@
     "research_domain": "Biomechanics / Human Movement",
     "research_fit_score": 41,
     "contact_priority": "LOW",
-    "url": "https://www.applykite.com/positions/phd-opening-in-neuroscience-photonics-and-mental-health-at-cervo-brain-research-centre-5udgbc81w7",
-    "source_url": "https://www.applykite.com/positions/phd-opening-in-neuroscience-photonics-and-mental-health-at-cervo-brain-research-centre-5udgbc81w7",
+    "url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/upcoming-fully-funded-phd-positions-in-neurosciences-and-translational-psychiatry-research-including-a-residency-phd-track-option-for-medical-doctors/243079",
+    "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/upcoming-fully-funded-phd-positions-in-neurosciences-and-translational-psychiatry-research-including-a-residency-phd-track-option-for-medical-doctors/243079",
     "posted": "",
-    "description": "Jacquemont Lab at CHU Sainte-Justine and Université de Montréal is hiring for\nPhD\nand\npostdoc\npositions in an exciting research area at the intersection of\nneuroscience\n,\ngenomics\n, and\nmedical science\n.\nThe project focuses on the\neffects of genetic variants on brain transcriptomics and brain architecture\n. This is a strong fit for candidates interested in human genetics, neurogenomics, transcriptomics, and brain dev",
-    "source": "ApplyKite",
+    "description": "International Max Planck Research School for Translational Psychiatry (IMPRS-TP) Munich, Germany Upcoming fully funded PhD Positions in Neurosciences and Translational Psychiatry research, including a residency/PhD track option for medical doctors Fully funded PhD positions in molecular, cellular, and systemic psychiatric research. Includes integrated PhD/residency track for medical doctors. International applicants ",
+    "source": "AcademicPositions",
     "evidence": [
       {
-        "claim": "Listed as a doctoral opening on ApplyKite",
-        "value": "Phd opening in neuroscience photonics and mental health at cervo brain research centre",
-        "source_url": "https://www.applykite.com/positions/phd-opening-in-neuroscience-photonics-and-mental-health-at-cervo-brain-research-centre-5udgbc81w7",
+        "claim": "Listed as a doctoral opening on AcademicPositions",
+        "value": "PhD Positions in Neurosciences and Translational Psychiatry research, including a residency/PhD track option for medical doctors",
+        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/upcoming-fully-funded-phd-positions-in-neurosciences-and-translational-psychiatry-research-including-a-residency-phd-track-option-for-medical-doctors/243079",
         "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "503 chars of description, country=Canada",
-        "source_url": "https://www.applykite.com/positions/phd-opening-in-neuroscience-photonics-and-mental-health-at-cervo-brain-research-centre-5udgbc81w7",
-        "source_type": "official",
-        "confidence": 0.9
+        "confidence": 0.7
       }
     ]
   },
   {
-    "id": "pd-018",
+    "id": "pd-014",
+    "title": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
+    "university": "AcademicPositions",
+    "country": "N/A",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 41,
+    "contact_priority": "LOW",
+    "url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
+    "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
+    "posted": "",
+    "description": "International Max Planck Research School for Translational Psychiatry (IMPRS-TP) Munich, Germany Fully funded PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors Fully funded PhD positions in neuroscience and translational psychiatry with integrated Residency/PhD track for medical doctors. No tuition fees. Open to MSc or MD graduates worldwide. Published 1 month ",
+    "source": "AcademicPositions",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on AcademicPositions",
+        "value": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
+        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
+        "source_type": "official",
+        "confidence": 0.7
+      }
+    ]
+  },
+  {
+    "id": "pd-015",
     "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
     "university": "AcademicPositions",
     "country": "N/A",

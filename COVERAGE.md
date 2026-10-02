@@ -1,6 +1,6 @@
 # PhDiscover — Source Coverage
 
-_Generated 2026-10-01T10:11:52.673731+00:00_
+_Generated 2026-10-02T02:22:31.546790+00:00_
 
 | Metric | Value |
 |---|---|
@@ -9,28 +9,28 @@ _Generated 2026-10-01T10:11:52.673731+00:00_
 | Boards returning data | 17 |
 | Boards returning nothing | 5 |
 | Not job boards (funding schemes, portals) | 34 |
-| Distinct postings harvested | 417 |
+| Distinct postings harvested | 410 |
 
 ## Boards returning data
 
 | Source | Postings | Reached via |
 |---|---|---|
-| ResearchJobsEurope | 137 | Plain HTTP |
-| PostDocJobs | 84 | Plain HTTP |
+| ResearchJobsEurope | 134 | Plain HTTP |
+| PostDocJobs | 83 | Plain HTTP |
 | Jobs.ac.uk (UK) | 45 | Plain HTTP |
 | CanadianResearch.org | 25 | Playwright (Cloudflare / client-rendered) |
-| AcademicPositions | 23 | Playwright (Cloudflare / client-rendered) |
+| AcademicPositions | 24 | Playwright (Cloudflare / client-rendered) |
 | Academic Jobs (Canada) | 22 | Playwright (Cloudflare / client-rendered) |
 | JobRxiv — Europe | 21 | Plain HTTP |
-| Jobindex (Denmark) | 14 | Plain HTTP |
-| ApplyKite | 14 | Playwright (Cloudflare / client-rendered) |
 | Jobs.ch (Switzerland) | 12 | Plain HTTP |
+| ApplyKite | 12 | Playwright (Cloudflare / client-rendered) |
+| Jobindex (Denmark) | 11 | Plain HTTP |
 | EURAXESS (EU main portal) | 9 | Playwright (Cloudflare / client-rendered) |
+| ThePostDoc | 6 | Plain HTTP |
 | AcademicTransfer (Netherlands) | 5 | Plain HTTP |
-| ThePostDoc | 4 | Plain HTTP |
 | MSCA Doctoral Networks (Marie Sklodowska-Curie) | 2 | Playwright (Cloudflare / client-rendered) |
+| BioScience Careers | 2 | Plain HTTP |
 | Job Bank (Government of Canada) | 1 | Plain HTTP |
-| BioScience Careers | 1 | Plain HTTP |
 | Nature Careers | 1 | Plain HTTP |
 
 ## Boards that return nothing

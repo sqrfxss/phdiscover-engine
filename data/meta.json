@@ -1,13 +1,12 @@
 {
-  "generated_at": "2026-10-01T10:11:52.561833+00:00",
-  "position_count": 18,
+  "generated_at": "2026-10-02T02:22:31.462909+00:00",
+  "position_count": 15,
   "sources_contributing": [
     "AcademicPositions",
     "ApplyKite",
-    "Jobindex (Denmark)",
     "ResearchJobsEurope"
   ],
-  "with_deadline": 11,
-  "with_country": 10,
-  "enriched": 14
+  "with_deadline": 8,
+  "with_country": 6,
+  "enriched": 9
 }

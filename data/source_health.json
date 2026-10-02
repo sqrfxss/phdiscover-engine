@@ -9,16 +9,16 @@
     "source_type": "official_euraxess",
     "region": "EU",
     "http_status": 200,
-    "http_bytes": 178878,
+    "http_bytes": 178276,
     "http_error": "",
-    "http_ms": 291,
+    "http_ms": 216,
     "browser_status": 200,
-    "browser_bytes": 674146,
+    "browser_bytes": 673501,
     "browser_error": "",
-    "candidate_links": 305,
+    "candidate_links": 286,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 305 candidate links",
-    "checked_at": "2026-10-01T10:06:22.729288+00:00"
+    "verdict_reason": "200 OK, 286 candidate links",
+    "checked_at": "2026-10-02T02:17:02.130959+00:00"
   },
   {
     "name": "msca",
@@ -32,14 +32,14 @@
     "http_status": 200,
     "http_bytes": 117147,
     "http_error": "",
-    "http_ms": 731,
+    "http_ms": 592,
     "browser_status": 200,
-    "browser_bytes": 187349,
+    "browser_bytes": 186161,
     "browser_error": "",
     "candidate_links": 88,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 88 candidate links",
-    "checked_at": "2026-10-01T10:06:22.750072+00:00"
+    "checked_at": "2026-10-02T02:17:02.146799+00:00"
   },
   {
     "name": "phdjobs",
@@ -51,16 +51,16 @@
     "source_type": "aggregator",
     "region": "GLOBAL",
     "http_status": 200,
-    "http_bytes": 44764,
+    "http_bytes": 44978,
     "http_error": "",
-    "http_ms": 148,
+    "http_ms": 169,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 13,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 13 candidate links",
-    "checked_at": "2026-10-01T10:06:22.750527+00:00"
+    "checked_at": "2026-10-02T02:17:02.147154+00:00"
   },
   {
     "name": "researchjobseurope",
@@ -72,16 +72,16 @@
     "source_type": "aggregator",
     "region": "EU",
     "http_status": 200,
-    "http_bytes": 243115,
+    "http_bytes": 243048,
     "http_error": "",
-    "http_ms": 1309,
+    "http_ms": 1230,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 130,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 130 candidate links",
-    "checked_at": "2026-10-01T10:06:22.750908+00:00"
+    "checked_at": "2026-10-02T02:17:02.147410+00:00"
   },
   {
     "name": "academictransfer",
@@ -93,16 +93,16 @@
     "source_type": "official_national",
     "region": "EU",
     "http_status": 200,
-    "http_bytes": 232821,
+    "http_bytes": 215705,
     "http_error": "",
-    "http_ms": 3006,
+    "http_ms": 3533,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
-    "candidate_links": 32,
+    "candidate_links": 33,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 32 candidate links",
-    "checked_at": "2026-10-01T10:06:22.751280+00:00"
+    "verdict_reason": "200 OK, 33 candidate links",
+    "checked_at": "2026-10-02T02:17:02.147693+00:00"
   },
   {
     "name": "jobs_ac_uk",
@@ -114,16 +114,16 @@
     "source_type": "official_national",
     "region": "UK",
     "http_status": 200,
-    "http_bytes": 443462,
+    "http_bytes": 445695,
     "http_error": "",
-    "http_ms": 3105,
+    "http_ms": 3451,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
-    "candidate_links": 42,
+    "candidate_links": 43,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 42 candidate links",
-    "checked_at": "2026-10-01T10:06:22.751634+00:00"
+    "verdict_reason": "200 OK, 43 candidate links",
+    "checked_at": "2026-10-02T02:17:02.147975+00:00"
   },
   {
     "name": "prospects",
@@ -137,14 +137,14 @@
     "http_status": 200,
     "http_bytes": 33752,
     "http_error": "",
-    "http_ms": 515,
+    "http_ms": 529,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 50,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 50 candidate links",
-    "checked_at": "2026-10-01T10:06:22.752002+00:00"
+    "checked_at": "2026-10-02T02:17:02.148209+00:00"
   },
   {
     "name": "jobs_ch",
@@ -156,16 +156,16 @@
     "source_type": "official_national",
     "region": "CH",
     "http_status": 200,
-    "http_bytes": 440158,
+    "http_bytes": 441636,
     "http_error": "",
-    "http_ms": 688,
+    "http_ms": 791,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 171,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 171 candidate links",
-    "checked_at": "2026-10-01T10:06:22.752327+00:00"
+    "checked_at": "2026-10-02T02:17:02.148469+00:00"
   },
   {
     "name": "academicjobs",
@@ -177,16 +177,16 @@
     "source_type": "aggregator",
     "region": "CA",
     "http_status": 403,
-    "http_bytes": 5851,
+    "http_bytes": 5830,
     "http_error": "",
-    "http_ms": 324,
+    "http_ms": 262,
     "browser_status": 200,
-    "browser_bytes": 685726,
+    "browser_bytes": 686017,
     "browser_error": "",
     "candidate_links": 174,
     "verdict": "cloudflare_403",
     "verdict_reason": "Site healthy, bot blocked — needs Playwright",
-    "checked_at": "2026-10-01T10:06:22.752687+00:00"
+    "checked_at": "2026-10-02T02:17:02.148711+00:00"
   },
   {
     "name": "jobbank",
@@ -198,16 +198,16 @@
     "source_type": "government",
     "region": "CA",
     "http_status": 200,
-    "http_bytes": 292342,
+    "http_bytes": 295205,
     "http_error": "",
-    "http_ms": 969,
+    "http_ms": 1027,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
-    "candidate_links": 91,
+    "candidate_links": 92,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 91 candidate links",
-    "checked_at": "2026-10-01T10:06:22.752977+00:00"
+    "verdict_reason": "200 OK, 92 candidate links",
+    "checked_at": "2026-10-02T02:17:02.148925+00:00"
   },
   {
     "name": "eluta",
@@ -228,7 +228,7 @@
     "candidate_links": 0,
     "verdict": "failed",
     "verdict_reason": "ConnectError: [SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1016)",
-    "checked_at": "2026-10-01T10:06:22.753257+00:00"
+    "checked_at": "2026-10-02T02:17:02.149120+00:00"
   },
   {
     "name": "jobindex",
@@ -240,16 +240,16 @@
     "source_type": "aggregator",
     "region": "EU",
     "http_status": 200,
-    "http_bytes": 364036,
+    "http_bytes": 364052,
     "http_error": "",
-    "http_ms": 2204,
+    "http_ms": 1818,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
-    "candidate_links": 167,
+    "candidate_links": 164,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 167 candidate links",
-    "checked_at": "2026-10-01T10:06:22.753525+00:00"
+    "verdict_reason": "200 OK, 164 candidate links",
+    "checked_at": "2026-10-02T02:17:02.149301+00:00"
   },
   {
     "name": "postdocjobs",
@@ -261,16 +261,16 @@
     "source_type": "aggregator",
     "region": "GLOBAL",
     "http_status": 200,
-    "http_bytes": 46903,
+    "http_bytes": 46895,
     "http_error": "",
-    "http_ms": 1112,
+    "http_ms": 1242,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
-    "candidate_links": 24,
+    "candidate_links": 25,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 24 candidate links",
-    "checked_at": "2026-10-01T10:06:22.753905+00:00"
+    "verdict_reason": "200 OK, 25 candidate links",
+    "checked_at": "2026-10-02T02:17:02.149554+00:00"
   },
   {
     "name": "thepostdoc",
@@ -282,16 +282,16 @@
     "source_type": "aggregator",
     "region": "GLOBAL",
     "http_status": 200,
-    "http_bytes": 47777,
+    "http_bytes": 47757,
     "http_error": "",
-    "http_ms": 1750,
+    "http_ms": 1771,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
-    "candidate_links": 25,
+    "candidate_links": 26,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 25 candidate links",
-    "checked_at": "2026-10-01T10:06:22.754182+00:00"
+    "verdict_reason": "200 OK, 26 candidate links",
+    "checked_at": "2026-10-02T02:17:02.149744+00:00"
   },
   {
     "name": "jobrxiv",
@@ -303,16 +303,16 @@
     "source_type": "aggregator",
     "region": "EU",
     "http_status": 200,
-    "http_bytes": 450078,
+    "http_bytes": 450014,
     "http_error": "",
-    "http_ms": 4756,
+    "http_ms": 904,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 343,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 343 candidate links",
-    "checked_at": "2026-10-01T10:06:22.754470+00:00"
+    "checked_at": "2026-10-02T02:17:02.149951+00:00"
   },
   {
     "name": "biosciencecareers",
@@ -324,16 +324,16 @@
     "source_type": "aggregator",
     "region": "GLOBAL",
     "http_status": 200,
-    "http_bytes": 37662,
+    "http_bytes": 37825,
     "http_error": "",
-    "http_ms": 2081,
+    "http_ms": 2033,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 14,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 14 candidate links",
-    "checked_at": "2026-10-01T10:06:22.754778+00:00"
+    "checked_at": "2026-10-02T02:17:02.150143+00:00"
   },
   {
     "name": "nature_careers",
@@ -345,16 +345,16 @@
     "source_type": "aggregator",
     "region": "GLOBAL",
     "http_status": 200,
-    "http_bytes": 199859,
+    "http_bytes": 199825,
     "http_error": "",
-    "http_ms": 2548,
+    "http_ms": 2707,
     "browser_status": null,
     "browser_bytes": 0,
     "browser_error": "",
     "candidate_links": 15,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 15 candidate links",
-    "checked_at": "2026-10-01T10:06:22.755056+00:00"
+    "checked_at": "2026-10-02T02:17:02.150323+00:00"
   },
   {
     "name": "applykite",
@@ -366,16 +366,16 @@
     "source_type": "aggregator",
     "region": "CA",
     "http_status": 200,
-    "http_bytes": 566648,
+    "http_bytes": 570706,
     "http_error": "",
-    "http_ms": 1474,
+    "http_ms": 1885,
     "browser_status": 200,
-    "browser_bytes": 583364,
+    "browser_bytes": 587454,
     "browser_error": "",
-    "candidate_links": 131,
+    "candidate_links": 132,
     "verdict": "crawlable",
-    "verdict_reason": "200 OK, 131 candidate links",
-    "checked_at": "2026-10-01T10:06:22.755335+00:00"
+    "verdict_reason": "200 OK, 132 candidate links",
+    "checked_at": "2026-10-02T02:17:02.150506+00:00"
   },
   {
     "name": "academicpositions",
@@ -389,14 +389,14 @@
     "http_status": 403,
     "http_bytes": 5761,
     "http_error": "",
-    "http_ms": 1186,
+    "http_ms": 1066,
     "browser_status": 200,
-    "browser_bytes": 414032,
+    "browser_bytes": 414596,
     "browser_error": "",
     "candidate_links": 289,
     "verdict": "cloudflare_403",
     "verdict_reason": "Site healthy, bot blocked — needs Playwright",
-    "checked_at": "2026-10-01T10:06:22.755613+00:00"
+    "checked_at": "2026-10-02T02:17:02.150691+00:00"
   },
   {
     "name": "researchjobs_com",
@@ -417,7 +417,7 @@
     "candidate_links": 0,
     "verdict": "failed",
     "verdict_reason": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.researchjobs.com'. (_ssl.c:1016)",
-    "checked_at": "2026-10-01T10:06:22.755929+00:00"
+    "checked_at": "2026-10-02T02:17:02.150895+00:00"
   },
   {
     "name": "findajob_eu",
@@ -438,7 +438,7 @@
     "candidate_links": 0,
     "verdict": "failed",
     "verdict_reason": "ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.findajob.eu'. (_ssl.c:1016)",
-    "checked_at": "2026-10-01T10:06:22.756263+00:00"
+    "checked_at": "2026-10-02T02:17:02.151090+00:00"
   },
   {
     "name": "canadian_research",
@@ -452,14 +452,14 @@
     "http_status": 200,
     "http_bytes": 156605,
     "http_error": "",
-    "http_ms": 1715,
+    "http_ms": 1600,
     "browser_status": 200,
     "browser_bytes": 155845,
     "browser_error": "",
     "candidate_links": 196,
     "verdict": "crawlable",
     "verdict_reason": "200 OK, 196 candidate links",
-    "checked_at": "2026-10-01T10:06:22.756606+00:00"
+    "checked_at": "2026-10-02T02:17:02.151322+00:00"
   },
   {
     "name": "daad",
