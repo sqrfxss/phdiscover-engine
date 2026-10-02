@@ -81,7 +81,12 @@ POSTING_HINTS = [
     "/talent", "/stellen", "/vacature", "/emploi", "/lavoro", "/offre",
     "/advert", "/listing", "/showjob", "/findajob", "/virksomhed/",
     "/search/phd", "/our-programs/", "/detail", "/en/job",
-]
+        # Boards that put an id before the slug with no separator: phdjobs.com uses
+        # /jobdetail-<id>-<slug>. The existing "/job-" entry cannot match it, since
+        # "jobdetail" continues with "d", not "-", so is_posting_link had to fall
+        # back on anchor text — which on that board is empty.
+        "/jobdetail", "/jobid", "/jobref", "/vacancyid", "/positionid",
+    ]
 
 # ── Anchor text that marks a listing regardless of URL shape ──────
 LISTING_TEXT = re.compile(
@@ -121,6 +126,26 @@ class Found:
     discovered_at: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
+# Boards that render a card as one flat pipe-separated string put the title
+# first and everything else after it: phdjobs.com/search.php gives
+# "title | institution | city, state | category | Posted : date". Reading the
+# whole row as the title drags the institution and the posting date in with it,
+# so only the first field is taken.
+TITLE_IN_ROW = re.compile(r"^[^|]{15,180}?(?=\s*\|)", re.S)
+
+
+# Board chrome that is anchor-linkable and now resolves. phdjobs.com's own
+# "181 New Jobs Posted Today." banner carries /posting/ nowhere but reads as a
+# title, so it lands in the results unless it is rejected by content.
+NOT_A_POSTING_TEXT = re.compile(
+    r"^\s*\d{0,4}\s*(?:new|latest|all|recent|featured)?\s*"
+    r"(?:jobs?|postings?|positions?|vacancies|results?|openings?)\b"
+    r"\s*(?:posted|available|listed|added)?\s*"
+    r"(?:today|now|this week|here|found|showing)?\s*"
+    r"[.!]?\s*$",
+    re.IGNORECASE)
+
+
 def path_shape(url: str) -> str:
     path = re.sub(r"^https?://[^/]+", "", url)
     parts = [p for p in path.split("?")[0].split("/") if p]
@@ -152,7 +177,12 @@ def harvest(html: str, base: str, source: str, label: str,
 
     for a in soup.find_all("a", href=True):
         href = a["href"]
-        if href.startswith("/"):
+        # Resolve anything that is not already absolute. Checking only for a
+        # leading "/" was the bug: phdjobs.com writes its postings as
+        # "jobdetail-442763-postdoctoral-fellow" — no slash, no scheme — so
+        # those 100 hrefs fell through unjoined, failed the startswith("http")
+        # test below, and the board returned 0 postings while serving 100.
+        if not href.startswith(("http://", "https://", "//")):
             # urljoin, not string concatenation: concatenating a root-relative
             # href onto a paginated URL ("/jobs?page=2") produced
             # "/jobs?page=2/jobs/phd-x", which no longer matches anything.
@@ -176,10 +206,34 @@ def harvest(html: str, base: str, source: str, label: str,
                 if 12 < len(htext) < 200:
                     title = htext
 
+        # Some boards anchor an empty link and put the title in a sibling block:
+        # phdjobs.com/search.php has 100 jobdetail-* anchors whose own text is
+        # empty, with title, location and date in a neighbouring div.
+        # find_parent() hands back the anchor's container, which holds nothing,
+        # so the title came out empty and all 100 postings were dropped for
+        # having no title. Walk up to the row and read it as a whole.
+        row = None
+        if len(title.strip()) <= 12 and card is not None:
+            row = card.find_parent(
+                ["tr", "li", "article", "div"],
+                class_=re.compile(r"row|card|item|post|listing|result|entry", re.I))
+            if row is not None:
+                # Read with "|" as the separator, not " ": get_text(" ")
+                # flattens "title | institution | city" into one run, and the
+                # field split can never fire on a string with no pipes left.
+                rtext = row.get_text("|", strip=True)
+                if len(rtext) > 12:
+                    m = TITLE_IN_ROW.search(rtext.replace("|", " "))
+                    title = (m.group(0).strip() if m
+                             else rtext.split("|")[0].strip()[:120])
+
         if not is_posting_link(href, title if len(title) > 12 else text):
             continue
 
-        ctx = (card.get_text(" ", strip=True) if card else text)[:700]
+        # The context is what relevance() and the topic gate both read, so it
+        # has to come from the row when the title did.
+        ctx_source = row if (row is not None and len(title.strip()) <= 12) else card
+        ctx = (ctx_source.get_text(" ", strip=True) if ctx_source else text)[:700]
         if not relevance(ctx):
             continue
 
@@ -189,6 +243,8 @@ def harvest(html: str, base: str, source: str, label: str,
         # A slug is a better title than a bare org name when the card heading
         # is just the institution ("Queen's University" on canadianresearch.org).
         final_title = title or text or ""
+        if NOT_A_POSTING_TEXT.match(final_title.strip()):
+            continue
         m = re.search(r"/(?:job|position|posting)/([a-z0-9\-]{14,})/?$",
                       href.split("?")[0], re.I)
         if m and len(final_title.split()) <= 3:

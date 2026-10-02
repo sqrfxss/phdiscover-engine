@@ -83,8 +83,8 @@ sources:
   stale_page_run: 4
 - name: phdjobs
   label: PhD Jobs
-  url: https://www.phdjobs.com/
-  search_url: https://www.phdjobs.com/
+  url: https://www.phdjobs.com/search.php
+  search_url: https://www.phdjobs.com/search.php
   region: GLOBAL
   country: ''
   tier: primary
@@ -92,7 +92,8 @@ sources:
   needs_browser: false
   rate_limit_per_min: 10
   status: verified_200
-  notes: Plain HTML, no bot protection. Reliable HTTP crawl.
+  notes: search.php is the real list (100 postings); the homepage only shows 4 featured
+    ones
   is_board: true
   max_pages: 3
   stale_page_run: 4
@@ -144,19 +145,23 @@ sources:
 - name: prospects
   label: Prospects (UK)
   url: https://www.prospects.ac.uk/
-  search_url: https://www.prospects.ac.uk/jobs-and-work-experience
+  search_url: https://www.prospects.ac.uk/graduate-jobs
   region: UK
   country: United Kingdom
   tier: primary
   source_type: official_national
   needs_browser: false
   rate_limit_per_min: 10
-  status: verified_200
-  notes: jobs-and-work-experience hub renders its list client-side; 200 but no extractable
-    vacancy links without a JS search session.
+  status: needs_browser
+  notes: 'Landing page renders but the vacancy list is not in the DOM: 0 job links
+    after JS render, and no listing API is called. /browse-graduate-jobs is empty
+    too; /graduate-jobs carries only a few employer-profile links. The list appears
+    to load behind a live search that this crawler cannot drive. 0 postings, not a
+    selector problem.'
   is_board: true
   max_pages: 3
   stale_page_run: 4
+  declared_status: reachable_no_data
 - name: jobs_ch
   label: Jobs.ch (Switzerland)
   url: https://www.jobs.ch/

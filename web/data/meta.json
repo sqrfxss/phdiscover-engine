@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-10-02T23:09:05.200005+00:00",
-  "position_count": 24,
+  "generated_at": "2026-10-02T23:59:08.115267+00:00",
+  "position_count": 27,
   "sources_contributing": [
     "AcademicPositions",
     "ApplyKite",
     "EURAXESS (EU official)",
     "JobRxiv — Europe",
+    "Jobindex (Denmark)",
     "Jobs.ac.uk (UK)",
     "Karl Landsteiner University of Health Sciences",
     "MODUL University Vienna",
@@ -13,6 +14,6 @@
     "University of Veterinary Medicine Hannover"
   ],
   "with_deadline": 8,
-  "with_country": 15,
-  "enriched": 20
+  "with_country": 18,
+  "enriched": 18
 }
