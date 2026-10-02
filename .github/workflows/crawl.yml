@@ -68,8 +68,17 @@ jobs:
       - name: Probe source health
         run: python scripts/probe_sources.py
 
+      - name: Discover university boards (weekly)
+        # One-off sweep over ~6,000 homepages to find where each university's
+        # vacancy board actually lives. Deliberately not daily: the results are
+        # cached in config/university_boards.json, and a university whose board
+        # has moved is caught here rather than by re-searching every day.
+        # Board URLs change on the order of once a year, so weekly is generous.
+        if: github.event_name == 'schedule'
+        run: python scripts/crawl_universities.py --missing-only --csv config/universities.csv
+
       - name: Crawl all boards
-        run: python scripts/crawl_v2.py
+        run: bash scripts/crawl_all_boards.py
 
       - name: Filter to doctoral biomechanics positions
         run: python scripts/filter_and_merge.py
