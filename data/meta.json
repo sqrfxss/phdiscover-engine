@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-02T23:30:03.567246+00:00",
-  "position_count": 30,
+  "generated_at": "2026-10-02T23:59:08.115267+00:00",
+  "position_count": 27,
   "sources_contributing": [
     "AcademicPositions",
     "ApplyKite",
@@ -13,7 +13,7 @@
     "ResearchJobsEurope",
     "University of Veterinary Medicine Hannover"
   ],
-  "with_deadline": 9,
-  "with_country": 21,
-  "enriched": 25
+  "with_deadline": 8,
+  "with_country": 18,
+  "enriched": 18
 }
