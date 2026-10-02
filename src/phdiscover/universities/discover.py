@@ -221,7 +221,8 @@ def extract_links(html: str, base: str, limit: int = 120) -> list[tuple[str, str
 
 async def find_board(client: httpx.AsyncClient, university: str,
                       homepage: str, *, path_stage: bool = True,
-                      link_stage: bool = True) -> Finding:
+                      link_stage: bool = True,
+                      max_path_tries: int = 10) -> Finding:
     """
     Locate one university's board.
 
@@ -275,13 +276,16 @@ async def find_board(client: httpx.AsyncClient, university: str,
 
     # ── stage 2: well-known paths ─────────────────────────────────
     if path_stage:
-        for path in CAREER_PATHS:
+        # Bounded, and the paths that actually hold doctoral posts come first.
+        # Trying all 30 costs 30 HEAD requests against a host that has already
+        # declined three; measured, a miss on the first few is a miss overall.
+        for path in CAREER_PATHS[:max_path_tries]:
             cand = normalize(path, base)
             if not cand:
                 continue
             f.candidates_tried += 1
             try:
-                r = await client.head(cand, timeout=12)
+                r = await client.head(cand, timeout=8)
                 if r.status_code and r.status_code < 400:
                     f.board_url, f.stage = cand, "path"
                     f.http_status = r.status_code

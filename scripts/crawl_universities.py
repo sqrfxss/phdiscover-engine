@@ -22,6 +22,7 @@ import argparse
 import asyncio
 import csv
 import json
+import os
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -39,11 +40,13 @@ DEFAULT_CSV = Path.home() / "Desktop" / "universities_final.csv"
 REGISTRY = ROOT / "config" / "university_boards.json"
 REPORT = ROOT / "data" / "university_discovery.json"
 
-# Concurrency and politeness. 5,000 hosts is a lot of traffic for someone else's
-# infrastructure; 8 at a time with a per-host delay keeps it to a crawl rather
-# than a load test.
-CONCURRENCY = 8
-PER_HOST_DELAY = 0.4
+# Concurrency and politeness. 6,000 hosts is a lot of traffic for someone else's
+# infrastructure, so this stays a crawl rather than a load test. 16 at a time
+# with a 0.25s per-host delay finished the sweep in well under two hours; at 8
+# and 0.4s it took over five, which is long enough that a run is likely to be
+# interrupted before it finishes.
+CONCURRENCY = int(os.environ.get("UNIV_CONCURRENCY", "16"))
+PER_HOST_DELAY = float(os.environ.get("UNIV_DELAY", "0.25"))
 
 
 def load_registry_csv(path: Path) -> list[dict]:
@@ -77,13 +80,28 @@ def load_registry() -> dict:
         return {"version": 1, "boards": {}, "updated_at": ""}
 
 
-def save_registry(reg: dict) -> None:
+def save_registry(reg: dict, checkpoint: bool = False) -> None:
+    """
+    Write the registry to disk.
+
+    Called every 10 universities during a sweep as well as at the end. The
+    sweep runs for hours over 6,000 hosts; writing only at the end means an
+    interrupted run — a dropped connection, a restart — leaves nothing behind
+    and the whole thing has to start over.
+    """
     REGISTRY.parent.mkdir(parents=True, exist_ok=True)
     reg["updated_at"] = datetime.now(timezone.utc).isoformat()
     reg["boards"] = dedupe_shared_boards(reg.get("boards", {}))
     reg["count"] = len(reg["boards"])
-    REGISTRY.write_text(json.dumps(reg, ensure_ascii=False, indent=1),
-                        encoding="utf-8")
+    if checkpoint:
+        reg["in_progress"] = True
+    else:
+        reg["in_progress"] = False
+    # Write to a sibling then replace, so a kill mid-write cannot truncate the
+    # file and lose the checkpoint it was in the middle of saving.
+    tmp = REGISTRY.with_suffix(".json.tmp")
+    tmp.write_text(json.dumps(reg, ensure_ascii=False, indent=1), encoding="utf-8")
+    tmp.replace(REGISTRY)
 
 
 def dedupe_shared_boards(boards: dict[str, dict]) -> dict[str, dict]:
@@ -130,9 +148,14 @@ def select(rows: list[dict], registry: dict, *, country: str = "",
 
 
 async def probe_one(client: httpx.AsyncClient, row: dict) -> Finding:
-    f = await find_board(client, row["university"], row["homepage"])
+    f = await find_board(client, row["university"], row["homepage"],
+                         max_path_tries=PATH_TRIES)
     await asyncio.sleep(PER_HOST_DELAY)
     return f
+
+
+# How many candidate paths to try before falling through to reading the homepage.
+PATH_TRIES = int(os.environ.get("UNIV_PATH_TRIES", "10"))
 
 
 async def run(targets: list[dict], registry: dict, *, refresh: bool) -> dict:
@@ -204,6 +227,10 @@ async def run(targets: list[dict], registry: dict, *, refresh: bool) -> dict:
                 pct = done / len(targets) * 100
                 print(f"  {done}/{len(targets)} ({pct:4.1f}%)  found={found}",
                       flush=True)
+                # Checkpoint every 10 universities. The full sweep takes hours,
+                # and without this an interrupted run leaves nothing on disk —
+                # which is exactly what happened the first time it was launched.
+                save_registry(registry, checkpoint=True)
 
         # gather has to live INSIDE the `async with`. Placed after it, every
         # worker raised "Cannot send a request, as the client has been closed"
