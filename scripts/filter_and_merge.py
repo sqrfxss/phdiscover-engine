@@ -29,6 +29,7 @@ WEB_OUT = ROOT / "web" / "data" / "ranked_opportunities.json"
 OUT = ROOT / "data" / "filtered_positions.json"
 
 INPUTS = [
+    ("data/university_crawl.json", "university_board", "University careers board"),
     ("data/browser_positions.json", "browser_crawler", "EURAXESS (EU official)"),
     ("data/crawl_v2.json", "crawl_v2", ""),
     ("data/crawl_results.json", "generic_crawler", ""),
@@ -230,7 +231,13 @@ def load_all() -> list[dict]:
                 "deadline": p.get("deadline", ""),
                 "deadline_date": p.get("deadline_date", ""),
                 "deadline_status": p.get("deadline_status", ""),
-                "origin": p.get("method", origin),
+                                # A posting from a university's own board carries the
+                                # institution with it, which is what makes it verifiable: a
+                                # link on jobs.ethz.ch traces to ETH Zurich, a link on an
+                                # aggregator traces to nothing.
+                                "university": (p.get("university")
+                                               or p.get("universities", "").split(",")[0].strip()),
+                                "origin": p.get("method", origin),
             })
     return [r for r in rows if r["url"]]
 
@@ -335,7 +342,17 @@ def title_from_slug(url: str, fallback: str) -> str:
     return slug[0].upper() + slug[1:]
 
 
-def guess_org(context: str, fallback: str) -> str:
+def guess_org(context: str, fallback: str, known: str = "") -> str:
+    """
+    Name the institution, preferring one we actually know over one we guessed.
+
+    A posting harvested from a university's own board already carries the
+    institution's name — it came from that site. Parsing the teaser text for
+    "University of X" instead can produce a different or wrong name, so the
+    registry's answer wins and the regex is only the fallback.
+    """
+    if known and len(known) > 3:
+        return known[:90]
     m = re.search(
         r"(University of [A-Z][\w' -]+|Universit\u00e4t [A-Z\u00c4\u00d6\u00dc][\w' -]+|"
         r"Universit[e\u00e9] [A-Z][\w' -]+|[A-Z][\w' -]{2,30} University|"
@@ -397,7 +414,7 @@ def main() -> None:
         {
             "id": f"pd-{i}",
             "title": f["title"],
-            "university": guess_org(f["context"], f["source_label"]),
+            "university": guess_org(f["context"], f["source_label"], f.get("university", "")),
             "country": f["country"] or "N/A",
             "department": "N/A",
             "pi_name": "See official posting",

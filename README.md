@@ -73,6 +73,47 @@ institutional homepages. Those pages list calls and grants, not individual
 vacancies, and will return zero forever. Counting them as failures would have
 been misleading.
 
+## University boards
+
+`config/universities.csv` holds 6,142 universities across 49 countries with their official URLs. Their
+homepages list no positions, so crawling them directly returns nothing. What varies is only *where
+each board lives* — measured across a sample:
+
+```
+tudelft.nl     /onderwijs/opleidingen/phd
+kth.se         /om/jobba-pa-kth              (Swedish, not English)
+univie.ac.at   careers.univie.ac.at          (a separate subdomain)
+ku.dk          phd.ku.dk                     (a separate subdomain)
+lmu.de         /de/workspace-fuer-studierende/stellenportal
+```
+
+No fixed path list and no English-only word list covers that, so `scripts/crawl_universities.py`
+searches four stages, cheapest first: a careers subdomain, a table of well-known paths, the
+homepage's own links, and finally a scored second look at those links. Results persist in
+`config/university_boards.json` and are re-checked rather than re-searched, so the sweep is a
+one-off cost and the daily run only notices a board that moved.
+
+```bash
+python scripts/crawl_universities.py --missing-only     # sweep the remainder
+python scripts/crawl_universities.py --country Germany  # one country
+python scripts/crawl_universities.py --stats            # what is on file
+python scripts/crawl_all_boards.py                      # crawl the boards
+```
+
+Three details that a naive version gets wrong, all found by running it:
+
+- **Ranking the homepage links.** A link reading "careers" often points at a language switch or a
+  general landing page. LMU Munich offers both `/en` and `/stellenportal`, and the generic one won
+  until links were scored by specificity.
+- **Rejecting student portals.** `universite-paris-saclay.fr/fr/suio` is an enrolment system, not a
+  board, and ranks highly because it sits beside careers text.
+- **Collapsing shared boards.** `ox.ac.uk`, `cam.ac.uk` and `imperial.ac.uk` all resolve to
+  `jobs.ac.uk`. Crawling it three times is three times the load on someone else's site for no new
+  data, so one entry keeps the board and the rest point at it.
+
+Every position carries the university it came from, which is what makes it verifiable later: a link
+on `jobs.ethz.ch` can be traced to ETH Zurich, a link on an aggregator cannot.
+
 ## Reliability
 
 The Iranian network drops connections without warning. Two mechanisms absorb

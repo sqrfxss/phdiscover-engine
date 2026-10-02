@@ -1,150 +1,103 @@
-# PhDiscover — lint and test.
-#
-# The 100 checks live in scripts/test_*.py, not in a tests/ directory: they are
-# standalone programs with their own exit codes, so they run on a machine with
-# no pytest installed and print a readable failure list rather than a traceback.
-# `pytest tests/` collected nothing, because there is no tests/ tree.
 name: CI
-
-on:
+true:
   push:
-    branches: [main]
+    branches:
+    - main
   pull_request:
-    branches: [main]
-  workflow_dispatch:
-
+    branches:
+    - main
+  workflow_dispatch: null
 permissions:
   contents: read
-
 env:
-  PYTHON_VERSION: "3.11"
-
+  PYTHON_VERSION: '3.11'
 jobs:
   checks:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+        cache: pip
+    - name: Install
+      run: 'python -m pip install -U pip
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-          cache: pip
+        pip install -e . ruff
 
-      - name: Install
-        run: |
-          python -m pip install -U pip
-          pip install -e . ruff
+        '
+    - name: Lint
+      continue-on-error: true
+      run: ruff check src/ scripts/ --select=E9,F63,F7,F82,F401
+    - name: Import check
+      run: python -c "import phdiscover, phdiscover.cache, phdiscover.deadlines, phdiscover.reliability;
+        print('imports OK')"
+    - name: Reliability, pagination and deadline checks
+      run: 'python scripts/test_reliability.py
 
-      - name: Lint
-        # Report but do not block: the codebase predates ruff and a wall of
-        # style errors would hide the real problems. Flip continue-on-error to
-        # false once the debt is paid down.
-        continue-on-error: true
-        run: ruff check src/ scripts/ --select=E9,F63,F7,F82,F401
+        python scripts/test_pagination.py
 
-      - name: Import check
-        # Catches a broken module or a renamed import before the crawl does.
-        run: python -c "import phdiscover, phdiscover.cache, phdiscover.deadlines, phdiscover.reliability; print('imports OK')"
+        python scripts/test_deadlines.py
 
-      - name: Reliability, pagination and deadline checks
-        # No network and no browser: these are pure logic, so a failure is a
-        # real regression.
-        run: |
-          python scripts/test_reliability.py
-          python scripts/test_pagination.py
-          python scripts/test_deadlines.py
+        '
+    - name: University board detection
+      run: python scripts/test_university_boards.py
+    - name: End-to-end crawl against a local fake board
+      run: python scripts/test_stale_stop.py
+    - name: Config and published-data sanity
+      run: 'python scripts/check_published.py
 
-      - name: End-to-end crawl against a local fake board
-        run: python scripts/test_stale_stop.py
-
-      - name: Config and published-data sanity
-        run: |
-          python scripts/check_published.py
-
-  # A lock that nobody installs is documentation, not a lock. This job proves the
-  # file reproduces an environment the checks pass in, on a machine that shares
-  # nothing with the one that produced it.
+        '
   locked-environment:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-
     steps:
-      - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    - name: Install exactly what the lock records
+      run: 'python -m pip install -U pip
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
+        pip install -r requirements.lock
 
-      - name: Install exactly what the lock records
-        run: |
-          python -m pip install -U pip
-          pip install -r requirements.lock
-          pip install -e . --no-deps
+        pip install -e . --no-deps
 
-      - name: The lock is complete
-        # Every package the pipeline imports must be present, and pinned. This
-        # is the check that would have caught typing_extensions being dropped
-        # between two runs on the local machine.
-        #
-        # Import names and distribution names differ for three of them, so the
-        # mapping is explicit rather than guessed.
-        run: |
-          python - <<'PY'
-          import sys
-          from importlib.metadata import version, PackageNotFoundError
+        '
+    - name: The lock is complete
+      run: "python - <<'PY'\nimport sys\nfrom importlib.metadata import version, PackageNotFoundError\n\
+        \nIMPORT_TO_DIST = {\n    \"bs4\": \"beautifulsoup4\",\n    \"yaml\": \"PyYAML\"\
+        ,\n    \"dotenv\": \"python-dotenv\",\n    \"httpx\": \"httpx\",\n    \"lxml\"\
+        : \"lxml\",\n    \"playwright\": \"playwright\",\n    \"pydantic\": \"pydantic\"\
+        ,\n    \"pydantic_settings\": \"pydantic-settings\",\n    \"typing_extensions\"\
+        : \"typing_extensions\",\n    \"structlog\": \"structlog\",\n    \"pyalex\"\
+        : \"pyalex\",\n    \"ddgs\": \"ddgs\",\n    \"rapidfuzz\": \"rapidfuzz\",\n\
+        }\n\npinned = {}\nwith open(\"requirements.lock\", encoding=\"utf-8\") as\
+        \ fh:\n    for line in fh:\n        if \"==\" in line and not line.strip().startswith(\"\
+        #\"):\n            name, want = line.strip().split(\"==\", 1)\n          \
+        \  pinned[name.lower().replace(\"_\", \"-\")] = want\n\nmissing, unpinned,\
+        \ drifted = [], [], []\nfor imp, dist in sorted(IMPORT_TO_DIST.items()):\n\
+        \    try:\n        have = version(dist)\n    except PackageNotFoundError:\n\
+        \        missing.append(f\"{imp} (distribution {dist})\")\n        continue\n\
+        \    want = pinned.get(dist.lower().replace(\"_\", \"-\"))\n    if want is\
+        \ None:\n        unpinned.append(f\"{dist}=={have}\")\n    elif have.lower()\
+        \ != want.lower():\n        drifted.append(f\"{dist}: {have} != {want}\")\n\
+        \nfor label, rows in ((\"not installed\", missing),\n                    (\"\
+        installed but not pinned\", unpinned),\n                    (\"installed at\
+        \ a different version\", drifted)):\n    for row in rows:\n        print(f\"\
+        ::error::{row} - {label}\")\nif not (missing or unpinned or drifted):\n  \
+        \  print(f\"lock is complete: {len(IMPORT_TO_DIST)} required packages pinned\"\
+        )\nsys.exit(1 if (missing or unpinned or drifted) else 0)\nPY\n"
+    - name: The checks pass on the locked environment
+      run: 'python scripts/test_reliability.py
 
-          IMPORT_TO_DIST = {
-              "bs4": "beautifulsoup4",
-              "yaml": "PyYAML",
-              "dotenv": "python-dotenv",
-              "httpx": "httpx",
-              "lxml": "lxml",
-              "playwright": "playwright",
-              "pydantic": "pydantic",
-              "pydantic_settings": "pydantic-settings",
-              "typing_extensions": "typing_extensions",
-              "structlog": "structlog",
-              "pyalex": "pyalex",
-              "ddgs": "ddgs",
-              "rapidfuzz": "rapidfuzz",
-          }
+        python scripts/test_pagination.py
 
-          pinned = {}
-          with open("requirements.lock", encoding="utf-8") as fh:
-              for line in fh:
-                  if "==" in line and not line.strip().startswith("#"):
-                      name, want = line.strip().split("==", 1)
-                      pinned[name.lower().replace("_", "-")] = want
+        python scripts/test_deadlines.py
 
-          missing, unpinned, drifted = [], [], []
-          for imp, dist in sorted(IMPORT_TO_DIST.items()):
-              try:
-                  have = version(dist)
-              except PackageNotFoundError:
-                  missing.append(f"{imp} (distribution {dist})")
-                  continue
-              want = pinned.get(dist.lower().replace("_", "-"))
-              if want is None:
-                  unpinned.append(f"{dist}=={have}")
-              elif have.lower() != want.lower():
-                  drifted.append(f"{dist}: {have} != {want}")
+        python scripts/test_stale_stop.py
 
-          for label, rows in (("not installed", missing),
-                              ("installed but not pinned", unpinned),
-                              ("installed at a different version", drifted)):
-              for row in rows:
-                  print(f"::error::{row} - {label}")
-          if not (missing or unpinned or drifted):
-              print(f"lock is complete: {len(IMPORT_TO_DIST)} required packages pinned")
-          sys.exit(1 if (missing or unpinned or drifted) else 0)
-          PY
+        python scripts/check_published.py
 
-      - name: The checks pass on the locked environment
-        run: |
-          python scripts/test_reliability.py
-          python scripts/test_pagination.py
-          python scripts/test_deadlines.py
-          python scripts/test_stale_stop.py
-          python scripts/check_published.py
+        '

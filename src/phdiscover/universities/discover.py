@@ -74,6 +74,31 @@ STUDENT_PORTAL = re.compile(
     r"studier|inscription|immatriculation|enrol|admission|admissions|"
     r"apply-application|candidate|campus|student|etudiant|studierenden)(/|$)", re.I)
 
+# Institutional pages that sit next to a careers link and match the same
+# vocabulary. Measured on the first sweep: uamd.edu.al/misioni-dhe-vizioni
+# ("mission and vision") and uda.ad/recerca/escola-internacional were both
+# returned as boards, and neither lists a single vacancy.
+#
+# The leading-boundary requirement is dropped: real boards sit under these
+# segments as prefixes — /recherche/stellenangebote, /research/jobs — so a
+# segment match alone is right, and a whole-segment match alone is what let
+# "misioni-dhe-vizioni" through.
+INSTITUTIONAL_PAGE = re.compile(
+    r"/(misioni|missio|vizioni|mision|vision|about|over|ueber|uber|"
+    r"historia|history|historie|structure|estructura|organigrama|organigram|"
+    r"recherche|research|recerca|forschung|onderzoek|policy|politique|"
+    r"politika|polityka|nauka|wissenschaft|science|sciences|ciencias)"
+    r"(/|-|$)", re.I)
+
+# A board page lists postings. These words appear in its chrome and nowhere
+# else useful, so their absence from a candidate is evidence against it.
+LISTING_WORDS = re.compile(
+    r"(job|jobs|vacanc|vacancy|vacancies|vakan|vacante|stellenangebot|"
+    r"offre|oferta|vaga|offerta|phd|doctoral|doktorat|postdoc|"
+    r"position|positions|opening|openings|recruit|recrutement|"
+    r"work with us|werken bij|arbeiten|current|open|available|search|"
+    r"listing|announcement|suche|recherche)", re.I)
+
 # Filenames that only ever serve assets, never a vacancy list.
 ASSET = re.compile(r"\.(pdf|docx?|xlsx?|pptx?|zip|jpe?g|png|gif|svg|css|js|"
                    r"mp4|mp3|ico|woff2?|ttf)(\?|$)", re.I)
@@ -123,25 +148,44 @@ def normalize(url: str, base: str) -> str:
     if p.scheme not in ("http", "https"):
         return ""
     # Drop tracking parameters; keep anything that looks like a real query.
-    if "?" in p.query:
-        keep = [kv for kv in p.query.split("&")
-                if kv and not kv.lower().startswith(("utm_", "ref", "fbclid",
-                                                     "gclid", "source="))
-                and "utm_" not in kv.lower()]
+    # Parsing the query has to happen on the raw string before urlparse sees
+    # it: urljoin returns "url?query" as one piece, and p.query is only
+    # populated once the string has been split — which urlparse does, so the
+    # check below was fine but `?utm_source=a&id=7` kept its utm because the
+    # filter tested startswith("utm_") on the whole query, not each pair.
+    if p.query:
+        keep = []
+        for kv in p.query.split("&"):
+            if not kv:
+                continue
+            key = kv.split("=", 1)[0].strip().lower()
+            if key.startswith(("utm_", "fbclid", "gclid", "msclkid", "_ga",
+                               "ref", "referrer", "source", "campaign")):
+                continue
+            keep.append(kv)
         query = "&".join(keep)
     else:
-        query = p.query
+        query = ""
     path = p.path.rstrip("/") or "/"
     return urlunparse((p.scheme, p.netloc.lower(), path, "", query, ""))
 
 
-def looks_like_board(url: str, text: str = "") -> bool:
+def looks_like_board(url: str, text: str = "", page_html: str = "") -> bool:
     """Does this URL plausibly hold a vacancy list?"""
     if not url or ASSET.search(url):
         return False
+    path = urlparse(url).path or ""
     # A student portal is not a board, however the link text reads.
-    if STUDENT_PORTAL.search(urlparse(url).path or ""):
+    if STUDENT_PORTAL.search(path):
         return False
+    # Neither is the university's own mission or research page. These sit right
+    # next to the careers link and share its vocabulary, which is why they
+    # surfaced in the first sweep.
+    if INSTITUTIONAL_PAGE.search(path):
+        # ...unless the page's own text names vacancies, in which case it is a
+        # board that happens to live under /research/.
+        if not (page_html and LISTING_WORDS.search(page_html)):
+            return False
     if NOT_A_BOARD.search(text) or NOT_A_BOARD.search(url):
         # ...unless the href itself is unmistakably a board.
         if not any(k in url.lower() for k in
@@ -150,6 +194,16 @@ def looks_like_board(url: str, text: str = "") -> bool:
             return False
     blob = f"{url} {text}".lower()
     return any(w in blob for w in CAREER_WORDS)
+
+
+def page_lists_positions(html: str) -> bool:
+    """Does this page actually contain vacancy listings?"""
+    if not html:
+        return False
+    # A board's own nav says so; so does the first row of its table.
+    if LISTING_WORDS.search(html):
+        return True
+    return False
 
 
 def rank_board_links(links: list[tuple[str, str]]) -> list[tuple[str, str]]:

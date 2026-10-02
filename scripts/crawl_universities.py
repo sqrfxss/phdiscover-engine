@@ -32,6 +32,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import httpx  # noqa: E402
 
+from crawl_v2 import harvest  # noqa: E402
 from phdiscover.universities.discover import (  # noqa: E402
     UA, Finding, find_board,
 )
@@ -237,7 +238,53 @@ async def run(targets: list[dict], registry: dict, *, refresh: bool) -> dict:
         # and the run finished with zero boards and a clean exit code.
         await asyncio.gather(*(worker(row) for row in targets))
 
+
     return registry
+
+
+async def verify_boards(boards: list[dict], *, sample: int = 0) -> None:
+    """
+    Fetch each board and confirm it actually lists vacancies.
+
+    Discovery only proves a URL exists and looks like a careers page. It does
+    not prove the page lists anything: measured, uamd.edu.al/misioni-dhe-vizioni
+    ("mission and vision") and uda.ad/recerca/escola-internacional both returned
+    200 and both list zero positions. Reading the page is the only way to tell a
+    board from a page that merely sounds like one.
+
+    Only the sample is fetched by default — verifying all of them costs a second
+    full sweep of 6,000 hosts.
+    """
+    from phdiscover.universities.discover import page_lists_positions
+
+    targets = boards if not sample else boards[:sample]
+    checked = listed = 0
+
+    async with httpx.AsyncClient(trust_env=False, follow_redirects=True,
+                                 timeout=25,
+                                 headers={"User-Agent": UA}) as client:
+        for b in targets:
+            url = b.get("board_url") or ""
+            if not url:
+                continue
+            checked += 1
+            try:
+                r = await client.get(url)
+            except Exception as e:  # noqa: BLE001
+                b["verify_error"] = f"{type(e).__name__}: {str(e)[:50]}"
+                continue
+            b["verify_status"] = r.status_code
+            if r.status_code == 200:
+                items = harvest(r.text, str(r.url), "verify", "", "", "http")
+                b["verify_postings"] = len(items)
+                if items or page_lists_positions(r.text):
+                    b["verified"] = True
+                    listed += 1
+                else:
+                    b["verified"] = False
+            if checked % 25 == 0 or checked == len(targets):
+                print(f"  verified {checked}/{len(targets)}  "
+                      f"lists postings: {listed}", flush=True)
 
 
 def write_report(reg: dict, rows: list[dict]) -> None:
@@ -287,6 +334,9 @@ def main() -> int:
                     help="re-search boards that were already found")
     ap.add_argument("--missing-only", action="store_true",
                     help="skip universities whose board is already on file")
+    ap.add_argument("--verify", type=int, default=0, metavar="N",
+                    help="fetch N boards found so far and confirm they list "
+                         "vacancies (0 = skip; costs one fetch per board)")
     ap.add_argument("--stats", action="store_true",
                     help="report what is on file and exit")
     args = ap.parse_args()
@@ -302,6 +352,16 @@ def main() -> int:
         print(f"still failing            : "
               f"{sum(1 for b in registry['boards'].values() if not b.get('still_ok'))}")
         print(f"report -> {REPORT}")
+        return 0
+
+    if args.verify:
+        found = [b for b in registry.get("boards", {}).values()
+                 if b.get("board_url")]
+        print(f"=> verifying {min(args.verify, len(found))} boards")
+        asyncio.run(verify_boards(found, sample=args.verify))
+        save_registry(registry)
+        ok = sum(1 for b in found if b.get("verified"))
+        print(f"\n  confirmed listing vacancies: {ok}/{len(found)}")
         return 0
 
     targets = select(rows, registry, country=args.country,
