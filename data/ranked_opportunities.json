@@ -1,6 +1,44 @@
 [
   {
     "id": "pd-001",
+    "title": "Phd student in integrative biomechanics for osteoarthritis prevention and treatment at ubc",
+    "university": "Apply Kite",
+    "country": "Canada",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 100,
+    "contact_priority": "HIGH",
+    "url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+    "source_url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+    "posted": "",
+    "description": "PhD position available in the Adaptive Bionics Lab at the University of Calgary, Canada, on the\nSmartwear Revolution\nproject. The research focuses on wearable upper- and lower-limb assistive devices and combines\nmusculoskeletal modeling\n,\ninverse dynamics\n,\nmotion capture\n,\nEMG\n, and\nground reaction force experiments\nto inform actuator design.\nThis opportunity is especially relevant for students with a background in\n",
+    "source": "ApplyKite",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ApplyKite",
+        "value": "Phd student in integrative biomechanics for osteoarthritis prevention and treatment at ubc",
+        "source_url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "503 chars of description, country=Canada",
+        "source_url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+        "source_type": "official",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-002",
     "title": "Doctoral Student in Neuromotor Interfaces for Dexterous Robot Teleoperation (multimodal egocentric vision + EMG)",
     "university": "EURAXESS",
     "country": "Switzerland",
@@ -45,7 +83,7 @@
     ]
   },
   {
-    "id": "pd-002",
+    "id": "pd-003",
     "title": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
     "university": "ResearchJobsEurope",
     "country": "Denmark",
@@ -90,7 +128,7 @@
     ]
   },
   {
-    "id": "pd-003",
+    "id": "pd-004",
     "title": "PhD position in probabilistic machine learning and statistics (307053) | University of Oslo",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -135,7 +173,7 @@
     ]
   },
   {
-    "id": "pd-004",
+    "id": "pd-005",
     "title": "DPhil Studentship – Investigating and Modelling Brain Dynamics Across Species",
     "university": "Jobs.ac.uk",
     "country": "United Kingdom",
@@ -180,7 +218,7 @@
     ]
   },
   {
-    "id": "pd-005",
+    "id": "pd-006",
     "title": "PhD Candidate in Rehabilitation Medicine – Biological Age and Biomarkers",
     "university": "EURAXESS",
     "country": "Netherlands",
@@ -218,7 +256,7 @@
     ]
   },
   {
-    "id": "pd-006",
+    "id": "pd-007",
     "title": "Doctoral Positions in Robot Learning and Soft, Musculoskeletal, and Biohybrid Robotics",
     "university": "EURAXESS",
     "country": "Switzerland",
@@ -256,7 +294,45 @@
     ]
   },
   {
-    "id": "pd-007",
+    "id": "pd-008",
+    "title": "Phd scholarship in real time multiphysics modeling of pem systems for an agricultural microgrid digital twin",
+    "university": "Apply Kite",
+    "country": "Canada",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 73,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+    "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+    "posted": "",
+    "description": "Candidates should hold or be completing a Master’s degree in electrical engineering, mechanical engineering, energy engineering, mechatronics or a related field. Required skills include dynamic systems and modeling, numerical simulation, data analysis, MATLAB/Simulink, programming, and numerical analysis. Experience with multiphysics/mechatronic modeling, thermodynamics, PEM systems, electrochemistry, model reduction",
+    "source": "ApplyKite",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ApplyKite",
+        "value": "Phd scholarship in real time multiphysics modeling of pem systems for an agricultural microgrid digital twin",
+        "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "609 chars of description, country=Canada",
+        "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+        "source_type": "official",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-009",
     "title": "PhD Candidate in Modelling and Executing Cascading Effects within a Cyber Range",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -301,7 +377,7 @@
     ]
   },
   {
-    "id": "pd-008",
+    "id": "pd-010",
     "title": "PhD Position Video-based Hand Motion-tracking for Patients with Rheumatoid Arthritis",
     "university": "EURAXESS",
     "country": "Netherlands",
@@ -346,7 +422,45 @@
     ]
   },
   {
-    "id": "pd-009",
+    "id": "pd-011",
+    "title": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech",
+    "university": "DTU Jobs side",
+    "country": "Denmark",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 70,
+    "contact_priority": "MEDIUM",
+    "url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
+    "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
+    "posted": "",
+    "description": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech Kgs. Lyngby Se rejsetid We are looking for an ambitious PhD student to work at the intersection of digital health, artificial intelligence, large language models (LLMs), and human-computer interaction. The PhD project will investigate how LLMs and interactive AI can help researchers explore complex health data collected from smartph",
+    "source": "Jobindex (Denmark)",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on Jobindex (Denmark)",
+        "value": "PhD scholarship in AI-Augmented Sense-Making in Digital Phenotyping - DTU Health Tech",
+        "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
+        "source_type": "aggregator",
+        "confidence": 0.7
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "0 chars of description, country=Denmark",
+        "source_url": "https://efzu.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/da/sites/CX_1/job/8189",
+        "source_type": "official",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-012",
     "title": "PhD positions in Human-Centred Artificial Intelligence - HCC",
     "university": "EURAXESS",
     "country": "Denmark",
@@ -391,7 +505,59 @@
     ]
   },
   {
-    "id": "pd-010",
+    "id": "pd-013",
+    "title": "PhD Research Fellow in fairness in artificial intelligence (307994) | University of Oslo",
+    "university": "ResearchJobsEurope",
+    "country": "Norway",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "Funding evidence on page",
+    "application_deadline": "Deadline 9 Oct 2026",
+    "deadline_date": "2026-10-09",
+    "deadline_status": "open",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 64,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
+    "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
+    "posted": "",
+    "description": "The norm is as follows: The average grade point for courses included in the Bachelor’s degree must be C or better in the Norwegian educational system The average grade point for courses included in the Master’s degree must be B or better in the Norwegian educational system The Master’s thesis must have the grade B or better in the Norwegian educational system The purpose of the fellowship is research training leading",
+    "source": "ResearchJobsEurope",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
+        "value": "PhD Research Fellow in fairness in artificial intelligence (307994) | University of Oslo",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
+        "source_type": "aggregator",
+        "confidence": 0.8
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "2500 chars of description, country=Norway",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Application deadline found on the page",
+        "value": "Deadline 9 Oct 2026",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
+        "source_type": "official",
+        "confidence": 0.75
+      },
+      {
+        "claim": "Funding or salary language present",
+        "value": "Yes",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
+        "source_type": "official",
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "id": "pd-014",
     "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -422,7 +588,7 @@
     ]
   },
   {
-    "id": "pd-011",
+    "id": "pd-015",
     "title": "Phd opportunity in artificial intelligence for pet imaging and medical image analysis",
     "university": "Apply Kite",
     "country": "Canada",
@@ -460,7 +626,7 @@
     ]
   },
   {
-    "id": "pd-012",
+    "id": "pd-016",
     "title": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
     "university": "ResearchJobsEurope",
     "country": "Denmark",
@@ -505,7 +671,7 @@
     ]
   },
   {
-    "id": "pd-013",
+    "id": "pd-017",
     "title": "PhD in Fast Controlled Photonic Integrated Switches for High Performance Artificial Intelligence Compute Clusters",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -550,7 +716,7 @@
     ]
   },
   {
-    "id": "pd-014",
+    "id": "pd-018",
     "title": "Doctoral Researcher / Väitöskirjatutkija (Deep Learning for High-Frequency Financial Data Modeling)",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -595,7 +761,7 @@
     ]
   },
   {
-    "id": "pd-015",
+    "id": "pd-019",
     "title": "PhD Position in Generative Modeling of Human Development and Disease",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -613,7 +779,7 @@
     "url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
     "source_url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
     "posted": "",
-    "description": "University of Basel Basel, Switzerland PhD Position in Generative Modeling of Human Development and Disease Fully funded 4-year PhD: build generative models on single-cell & spatial genomics to study development/disease. Need quantitative MSc, strong Python + PyTorch/JAX, GitHub. Published 1 week ago Closing on: 2026-10-16 (Europe/Zurich) PhD",
+    "description": "University of Basel Basel, Switzerland PhD Position in Generative Modeling of Human Development and Disease Fully funded 4-year PhD: build generative models on single-cell & spatial genomics to study development/disease. Need quantitative MSc, strong Python + PyTorch/JAX, GitHub. Published 2 weeks ago Closing on: 2026-10-16 (Europe/Zurich) PhD",
     "source": "AcademicPositions",
     "evidence": [
       {
@@ -626,7 +792,52 @@
     ]
   },
   {
-    "id": "pd-016",
+    "id": "pd-020",
+    "title": "PhD Studentship: Richard Elphick Studentship in Modelling Progression Risks in Barrett's Oesophagus",
+    "university": "Jobs.ac.uk",
+    "country": "United Kingdom",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "Funding evidence on page",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+    "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+    "posted": "",
+    "description": "Oesophageal adenocarcinoma (OAC), the most common oesophageal cancer in the UK and US, has a 5-year survival rate below 20%, though outcomes improve with early detection. Barrett's oesophagus, an asymptomatic precursor, is monitored to detect and treat dysplasia before cancer develops or to identify cancer at an earlier stage. However, most cases remain undiagnosed. The Cytosponge, developed by Prof Fitzgerald's lab,",
+    "source": "Jobs.ac.uk (UK)",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on Jobs.ac.uk (UK)",
+        "value": "PhD Studentship: Richard Elphick Studentship in Modelling Progression Risks in Barrett's Oesophagus",
+        "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+        "source_type": "official",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "552 chars of description, country=United Kingdom",
+        "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Funding or salary language present",
+        "value": "Yes",
+        "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+        "source_type": "official",
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "id": "pd-021",
     "title": "PHD Program Admissions",
     "university": "MUVi Apply",
     "country": "Austria",
@@ -664,7 +875,7 @@
     ]
   },
   {
-    "id": "pd-017",
+    "id": "pd-022",
     "title": "Doctoral Position in Advanced Bioelectronic & Electrical Conversion Research",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -695,7 +906,7 @@
     ]
   },
   {
-    "id": "pd-018",
+    "id": "pd-023",
     "title": "PhD position (4-year funded) Full-time brain Cellular neuroscience clinical neuroscience Hospital del Mar Research Institute, Barcelona Spain Barcelona on 18 Se",
     "university": "jobRxiv",
     "country": "N/A",
@@ -747,7 +958,7 @@
     ]
   },
   {
-    "id": "pd-019",
+    "id": "pd-024",
     "title": "PhD Program Mental Health and Neuroscience",
     "university": "Karl Landsteiner University of Health Sciences",
     "country": "Austria",
@@ -785,7 +996,7 @@
     ]
   },
   {
-    "id": "pd-020",
+    "id": "pd-025",
     "title": "PhD Programme \"Systems Neuroscience\"",
     "university": "Stiftung Tierärztliche Hochschule Hannover",
     "country": "Germany",
@@ -823,7 +1034,7 @@
     ]
   },
   {
-    "id": "pd-021",
+    "id": "pd-026",
     "title": "PhD Positions in Neurosciences and Translational Psychiatry research, including a residency/PhD track option for medical doctors",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -854,14 +1065,14 @@
     ]
   },
   {
-    "id": "pd-022",
+    "id": "pd-027",
     "title": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
     "university": "AcademicPositions",
     "country": "N/A",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
-    "funding": "Funding evidence on page",
+    "funding": "See official posting",
     "application_deadline": "See official posting",
     "deadline_date": "",
     "deadline_status": "unknown",
@@ -872,7 +1083,7 @@
     "url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
     "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
     "posted": "",
-    "description": "Bioinformatics , , Biostatistics , , Cell Biology , , Chronobiology , , Computational Biology , and 27 more Developmental Biology , Genetics , Human Biology , Molecular Biology , Neuroscience , Systems Biology , Computing in Mathematics, Natural Science, Engineering and Medicine , Medical Imaging , Addiction Medicine , Biomedicine , Clinical Sciences , Endocrinology , Epidemiology , Molecular Medicine , Neurology , O",
+    "description": "International Max Planck Research School for Translational Psychiatry (IMPRS-TP) Munich, Germany Fully funded PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors Fully funded PhD positions in neuroscience and translational psychiatry with integrated Residency/PhD track for medical doctors. No tuition fees. Open to MSc or MD graduates worldwide. Published 1 month ",
     "source": "AcademicPositions",
     "evidence": [
       {
@@ -880,26 +1091,12 @@
         "value": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
         "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
         "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "678 chars of description",
-        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-        "source_type": "official",
-        "confidence": 0.6
+        "confidence": 0.7
       }
     ]
   },
   {
-    "id": "pd-023",
+    "id": "pd-028",
     "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
     "university": "AcademicPositions",
     "country": "Sweden",
@@ -944,7 +1141,52 @@
     ]
   },
   {
-    "id": "pd-024",
+    "id": "pd-029",
+    "title": "PhD Studentship in the NIHR Applied Research Collaboration (ARC): North East and North Cumbria (NENC): Researching Equity, Access and Place-based-health: Community-based Diagnostic",
+    "university": "Jobs.ac.uk",
+    "country": "United Kingdom",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "Funding evidence on page",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 41,
+    "contact_priority": "LOW",
+    "url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+    "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+    "posted": "",
+    "description": "The researcher will work closely with a supervisory team that includes expertise of health inequalities, service access, equity diversity and inclusion, place-based-health and statistical analysis. Research inclusion will be embedded throughout, mainly through the close collaborative working with external partners (the Great North Healthcare Alliance) and public contributors across the North East of England. The proj",
+    "source": "Jobs.ac.uk (UK)",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on Jobs.ac.uk (UK)",
+        "value": "PhD Studentship in the NIHR Applied Research Collaboration (ARC): North East and North Cumbria (NENC): Researching Equity, Access and Place-based-health: Community-based Diagnostic",
+        "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+        "source_type": "official",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "683 chars of description, country=United Kingdom",
+        "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Funding or salary language present",
+        "value": "Yes",
+        "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+        "source_type": "official",
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "id": "pd-030",
     "title": "PhD positions in Germany Full-time AI applied mathematics behavioral neuroscience $70,000 - $75,000 MAX PLANCK Institute for Human Cognitive and Brain Sciences Germa",
     "university": "jobRxiv",
     "country": "N/A",

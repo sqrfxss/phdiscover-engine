@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-02T02:40:54.021843+00:00",
+  "generated_at": "2026-10-02T23:30:03.799746+00:00",
   "totals": {
     "sources_in_registry": 56,
     "job_boards": 22,
     "not_job_boards": 34,
     "boards_returning_data": 17,
     "boards_returning_nothing": 5,
-    "distinct_postings_found": 464
+    "distinct_postings_found": 573
   },
   "boards_with_data": [
     {
@@ -17,11 +17,25 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 155,
+      "last_returned": 185,
       "last_note": "200 134 postings, 8 page(s) (secure)",
       "http_status": 200,
-      "bytes": 243048,
+      "bytes": 239840,
       "url": "https://www.researchjobseurope.com/jobs"
+    },
+    {
+      "name": "jobs_ac_uk",
+      "label": "Jobs.ac.uk (UK)",
+      "kind": "job_board",
+      "status": "verified_200",
+      "status_reason": "Crawlable",
+      "reach": "Plain HTTP",
+      "tls_verify": true,
+      "last_returned": 106,
+      "last_note": "200 45 postings, 6 page(s) (secure)",
+      "http_status": 200,
+      "bytes": 452689,
+      "url": "https://www.jobs.ac.uk/jobs/phd"
     },
     {
       "name": "postdocjobs",
@@ -38,20 +52,6 @@
       "url": "https://www.postdocjobs.com/"
     },
     {
-      "name": "jobs_ac_uk",
-      "label": "Jobs.ac.uk (UK)",
-      "kind": "job_board",
-      "status": "verified_200",
-      "status_reason": "Crawlable",
-      "reach": "Plain HTTP",
-      "tls_verify": true,
-      "last_returned": 54,
-      "last_note": "200 45 postings, 6 page(s) (secure)",
-      "http_status": 200,
-      "bytes": 445695,
-      "url": "https://www.jobs.ac.uk/jobs/phd"
-    },
-    {
       "name": "jobrxiv",
       "label": "JobRxiv — Europe",
       "kind": "job_board",
@@ -59,10 +59,10 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 28,
+      "last_returned": 32,
       "last_note": "200 21 postings, 1 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 450014,
+      "bytes": 449337,
       "url": "https://jobrxiv.org/job-region/europe/"
     },
     {
@@ -94,6 +94,20 @@
       "url": "https://academicpositions.com/jobs/position/phd"
     },
     {
+      "name": "euraxess",
+      "label": "EURAXESS (EU main portal)",
+      "kind": "job_board",
+      "status": "verified_200",
+      "status_reason": "Crawlable",
+      "reach": "Playwright (Cloudflare / client-rendered)",
+      "tls_verify": true,
+      "last_returned": 22,
+      "last_note": "browser 200, 9 postings",
+      "http_status": 200,
+      "bytes": 174998,
+      "url": "https://euraxess.ec.europa.eu/jobs/search"
+    },
+    {
       "name": "academicjobs",
       "label": "Academic Jobs (Canada)",
       "kind": "job_board",
@@ -108,18 +122,18 @@
       "url": "https://www.academicjobs.com/en-ca/research-jobs"
     },
     {
-      "name": "euraxess",
-      "label": "EURAXESS (EU main portal)",
+      "name": "applykite",
+      "label": "ApplyKite",
       "kind": "job_board",
       "status": "verified_200",
       "status_reason": "Crawlable",
       "reach": "Playwright (Cloudflare / client-rendered)",
       "tls_verify": true,
-      "last_returned": 15,
-      "last_note": "browser 200, 9 postings",
+      "last_returned": 20,
+      "last_note": "browser 200, 12 postings",
       "http_status": 200,
-      "bytes": 178276,
-      "url": "https://euraxess.ec.europa.eu/jobs/search"
+      "bytes": 576350,
+      "url": "https://www.applykite.com/search/positions/all/canada"
     },
     {
       "name": "jobs_ch",
@@ -129,25 +143,11 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 12,
+      "last_returned": 14,
       "last_note": "200 12 postings, 4 page(s) (secure)",
       "http_status": 200,
-      "bytes": 441686,
+      "bytes": 455123,
       "url": "https://www.jobs.ch/en/vacancies/?term=phd"
-    },
-    {
-      "name": "applykite",
-      "label": "ApplyKite",
-      "kind": "job_board",
-      "status": "verified_200",
-      "status_reason": "Crawlable",
-      "reach": "Playwright (Cloudflare / client-rendered)",
-      "tls_verify": true,
-      "last_returned": 12,
-      "last_note": "browser 200, 12 postings",
-      "http_status": 200,
-      "bytes": 570706,
-      "url": "https://www.applykite.com/search/positions/all/canada"
     },
     {
       "name": "jobindex",
@@ -157,10 +157,10 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 11,
+      "last_returned": 14,
       "last_note": "browser 200, 11 postings",
       "http_status": 200,
-      "bytes": 364052,
+      "bytes": 367154,
       "url": "https://www.jobindex.dk/jobsoegning?q=phd"
     },
     {
@@ -171,10 +171,10 @@
       "status_reason": "Crawlable",
       "reach": "Plain HTTP",
       "tls_verify": true,
-      "last_returned": 10,
+      "last_returned": 13,
       "last_note": "200 5 postings, 1 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 215705,
+      "bytes": 219482,
       "url": "https://www.academictransfer.com/en/jobs"
     },
     {
@@ -216,7 +216,7 @@
       "last_returned": 2,
       "last_note": "200 2 postings, 2 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 37825,
+      "bytes": 37863,
       "url": "https://www.biosciencecareers.com/jobs"
     },
     {
@@ -230,7 +230,7 @@
       "last_returned": 1,
       "last_note": "200 1 postings, 2 page(s) (secure), pager exhausted",
       "http_status": 200,
-      "bytes": 295205,
+      "bytes": 292257,
       "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=phd"
     },
     {
@@ -244,7 +244,7 @@
       "last_returned": 1,
       "last_note": "200 1 postings, 3 page(s) (secure)",
       "http_status": 200,
-      "bytes": 199825,
+      "bytes": 199875,
       "url": "https://www.nature.com/careers"
     }
   ],
@@ -260,7 +260,7 @@
       "last_returned": 0,
       "last_note": "browser 200, 0 postings",
       "http_status": 200,
-      "bytes": 44979,
+      "bytes": 44974,
       "url": "https://www.phdjobs.com/"
     },
     {
