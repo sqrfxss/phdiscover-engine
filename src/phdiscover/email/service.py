@@ -72,13 +72,26 @@ class ResendProvider(EmailProvider):
         self.url = "https://api.resend.com/emails"
 
     async def send(self, to, subject, html_body, from_name, reply_to="") -> EmailResult:
+        # Resend accepts a display name only on a verified domain. On the
+        # onboarding address it rejects the whole request with
+        # "invalid from address", so the bare address is used until a domain
+        # is configured.
+        sender = self.domain or "onboarding@resend.dev"
+        if self.domain and from_name:
+            sender = f"{from_name} <{self.domain}>"
+
         payload: dict[str, Any] = {
-            "from": f"{from_name} <{self.domain or 'onboarding@resend.dev'}>",
+            "from": sender,
             "to": to,
             "subject": subject,
             "html": html_body,
         }
-        if reply_to:
+        # reply_to is deliberately omitted unless a verified domain exists.
+        # Resend validates it as another recipient, so on an unverified account
+        # it turns a legitimate send into
+        # "you can only send testing emails to your own address" — measured,
+        # 403, even when to[] was already that same address.
+        if reply_to and self.domain:
             payload["reply_to"] = reply_to
 
         async with httpx.AsyncClient(trust_env=False, timeout=30) as client:
