@@ -141,3 +141,17 @@ jobs:
             data/COVERAGE.md
           retention-days: 30
           if-no-files-found: ignore
+
+      # Hand this run's postings to the local machine, so the next local
+      # pipeline can merge them. A local run reaches different boards: it walks
+      # more pages where the network allows, and it found 5 EURAXESS positions
+      # in one measured run that the runner did not. One run overwrites the
+      # other unless both are kept.
+      - name: Publish the crawl for the local merge
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crawl-for-local
+          path: data/crawl_v2.json
+          retention-days: 3
+          if-no-files-found: ignore

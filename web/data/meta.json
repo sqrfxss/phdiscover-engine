@@ -1,16 +1,15 @@
 {
-  "generated_at": "2026-10-01T04:29:14.657193+00:00",
-  "position_count": 28,
+  "generated_at": "2026-10-02T02:40:53.819811+00:00",
+  "position_count": 23,
   "sources_contributing": [
     "AcademicPositions",
     "ApplyKite",
     "EURAXESS (EU official)",
     "JobRxiv — Europe",
-    "Jobindex (Denmark)",
     "Jobs.ac.uk (UK)",
     "ResearchJobsEurope"
   ],
-  "with_deadline": 14,
-  "with_country": 20,
-  "enriched": 27
+  "with_deadline": 10,
+  "with_country": 12,
+  "enriched": 18
 }

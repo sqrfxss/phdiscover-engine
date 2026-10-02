@@ -69,19 +69,37 @@ echo "=== [1/5] Probing source health ==="
 $PY scripts/probe_sources.py || true
 
 echo
-echo "=== [2/5] Crawling all boards ==="
+echo "=== [2/6] Crawling all boards ==="
 $PY scripts/crawl_v2.py
 
+# A local run and the GitHub runner see different boards: the runner reaches
+# what times out here, and a local run walks more pages on what it can reach.
+# Measured on two consecutive runs — 415 postings from GitHub, 368 from Iran,
+# with 8 positions (5 of them EURAXESS) found only by the local run. Merging
+# keeps both instead of letting whichever ran last overwrite the other.
+if [ -f data/crawl_github_run.json ]; then
+  echo
+  echo "=== [3/6] Merging with the last GitHub-runner crawl ==="
+  $PY scripts/merge_crawls.py data/crawl_github_run.json data/crawl_v2.json \
+      -o data/crawl_merged.json
+  if [ -s data/crawl_merged.json ]; then
+    mv data/crawl_merged.json data/crawl_v2.json
+    echo "Merged into data/crawl_v2.json"
+  else
+    echo "Merge produced nothing; keeping this run's crawl." >&2
+  fi
+fi
+
 echo
-echo "=== [3/5] Filtering to doctoral biomechanics positions ==="
+echo "=== [4/6] Filtering to doctoral biomechanics positions ==="
 $PY scripts/filter_and_merge.py
 
 echo
-echo "=== [4/5] Enriching each position detail page ==="
+echo "=== [5/6] Enriching each position detail page ==="
 $PY scripts/enrich_positions.py
 
 echo
-echo "=== [5/5] Publishing to web/data ==="
+echo "=== [6/6] Publishing to web/data ==="
 $PY scripts/publish_site.py
 $PY scripts/coverage_report.py
 
