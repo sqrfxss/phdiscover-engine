@@ -1,0 +1,60 @@
+# Exact versions the pipeline was verified against.
+#
+# Generated with:  .venv/Scripts/python.exe -m pip freeze --exclude-editable
+# Verified:        2026-10-02, 100 checks passing, 23 positions published.
+#
+# Use this file, not pyproject.toml, when reproducing the environment. The lock
+# pins dependencies only, so the package itself is installed from the tree:
+#
+#     python -m venv .venv
+#     .venv/Scripts/python.exe -m pip install -r requirements.lock
+#     .venv/Scripts/python.exe -m pip install -e . --no-deps
+#     .venv/Scripts/python.exe -m playwright install chromium
+#
+# --no-deps on the second step matters: without it pip re-resolves the ranges
+# in pyproject.toml and can move a package past the version pinned here, which
+# is exactly what this file exists to prevent.
+#
+# pyproject.toml declares the dependency *ranges* and stays authoritative for
+# what the code may use; this file records what it was actually run against.
+#
+# Why pin at all: editing a range in pyproject.toml made pip upgrade transitive
+# packages, and typing_extensions disappeared from the environment between two
+# runs. pydantic imports it on every use, so the next pipeline run died with
+# "ModuleNotFoundError: typing_extensions" before reaching the crawl. A lock
+# makes the upgrade a deliberate act instead of a side effect.
+#
+# Chromium: playwright's bundled build comes from cdn.playwright.dev, which
+# returns 403 "this service is not available in your location" from Iran. The
+# crawler uses the installed Chrome instead; the install step above is only
+# needed on a machine without it.
+
+annotated-types==0.8.0
+anyio==4.15.1
+beautifulsoup4==4.15.0
+certifi==2026.7.22
+charset-normalizer==3.5.2
+click==8.5.0
+ddgs==9.16.0
+greenlet==3.5.6
+h11==0.16.0
+httpcore==1.0.9
+httpx==0.28.1
+idna==3.20
+lxml==6.1.3
+playwright==1.63.0
+primp==2.0.1
+pyalex==0.21
+pydantic_core==2.46.5
+pydantic==2.13.5
+pydantic-settings==2.15.0
+pyee==13.0.1
+python-dotenv==1.2.3
+PyYAML==6.0.3
+RapidFuzz==3.14.6
+requests==2.34.2
+soupsieve==2.10
+structlog==26.1.0
+typing_extensions==4.16.0
+typing-inspection==0.4.4
+urllib3==2.8.0

@@ -188,6 +188,30 @@ gh api -X PUT repos/:owner/:repo/actions/permissions/workflow \
 Without it the crawl's push fails with `403 Permission denied for github-actions[bot]` after the
 crawl has already succeeded — the work is lost, not the run.
 
+## Environment
+
+`pyproject.toml` declares the dependency ranges and stays authoritative for what the code may use.
+`requirements.lock` pins the exact versions it was verified against.
+
+```bash
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -r requirements.lock
+.venv/Scripts/python.exe -m pip install -e . --no-deps
+```
+
+`--no-deps` on the second step matters: without it pip re-resolves the ranges in `pyproject.toml`
+and can move a package past the version the lock records.
+
+`run_pipeline.sh` picks the first interpreter that can import what the pipeline needs, so a stale
+or partial `.venv` cannot silently shadow the system python — that produced
+`ModuleNotFoundError: bs4` two steps into a run, after the probe had already rewritten the health
+report. It also prints any drift from the lock, and the exact command that fixes it.
+
+**Chromium**: Playwright's bundled build comes from `cdn.playwright.dev`, which returns
+`403 "this service is not available in your location"` from Iran. `open_browser` therefore launches
+the installed Chrome directly and falls back to the bundled build only where none is present (Linux
+CI).
+
 ## Layout
 
 ```
@@ -201,6 +225,10 @@ scripts/test_reliability.py   22 checks on retry + cache, no network
 scripts/test_pagination.py    17 checks on pager discovery, no network
 scripts/test_deadlines.py     41 checks on date parsing and the stop rule
 scripts/test_stale_stop.py    end-to-end crawl against a local fake board
+scripts/check_published.py    17 checks on the published data
+scripts/merge_crawls.py       unions two runs' postings by canonical URL
+scripts/deploy_site.sh        publishes web/ to the gh-pages branch
+requirements.lock             the versions the 100 checks passed on
 src/phdiscover/reliability.py retry with jittered backoff
 src/phdiscover/cache.py       per-source cache, merge-on-read
 src/phdiscover/deadlines.py   deadline parsing + page freshness

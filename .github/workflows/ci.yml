@@ -62,3 +62,89 @@ jobs:
       - name: Config and published-data sanity
         run: |
           python scripts/check_published.py
+
+  # A lock that nobody installs is documentation, not a lock. This job proves the
+  # file reproduces an environment the checks pass in, on a machine that shares
+  # nothing with the one that produced it.
+  locked-environment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install exactly what the lock records
+        run: |
+          python -m pip install -U pip
+          pip install -r requirements.lock
+          pip install -e . --no-deps
+
+      - name: The lock is complete
+        # Every package the pipeline imports must be present, and pinned. This
+        # is the check that would have caught typing_extensions being dropped
+        # between two runs on the local machine.
+        #
+        # Import names and distribution names differ for three of them, so the
+        # mapping is explicit rather than guessed.
+        run: |
+          python - <<'PY'
+          import sys
+          from importlib.metadata import version, PackageNotFoundError
+
+          IMPORT_TO_DIST = {
+              "bs4": "beautifulsoup4",
+              "yaml": "PyYAML",
+              "dotenv": "python-dotenv",
+              "httpx": "httpx",
+              "lxml": "lxml",
+              "playwright": "playwright",
+              "pydantic": "pydantic",
+              "pydantic_settings": "pydantic-settings",
+              "typing_extensions": "typing_extensions",
+              "structlog": "structlog",
+              "pyalex": "pyalex",
+              "ddgs": "ddgs",
+              "rapidfuzz": "rapidfuzz",
+          }
+
+          pinned = {}
+          with open("requirements.lock", encoding="utf-8") as fh:
+              for line in fh:
+                  if "==" in line and not line.strip().startswith("#"):
+                      name, want = line.strip().split("==", 1)
+                      pinned[name.lower().replace("_", "-")] = want
+
+          missing, unpinned, drifted = [], [], []
+          for imp, dist in sorted(IMPORT_TO_DIST.items()):
+              try:
+                  have = version(dist)
+              except PackageNotFoundError:
+                  missing.append(f"{imp} (distribution {dist})")
+                  continue
+              want = pinned.get(dist.lower().replace("_", "-"))
+              if want is None:
+                  unpinned.append(f"{dist}=={have}")
+              elif have.lower() != want.lower():
+                  drifted.append(f"{dist}: {have} != {want}")
+
+          for label, rows in (("not installed", missing),
+                              ("installed but not pinned", unpinned),
+                              ("installed at a different version", drifted)):
+              for row in rows:
+                  print(f"::error::{row} - {label}")
+          if not (missing or unpinned or drifted):
+              print(f"lock is complete: {len(IMPORT_TO_DIST)} required packages pinned")
+          sys.exit(1 if (missing or unpinned or drifted) else 0)
+          PY
+
+      - name: The checks pass on the locked environment
+        run: |
+          python scripts/test_reliability.py
+          python scripts/test_pagination.py
+          python scripts/test_deadlines.py
+          python scripts/test_stale_stop.py
+          python scripts/check_published.py

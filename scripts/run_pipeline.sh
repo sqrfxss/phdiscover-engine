@@ -39,7 +39,8 @@ if ! "$PY" -c "import bs4, httpx, yaml, lxml" >/dev/null 2>&1; then
   cat >&2 <<EOF
 Missing dependencies for: $PY
 
-  $PY -m pip install -e .
+  $PY -m pip install -r requirements.lock
+  $PY -m pip install -e . --no-deps
 
 or activate the project venv:
 
@@ -49,6 +50,44 @@ EOF
   exit 1
 fi
 echo "==> interpreter: $PY"
+
+# Warn when the installed versions have drifted from requirements.lock. Not an
+# error — an upgraded patch release is usually fine — but editing a range in
+# pyproject.toml once made pip drop typing_extensions, and pydantic imports it
+# on every use, so the pipeline died at the import instead of at the upgrade.
+if [ -f requirements.lock ]; then
+  DRIFT=$("$PY" - <<'PYEOF' 2>/dev/null || true
+import sys
+from importlib.metadata import version, PackageNotFoundError
+
+try:
+    with open("requirements.lock", encoding="utf-8") as fh:
+        pinned = dict(
+            line.strip().split("==", 1)
+            for line in fh
+            if "==" in line and not line.strip().startswith("#")
+        )
+except OSError:
+    sys.exit(0)
+
+drift = []
+for name, want in sorted(pinned.items()):
+    try:
+        have = version(name)
+    except PackageNotFoundError:
+        drift.append(f"{name}: missing (want {want})")
+    else:
+        if have != want:
+            drift.append(f"{name}: {have} (lock says {want})")
+print("\n".join(drift))
+PYEOF
+)
+  if [ -n "$DRIFT" ]; then
+    echo "==> version drift from requirements.lock:"
+    echo "$DRIFT" | sed 's/^/    /'
+    echo "    refresh with: $PY -m pip install -r requirements.lock"
+  fi
+fi
 
 # A second concurrent run would have two crawlers writing the same
 # data/crawl_v2.json, and the later write would silently discard the earlier
