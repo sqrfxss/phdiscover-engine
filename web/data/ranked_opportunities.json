@@ -295,44 +295,6 @@
   },
   {
     "id": "pd-008",
-    "title": "Phd scholarship in real time multiphysics modeling of pem systems for an agricultural microgrid digital twin",
-    "university": "Apply Kite",
-    "country": "Canada",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 73,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
-    "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
-    "posted": "",
-    "description": "Candidates should hold or be completing a Master’s degree in electrical engineering, mechanical engineering, energy engineering, mechatronics or a related field. Required skills include dynamic systems and modeling, numerical simulation, data analysis, MATLAB/Simulink, programming, and numerical analysis. Experience with multiphysics/mechatronic modeling, thermodynamics, PEM systems, electrochemistry, model reduction",
-    "source": "ApplyKite",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ApplyKite",
-        "value": "Phd scholarship in real time multiphysics modeling of pem systems for an agricultural microgrid digital twin",
-        "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "609 chars of description, country=Canada",
-        "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
-        "source_type": "official",
-        "confidence": 0.9
-      }
-    ]
-  },
-  {
-    "id": "pd-009",
     "title": "PhD Candidate in Modelling and Executing Cascading Effects within a Cyber Range",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -377,7 +339,7 @@
     ]
   },
   {
-    "id": "pd-010",
+    "id": "pd-009",
     "title": "PhD Position Video-based Hand Motion-tracking for Patients with Rheumatoid Arthritis",
     "university": "EURAXESS",
     "country": "Netherlands",
@@ -422,7 +384,7 @@
     ]
   },
   {
-    "id": "pd-011",
+    "id": "pd-010",
     "title": "PhD positions in Human-Centred Artificial Intelligence - HCC",
     "university": "EURAXESS",
     "country": "Denmark",
@@ -467,7 +429,7 @@
     ]
   },
   {
-    "id": "pd-012",
+    "id": "pd-011",
     "title": "PhD Research Fellow in fairness in artificial intelligence (307994) | University of Oslo",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -519,7 +481,83 @@
     ]
   },
   {
+    "id": "pd-012",
+    "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
+    "university": "AcademicPositions",
+    "country": "N/A",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 60,
+    "contact_priority": "MEDIUM",
+    "url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "posted": "",
+    "description": "ETH Zürich Zurich, Switzerland Doctoral Position for Synthetic Biology-Inspired Therapies PhD developing synthetic biology-inspired cell therapies: engineer human cells with gene circuits/biosensors, build programmable implants. Strong molecular & cell biology; primary human cells; Basel. Published 1 week ago PhD",
+    "source": "AcademicPositions",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on AcademicPositions",
+        "value": "Doctoral Position for Synthetic Biology-Inspired Therapies",
+        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+        "source_type": "official",
+        "confidence": 0.7
+      }
+    ]
+  },
+  {
     "id": "pd-013",
+    "title": "Phd scholarship in real time multiphysics modeling of pem systems for an agricultural microgrid digital twin",
+    "university": "Apply Kite",
+    "country": "Canada",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "Funding evidence on page",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+    "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+    "posted": "",
+    "description": "Fully funded Joint PhD opportunity between\nBirla Institute of Technology and Science, Pilani (BITS Pilani)\nand\nRMIT University\nfor a project on\nLong-term Stability and Failure Analysis of Proton Exchange Membrane Fuel Cells in Heavy-Duty Electric Vehicles\n.\nThe research is centered on\ngreen hydrogen\n,\nPEM fuel cells\n,\nfuel-cell durability\n,\ndegradation\n,\nfailure mechanisms\n, and\nlifetime analysis\n, with a strong emph",
+    "source": "ApplyKite",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ApplyKite",
+        "value": "Phd scholarship in real time multiphysics modeling of pem systems for an agricultural microgrid digital twin",
+        "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+        "source_type": "official",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "503 chars of description, country=Canada",
+        "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Funding or salary language present",
+        "value": "Yes",
+        "source_url": "https://www.applykite.com/positions/phd-scholarship-in-real-time-multiphysics-modeling-of-pem-systems-for-an-agricultural-microgrid-digital-twin-kxfmf16vh8",
+        "source_type": "official",
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "id": "pd-014",
     "title": "PhD in Fast Controlled Photonic Integrated Switches for High Performance Artificial Intelligence Compute Clusters",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -564,7 +602,7 @@
     ]
   },
   {
-    "id": "pd-014",
+    "id": "pd-015",
     "title": "Doctoral Researcher / Väitöskirjatutkija (Deep Learning for High-Frequency Financial Data Modeling)",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -609,7 +647,7 @@
     ]
   },
   {
-    "id": "pd-015",
+    "id": "pd-016",
     "title": "PhD Position in Generative Modeling of Human Development and Disease",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -640,7 +678,7 @@
     ]
   },
   {
-    "id": "pd-016",
+    "id": "pd-017",
     "title": "PhD fellowship/scholarship, AI-augmented Physiological Modelling for Prediction and Mitigation of Heat Stress in Pigs",
     "university": "Jobindex",
     "country": "Denmark",
@@ -678,7 +716,7 @@
     ]
   },
   {
-    "id": "pd-017",
+    "id": "pd-018",
     "title": "PhD Studentship: Richard Elphick Studentship in Modelling Progression Risks in Barrett's Oesophagus",
     "university": "Jobs.ac.uk",
     "country": "United Kingdom",
@@ -723,7 +761,7 @@
     ]
   },
   {
-    "id": "pd-018",
+    "id": "pd-019",
     "title": "PHD Program Admissions",
     "university": "MUVi Apply",
     "country": "Austria",
@@ -761,7 +799,7 @@
     ]
   },
   {
-    "id": "pd-019",
+    "id": "pd-020",
     "title": "Doctoral Position in Advanced Bioelectronic & Electrical Conversion Research",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -792,7 +830,7 @@
     ]
   },
   {
-    "id": "pd-020",
+    "id": "pd-021",
     "title": "PhD position (4-year funded) Full-time brain Cellular neuroscience clinical neuroscience Hospital del Mar Research Institute, Barcelona Spain Barcelona on 18 Se",
     "university": "jobRxiv",
     "country": "N/A",
@@ -840,44 +878,6 @@
         "source_url": "https://jobrxiv.org/job/hospital-del-mar-research-institute-barcelona-27778-neuroscience-phd-position-4-year-funded/",
         "source_type": "official",
         "confidence": 0.6
-      }
-    ]
-  },
-  {
-    "id": "pd-021",
-    "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
-    "university": "AcademicPositions",
-    "country": "N/A",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "See official posting",
-    "deadline_date": "",
-    "deadline_status": "unknown",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 41,
-    "contact_priority": "LOW",
-    "url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-    "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-    "posted": "",
-    "description": "The D-BSSE is the first truly interdisciplinary research department, uniting theoretical and experimental biology with advanced bioengineering and fostering close collaborations with leaders in material science, physics, and chemistry to drive transformative advances in systems biology, biotechnology, and synthetic biology. Situated in Basel, Switzerland, at the heart of the BioValley, a tri-national region that host",
-    "source": "AcademicPositions",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on AcademicPositions",
-        "value": "Doctoral Position for Synthetic Biology-Inspired Therapies",
-        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "647 chars of description",
-        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-        "source_type": "official",
-        "confidence": 0.9
       }
     ]
   },
@@ -965,7 +965,7 @@
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
-    "funding": "Funding evidence on page",
+    "funding": "See official posting",
     "application_deadline": "See official posting",
     "deadline_date": "",
     "deadline_status": "unknown",
@@ -976,7 +976,7 @@
     "url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
     "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
     "posted": "",
-    "description": "Bioinformatics , , Biostatistics , , Cell Biology , , Chronobiology , , Computational Biology , and 27 more Developmental Biology , Genetics , Human Biology , Molecular Biology , Neuroscience , Systems Biology , Computing in Mathematics, Natural Science, Engineering and Medicine , Medical Imaging , Addiction Medicine , Biomedicine , Clinical Sciences , Endocrinology , Epidemiology , Molecular Medicine , Neurology , O",
+    "description": "International Max Planck Research School for Translational Psychiatry (IMPRS-TP) Munich, Germany Fully funded PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors Fully funded PhD positions in neuroscience and translational psychiatry with integrated Residency/PhD track for medical doctors. No tuition fees. Open to MSc or MD graduates worldwide. Published 1 month ",
     "source": "AcademicPositions",
     "evidence": [
       {
@@ -984,21 +984,7 @@
         "value": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
         "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
         "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "678 chars of description",
-        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://academicpositions.com/ad/international-max-planck-research-school-for-translational-psychiatry-imprs-tp/2026/fully-funded-phd-positions-in-neuroscience-and-translational-psychiatry-with-a-residency-phd-track-for-medical-doctors/243078",
-        "source_type": "official",
-        "confidence": 0.6
+        "confidence": 0.7
       }
     ]
   },

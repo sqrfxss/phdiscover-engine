@@ -107,6 +107,47 @@ def load_boards(country: str = "", limit: int = 0) -> list[dict]:
     return out
 
 
+# Board chrome: navigation, buttons and page furniture that is anchor-linkable
+# and so looks exactly like a posting to a URL-and-text scraper.
+#
+# Measured on the 3,481-board crawl: of the 680 "postings" it returned, the
+# largest title groups were "home" (19), "Return" (10), "Careers" (8), "Find
+# out more:" (8), "current students &" (8), and 10 rows titled "(untitled)".
+# Not one is a vacancy. They get in because relevance() asks whether the
+# context mentions research, and a university's whole nav bar does constantly.
+BOARD_CHROME = re.compile(
+    r"^(?:home|return|back|menu|close|search|login|log in|sign in|sign up|"
+    r"register|contact(?:\s+us)?|about(?:\s+us)?|news|events?|blog|"
+    # "Careers" as a standalone nav label. Listed before the plural forms below
+    # so the alternation reaches it: a group entered as "careers?" only matches
+    # when nothing longer precedes it on the line, and a board's own nav entry
+    # is exactly that.
+    r"careers?|job opportunities|safe recruitment|"
+    r"(?:untitled|no title|not specified)|"
+    r"find out more|read more|learn more|more info(?:rmation)?|"
+    r"apply|apply now|submit|view|view all|see all|show all|all jobs|"
+    r"current students?|staff|faculty|alumni|donate|support us|"
+    r"next|previous|prev|first|last|page \d+|"
+    r"skip to (?:main |page )?content|main navigation|"
+    r"privacy(?: policy)?|cookies?(?:\s+(?:settings|preferences|policy))?|" \
+    r"terms(?:\s+of\s+(?:use|service))?|imprint|impressum|"
+    r"return to|go back|show more|load more)\s*[.!:]?$",
+    re.IGNORECASE)
+
+# A title made only of punctuation, digits or whitespace carries no discipline.
+NOT_A_TITLE = re.compile(r"^(?:[\W\d_]|(?:untitled|no title))*\.?$", re.IGNORECASE)
+
+
+def is_board_chrome(title: str) -> bool:
+    """Is this 'posting' a piece of the page's furniture?"""
+    t = (title or "").strip()
+    if not t:
+        return True
+    if NOT_A_TITLE.match(t):
+        return True
+    return bool(BOARD_CHROME.match(t))
+
+
 async def crawl_one(client: httpx.AsyncClient, board: dict) -> dict:
     """Walk up to MAX_PAGES_PER_BOARD listing pages of one board."""
     name = board["universities"][0] if board["universities"] else board["board_url"]
@@ -143,6 +184,12 @@ async def crawl_one(client: httpx.AsyncClient, board: dict) -> dict:
             # serialises declared dataclass fields, so assigning
             # it.university put the value in memory and dropped it on write.
             item = asdict(it)
+            # Drop the page's own furniture before it enters the dataset. The
+            # topic gate rejects these later, but they inflate every downstream
+            # count — 680 "postings" from the last full crawl, of which the
+            # largest groups were "home" and "Return".
+            if is_board_chrome(item.get("title", "")):
+                continue
             item["university"] = name
             item["universities"] = ", ".join(board["universities"][:4])
             found.append(item)

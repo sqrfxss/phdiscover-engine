@@ -43,6 +43,8 @@ jobs:
         '
     - name: University board detection
       run: python scripts/test_university_boards.py
+    - name: Board chrome filter
+      run: python scripts/test_board_chrome.py
     - name: Workflow shape
       run: python scripts/test_workflows.py
     - name: End-to-end crawl against a local fake board
