@@ -76,11 +76,26 @@ def main():
     d = extract_deadline("Deadline: 05/10/2026", day_first=False, today=TODAY)
     check("05/10 month-first -> 10 May", d.value.isoformat(), "2026-05-10")
 
-    print("\n=== a year-less date rolls forward ===")
-    d = extract_deadline(f"Deadline: {(TODAY - timedelta(days=10)).strftime('%d %b')}",
-                         today=TODAY)
-    check("a past month/day means next year", d.value.year, TODAY.year + 1)
-    check("...and is therefore open", d.status, DeadlineStatus.OPEN)
+    # A year-less date no longer rolls forward. It used to: 23 Sep 2025 today,
+    # "Deadline: 23 Sep" resolved to 2026-09-23 and came back OPEN, which on a
+    # site that shows deadlines reads as a real closing date the board never
+    # gave. The year is only filled in when the source itself says the post
+    # recurs ("annually", "open until filled"), which is covered in
+    # test_deadline_years.py. Here it is asserted that nothing is resolved.
+    print("\n=== a year-less date is not resolved ===")
+    past = (TODAY - timedelta(days=10)).strftime("%d %b")
+    d = extract_deadline(f"Deadline: {past}", today=TODAY)
+    check("no date resolved for a year-less deadline",
+          d.value, None)
+    check("...and no status claimed", d.status, DeadlineStatus.UNKNOWN)
+    check("...but the raw text survives", bool(d.raw), True)
+
+    # The same date with a year is unaffected.
+    d = extract_deadline(f"Deadline: {past} {TODAY.year}", today=TODAY)
+    check("the dated form still resolves",
+          d.value.isoformat() if d.value else None, f"{TODAY.year}-09-19")
+    check("...and a past dated deadline reads as expired",
+          d.status, DeadlineStatus.EXPIRED)
 
     print("\n=== a posting date is not a deadline ===")
     # Measured on researchjobseurope.com: the card ends with

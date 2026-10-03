@@ -102,12 +102,33 @@ def _day_first_default() -> bool:
 DAY_FIRST_DEFAULT = _day_first_default()  # noqa: N816
 
 
+# A year-less date is only ever the next occurrence when the source says so.
+#
+# Filling the year in unconditionally made "Applications close December 1" come
+# out as 2026-12-01 with status open — on a site that displays deadlines, that
+# is a fabricated fact wearing a real date. Worse, it can invent a year in the
+# future: run in July and "Deadline 3 March" becomes 2027-03-03, six months
+# after the board last touched it.
+#
+# Resolving the year is kept only for the two shapes where it is genuinely
+# unambiguous — an explicit "until" range, and a board that says the post
+# recurs. Everywhere else a year-less date stays unresolved and the deadline is
+# reported as not stated.
+IMPLICIT_YEAR_OK = re.compile(
+    r"\b(?:each\s+year|annually|every\s+year|recurring|next\s+occurrence|"
+    r"until\s+filled|on\s+a\s+rolling\s+basis)\b",
+    re.IGNORECASE)
+
+
 def _mk(year: int | None, month: int, day: int, raw: str, conf: float,
-        today: date | None = None) -> Deadline:
+        today: date | None = None, allow_implicit_year: bool = False,
+        context: str = "") -> Deadline:
     today = today or date.today()
     if year is None:
-        # A date with no year means the next occurrence. A deadline already
-        # past this year but with no year given is almost always next year's.
+        if not (allow_implicit_year or IMPLICIT_YEAR_OK.search(context or "")):
+            # No year given and nothing to justify one: report the string so the
+            # raw text survives, but resolve nothing and claim no status.
+            return Deadline(raw, None, DeadlineStatus.UNKNOWN, conf)
         year = today.year
         candidate = _safe_date(year, month, day)
         if candidate is None or candidate < today:
@@ -165,13 +186,21 @@ def extract_deadline(text: str, *, day_first: bool | None = None,
     #
     # The guard is applied per candidate, not once: a card can carry a posting
     # date *and* a real deadline, and only the latter is wanted.
+    unresolved: str = ""
     for m in _all_dates(text):
         if _preceded_by(text, m.start(), NOT_A_DEADLINE):
             continue
-        d = _match_to_deadline(m, day_first, today)
+        d = _match_to_deadline(m, day_first, today, context=text)
         if d.status is not DeadlineStatus.UNKNOWN:
             return Deadline(d.raw, d.value, d.status, max(d.confidence - 0.15, 0.3))
+        # A date that parses but carries no year: not a deadline we can claim,
+        # yet the text itself is worth keeping. "Deadline 3 March" is evidence
+        # that a closing date exists, and dropping the string loses that.
+        if not unresolved:
+            unresolved = d.raw
 
+    if unresolved:
+        return Deadline(unresolved, None, DeadlineStatus.UNKNOWN, 0.0)
     return UNKNOWN
 
 
@@ -223,7 +252,8 @@ def _preceded_by(text: str, pos: int, pattern: re.Pattern) -> bool:
     return False
 
 
-def _match_to_deadline(m: re.Match, day_first: bool, today: date) -> Deadline:
+def _match_to_deadline(m: re.Match, day_first: bool, today: date,
+                      context: str = "") -> Deadline:
     """
     Convert one already-matched date into a Deadline.
 
@@ -234,7 +264,8 @@ def _match_to_deadline(m: re.Match, day_first: bool, today: date) -> Deadline:
     groups = m.groups()
     raw = m.group(0)
     if m.re is _ISO:
-        return _mk(int(groups[0]), int(groups[1]), int(groups[2]), raw, 0.9, today)
+        return _mk(int(groups[0]), int(groups[1]), int(groups[2]), raw, 0.9, today,
+                              context=context or (m.string if m else ""))
     if m.re is _DMY_TEXT:
         return _mk(_maybe_year(groups[2]), MONTHS[groups[1].lower().rstrip(".")],
                    int(groups[0]), raw, 0.9, today)
@@ -247,12 +278,16 @@ def _match_to_deadline(m: re.Match, day_first: bool, today: date) -> Deadline:
     if y < 100:
         y += 2000
     if a > 12 and b <= 12:
-        return _mk(y, b, a, raw, 0.9, today)
+        return _mk(y, b, a, raw, 0.9, today,
+                              context=context or (m.string if m else ""))
     if b > 12 and a <= 12:
-        return _mk(y, a, b, raw, 0.9, today)
+        return _mk(y, a, b, raw, 0.9, today,
+                              context=context or (m.string if m else ""))
     if day_first:
-        return _mk(y, b, a, raw, 0.6, today)
-    return _mk(y, a, b, raw, 0.6, today)
+        return _mk(y, b, a, raw, 0.6, today,
+                              context=context or (m.string if m else ""))
+    return _mk(y, a, b, raw, 0.6, today,
+                              context=context or (m.string if m else ""))
 
 
 def _maybe_year(g: str | None) -> int | None:
@@ -264,13 +299,15 @@ def _parse_text_date(text: str, day_first: bool, today: date) -> Deadline:
     if m:
         day, mon = int(m.group(1)), MONTHS[m.group(2).lower().rstrip(".")]
         year = int(m.group(3)) if m.group(3) else None
-        return _mk(year, mon, day, m.group(0), 0.9, today)
+        return _mk(year, mon, day, m.group(0), 0.9, today,
+                              context=text)
 
     m = _MDY_TEXT.search(text)
     if m:
         mon, day = MONTHS[m.group(1).lower().rstrip(".")], int(m.group(2))
         year = int(m.group(3)) if m.group(3) else None
-        return _mk(year, mon, day, m.group(0), 0.9, today)
+        return _mk(year, mon, day, m.group(0), 0.9, today,
+                              context=text)
 
     m = _DMY_NUM.search(text)
     if m:
@@ -278,12 +315,16 @@ def _parse_text_date(text: str, day_first: bool, today: date) -> Deadline:
         if y < 100:
             y += 2000
         if a > 12 and b <= 12:
-            return _mk(y, b, a, m.group(0), 0.9, today)   # unambiguous day-first
+            return _mk(y, b, a, m.group(0), 0.9, today,
+                        context=text)   # unambiguous day-first
         if b > 12 and a <= 12:
-            return _mk(y, a, b, m.group(0), 0.9, today)   # unambiguous month-first
+            return _mk(y, a, b, m.group(0), 0.9, today,
+                        context=text)   # unambiguous month-first
         if day_first:
-            return _mk(y, b, a, m.group(0), 0.6, today)   # a guess, marked as one
-        return _mk(y, a, b, m.group(0), 0.6, today)
+            return _mk(y, b, a, m.group(0), 0.6, today,
+                        context=text)   # a guess, marked as one
+        return _mk(y, a, b, m.group(0), 0.6, today,
+                              context=text)
 
     return UNKNOWN
 
