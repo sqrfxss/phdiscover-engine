@@ -992,11 +992,11 @@
     "id": "pd-025",
     "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
     "university": "AcademicPositions",
-    "country": "Sweden",
+    "country": "N/A",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
-    "funding": "Funding evidence on page",
+    "funding": "See official posting",
     "application_deadline": "See official posting",
     "deadline_date": "",
     "deadline_status": "unknown",
@@ -1007,7 +1007,7 @@
     "url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
     "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
     "posted": "",
-    "description": "A creative and inspiring environment full of expertise and curiosity. Karolinska Institutet is one of the world's leading medical universities. Our vision is to pursue the development of knowledge about life and to promote a better health for all. At Karolinska Institutet, we conduct successful medical research and hold the largest range of medical education in Sweden. As a doctoral student you are offered an individ",
+    "description": "Karolinska Institutet Stockholm, Sweden PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors Funded PhD in computational neuroscience: model large-scale neural recordings during natural behaviors using ML, graph theory & dynamical systems. Python/MATLAB/Julia. Stockholm. Published 10 months ago Closing on: 2026-10-30 (Europe/Stockholm) PhD",
     "source": "AcademicPositions",
     "evidence": [
       {
@@ -1015,21 +1015,7 @@
         "value": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
         "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
         "source_type": "official",
-        "confidence": 0.95
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "903 chars of description, country=Sweden",
-        "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Funding or salary language present",
-        "value": "Yes",
-        "source_url": "https://academicpositions.com/ad/karolinska-institutet/2025/phd-position-computational-neuroscience-and-systems-biology-theme-neural-dynamics-underlying-survival-behaviors/241536",
-        "source_type": "official",
-        "confidence": 0.6
+        "confidence": 0.7
       }
     ]
   },

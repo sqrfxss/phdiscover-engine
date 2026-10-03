@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-03T00:13:05.849441+00:00",
+  "generated_at": "2026-10-03T00:32:00.353259+00:00",
   "position_count": 27,
   "sources_contributing": [
     "AcademicPositions",
@@ -14,6 +14,6 @@
     "University of Veterinary Medicine Hannover"
   ],
   "with_deadline": 8,
-  "with_country": 19,
-  "enriched": 23
+  "with_country": 18,
+  "enriched": 22
 }

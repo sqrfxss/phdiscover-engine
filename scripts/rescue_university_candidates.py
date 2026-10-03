@@ -141,6 +141,60 @@ def _role_prefix_len(t: str) -> int:
     return m.end() if m else 0
 
 
+# A title that names the vacancy is decidable on the card, whatever else it
+# begins with: "PhD Position in the Centre for Clinical Biomechanics" opens with
+# an institution and is still a titled posting.
+LISTING_TITLE = re.compile(
+    r"\b(?:phd|ph\.d|doctoral|doctorate|dphil|postdoc(?:toral)?|post-doc|"
+    r"research(?:er|ers)?|studentship|vacanc(?:y|ies)|position|opening|"
+    r"fellow(?:ship)?|grant|award|job|employment|recruit(?:ment|ing)?|"
+    r"call\s+for)\b",
+    re.IGNORECASE)
+
+# A title that names no vacancy and no role at all. These boards print the
+# posting's card with the institution or the funding regulation as its heading:
+# "The Centre for Research and Studies in Sociology (CIES-Iscte) …", "According
+# to Regulation no. 815/2025 …", "Under the terms of the Regulation on Merit
+# Scholarships …". None of them can be judged from the card, and none of them
+# is what GENERIC_BARE matches either, since they are longer than a role.
+#
+# Measured on the 3,481-board crawl: 214 of 595 rows. GENERIC_BARE caught 16.
+# Every one of the other 214 was thrown away by the topic gate for having no
+# topic words in its title, when the page it points at states the discipline.
+# A heading that names the posting's institution or its funding rule rather than
+# the vacancy.
+#
+# The test is positional, not lexical. Both of these titles contain "research",
+# so a word list cannot separate them:
+#
+#   "PhD Position in the Centre for Clinical Biomechanics"   <- a vacancy, role
+#                                                              word first
+#   "The Centre for Research and Studies in Sociology (CIES)" <- not decidable,
+#                                                              institution first
+#
+# An earlier version listed institution words and refused any title matching
+# one that also contained a vacancy word. "The Centre for Research…" contains
+# both, so it satisfied neither branch and fell through to the word-count
+# shortcut, which returned early on its 16 words.
+UNJUDGEABLE_TITLE = re.compile(
+    r"^\s*(?:"
+    r"(?:the\s+)?(?:cent(?:er|re|ro)|institute|department|faculty|school|"
+    r"academy|foundation|association|society|unit|laboratory|lab)\b"
+    r"|according\s+to\b|under\s+the\s+terms\s+of\b|per\s+regulation\b"
+    r"|regulation\s+(?:no\.?|number)?|terms\s+and\s+conditions\b"
+    r"|general\s+call\b"
+    r")",
+    re.IGNORECASE)
+
+# A role word in the leading position is what makes a heading a vacancy.
+ROLE_FIRST = re.compile(
+    r"^\s*[\s#*\-\u2013\u2014:,]*"
+    r"(?:phd|ph\.d|doctoral|doctorate|dphil|postdoc(?:toral)?|post-doc|"
+    r"research(?:er|ers)?|studentship|call|grant|award|vacanc(?:y|ies)|"
+    r"position|opening|fellowship|job|recruit(?:ment)?|talent)",
+    re.IGNORECASE)
+
+
 def is_generic(title: str) -> bool:
     """
     Does this title give the topic gate nothing to work with?
@@ -161,13 +215,30 @@ def is_generic(title: str) -> bool:
         return True
     if NOT_A_POSTING.search(t):
         return False
-    # Seven or more words means a discipline is almost certainly named.
+    # An institution or funding-regulation heading, however long. Checked before
+    # the word-count shortcut below, which assumed a long title always names its
+    # discipline — "The Centre for Research and Studies in Sociology (CIES-Iscte)
+    # of Iscte – University Institute of Lisbon" is 16 words and names none.
+    if UNJUDGEABLE_TITLE.match(t) and not ROLE_FIRST.match(t):
+        return True
+    # Seven or more words otherwise means a discipline is almost certainly named.
     if len(t.split()) >= 7:
         return False
     if GENERIC_BARE.match(t):
         return True
-    # Filler only, after stripping the leading role words.
-    return _is_filler_run(t[_role_prefix_len(t):].strip())
+    # Filler only, after stripping the leading role words. Checked before
+    # LISTING_TITLE because "PhD (2 positions)" and "PhD Student, in the area"
+    # both contain a vacancy word and would otherwise be accepted as titled.
+    if _is_filler_run(t[_role_prefix_len(t):].strip()):
+        return True
+    # A heading that is an institution or a funding regulation: no vacancy and
+    # no role, so only the page can say what it is.
+    # Anything else that names a vacancy or a role is decided on the card.
+    if LISTING_TITLE.search(t):
+        return False
+    # No vacancy word, no role word, not an institution heading: still nothing
+    # to judge from the title alone.
+    return not LISTING_TITLE.search(t)
 
 
 async def fetch(client: httpx.AsyncClient, sem: asyncio.Semaphore,
