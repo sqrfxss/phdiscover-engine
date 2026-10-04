@@ -46,6 +46,51 @@
   },
   {
     "id": "pd-002",
+    "title": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
+    "university": "ResearchJobsEurope",
+    "country": "Denmark",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "Deadline 7 Oct 2026",
+    "deadline_date": "2026-10-07",
+    "deadline_status": "open",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 78,
+    "contact_priority": "HIGH",
+    "url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+    "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+    "posted": "",
+    "description": "We are inviting applications for a Post-doctoral position of 24 months in the research group of Biochemical Engineering at the Department of Plant and Environmental Sciences at the University of Copenhagen ( Biochemical Engineering – Institut for Plante- og Miljøvidenskab - Københavns Universitet (ku.dk) ) . The research group, headed by Prof. Sotirios Kampranis ( Sotirios Kampranis - Plant Biochemistry Employees (ku",
+    "source": "ResearchJobsEurope",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
+        "value": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+        "source_type": "aggregator",
+        "confidence": 0.75
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "600 chars of description, country=Denmark",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Application deadline found on the page",
+        "value": "Deadline 7 Oct 2026",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
+        "source_type": "official",
+        "confidence": 0.75
+      }
+    ]
+  },
+  {
+    "id": "pd-003",
     "title": "PhD position in probabilistic machine learning and statistics (307053) | University of Oslo",
     "university": "ResearchJobsEurope",
     "country": "Norway",
@@ -90,7 +135,7 @@
     ]
   },
   {
-    "id": "pd-003",
+    "id": "pd-004",
     "title": "DPhil Studentship – Investigating and Modelling Brain Dynamics Across Species",
     "university": "Jobs.ac.uk",
     "country": "United Kingdom",
@@ -135,7 +180,7 @@
     ]
   },
   {
-    "id": "pd-004",
+    "id": "pd-005",
     "title": "PhD Candidate in Rehabilitation Medicine – Biological Age and Biomarkers",
     "university": "EURAXESS",
     "country": "Netherlands",
@@ -153,7 +198,7 @@
     "url": "https://euraxess.ec.europa.eu/jobs/467850",
     "source_url": "https://euraxess.ec.europa.eu/jobs/467850",
     "posted": "24 September 2026",
-    "description": "This is NTNUNTNU is a broad-based university with a technical-scientific profile and a focus in professional education. The university is located in three cities with headquarters in Trondheim.At NTNU, 9,000 employees and 43,000 students work to create knowledge for a better world.You will find more...",
+    "description": "Call for Applications – PhD Programme – 42st CycleMusical Heritage and Soundscapes: Sources, Spaces, Instruments, Pedagogical and Performative PracticesDescription of the Training ProjectThe PhD Programme in Musical Heritage and Soundscapes: Sources, Spaces, Instruments, Pedagogical and Performative...",
     "source": "EURAXESS (EU official)",
     "evidence": [
       {
@@ -173,7 +218,7 @@
     ]
   },
   {
-    "id": "pd-005",
+    "id": "pd-006",
     "title": "Doctoral Positions in Robot Learning and Soft, Musculoskeletal, and Biohybrid Robotics",
     "university": "EURAXESS",
     "country": "Switzerland",
@@ -207,51 +252,6 @@
         "source_url": "https://euraxess.ec.europa.eu/jobs/461683",
         "source_type": "official",
         "confidence": 0.9
-      }
-    ]
-  },
-  {
-    "id": "pd-006",
-    "title": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
-    "university": "ResearchJobsEurope",
-    "country": "Denmark",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "Deadline 4 Oct 2026",
-    "deadline_date": "2026-10-04",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 73,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
-    "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
-    "posted": "",
-    "description": "DTU – For the benefit of society since 1829\nDTU is one of Europe's leading elite technical universities. Through research and education at an international top level, we create solutions to the major societal challenges of our time and help secure Europe's global leadership in sustainable technological development. Since Hans Christian Ørsted founded DTU almost 200 years ago, our mission has remained the same: We dev",
-    "source": "ResearchJobsEurope",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
-        "source_type": "aggregator",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "801 chars of description, country=Denmark",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "Deadline 4 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
-        "source_type": "official",
-        "confidence": 0.75
       }
     ]
   },
@@ -347,6 +347,44 @@
   },
   {
     "id": "pd-009",
+    "title": "Phd student in integrative biomechanics for osteoarthritis prevention and treatment at ubc",
+    "university": "Apply Kite",
+    "country": "Canada",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 71,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+    "source_url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+    "posted": "",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "source": "ApplyKite",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ApplyKite",
+        "value": "Phd student in integrative biomechanics for osteoarthritis prevention and treatment at ubc",
+        "source_url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "231 chars of description, country=Canada",
+        "source_url": "https://www.applykite.com/positions/phd-student-in-integrative-biomechanics-for-osteoarthritis-prevention-and-treatment-at-ubc-2hbf602wox",
+        "source_type": "official",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-010",
     "title": "PhD positions in Human-Centred Artificial Intelligence - HCC",
     "university": "EURAXESS",
     "country": "Denmark",
@@ -391,59 +429,128 @@
     ]
   },
   {
-    "id": "pd-010",
-    "title": "PhD position on Modelling of turbidity current fluxes in submarine canyons",
+    "id": "pd-011",
+    "title": "PhD Research Fellow in fairness in artificial intelligence (307994) | University of Oslo",
     "university": "ResearchJobsEurope",
-    "country": "Netherlands",
+    "country": "Norway",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
     "funding": "Funding evidence on page",
-    "application_deadline": "Deadline 2 Oct 2026",
-    "deadline_date": "2026-10-02",
+    "application_deadline": "Deadline 9 Oct 2026",
+    "deadline_date": "2026-10-09",
     "deadline_status": "open",
     "opportunity_type": "FUNDED_PHD",
     "research_domain": "Biomechanics / Human Movement",
     "research_fit_score": 64,
     "contact_priority": "MEDIUM",
-    "url": "https://www.researchjobseurope.com/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
-    "source_url": "https://www.researchjobseurope.com/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
+    "url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
+    "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
     "posted": "",
-    "description": "## Experience in modelling of sediment transport Coding experience; A willingness to contribute to team goals; A flair for written, graphical, and oral communication; And above all, creativity and curiosity. Due to the international character of our research, good command of spoken and written English is essential. We highly encourage applicants from all members of our community and of diverse backgrounds to join us.",
+    "description": "The norm is as follows: The average grade point for courses included in the Bachelor’s degree must be C or better in the Norwegian educational system The average grade point for courses included in the Master’s degree must be B or better in the Norwegian educational system The Master’s thesis must have the grade B or better in the Norwegian educational system The purpose of the fellowship is research training leading",
     "source": "ResearchJobsEurope",
     "evidence": [
       {
         "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "PhD position on Modelling of turbidity current fluxes in submarine canyons",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
+        "value": "PhD Research Fellow in fairness in artificial intelligence (307994) | University of Oslo",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
         "source_type": "aggregator",
         "confidence": 0.8
       },
       {
         "claim": "Detail page fetched and parsed",
-        "value": "2500 chars of description, country=Netherlands",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
+        "value": "2500 chars of description, country=Norway",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
         "source_type": "official",
         "confidence": 0.9
       },
       {
         "claim": "Application deadline found on the page",
-        "value": "Deadline 2 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
+        "value": "Deadline 9 Oct 2026",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
         "source_type": "official",
         "confidence": 0.75
       },
       {
         "claim": "Funding or salary language present",
         "value": "Yes",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-position-on-modelling-of-turbidity-current-fluxes-in-submarine-canyons",
+        "source_url": "https://www.researchjobseurope.com/jobs/nbsp-phd-research-fellow-in-fairness-in-artificial-intelligence-307994-university-of-oslo",
         "source_type": "official",
         "confidence": 0.6
       }
     ]
   },
   {
-    "id": "pd-011",
+    "id": "pd-012",
+    "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
+    "university": "AcademicPositions",
+    "country": "N/A",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 60,
+    "contact_priority": "MEDIUM",
+    "url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "posted": "",
+    "description": "ETH Zürich Zurich, Switzerland Doctoral Position for Synthetic Biology-Inspired Therapies PhD developing synthetic biology-inspired cell therapies: engineer human cells with gene circuits/biosensors, build programmable implants. Strong molecular & cell biology; primary human cells; Basel. Published 1 week ago PhD",
+    "source": "AcademicPositions",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on AcademicPositions",
+        "value": "Doctoral Position for Synthetic Biology-Inspired Therapies",
+        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+        "source_type": "official",
+        "confidence": 0.7
+      }
+    ]
+  },
+  {
+    "id": "pd-013",
+    "title": "Phd in advanced modeling of perception systems for an autonomous intelligent tractor",
+    "university": "Apply Kite",
+    "country": "Canada",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.applykite.com/positions/phd-in-advanced-modeling-of-perception-systems-for-an-autonomous-intelligent-tractor-t8t9imyzix",
+    "source_url": "https://www.applykite.com/positions/phd-in-advanced-modeling-of-perception-systems-for-an-autonomous-intelligent-tractor-t8t9imyzix",
+    "posted": "",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "source": "ApplyKite",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ApplyKite",
+        "value": "Phd in advanced modeling of perception systems for an autonomous intelligent tractor",
+        "source_url": "https://www.applykite.com/positions/phd-in-advanced-modeling-of-perception-systems-for-an-autonomous-intelligent-tractor-t8t9imyzix",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "231 chars of description, country=Canada",
+        "source_url": "https://www.applykite.com/positions/phd-in-advanced-modeling-of-perception-systems-for-an-autonomous-intelligent-tractor-t8t9imyzix",
+        "source_type": "official",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-014",
     "title": "Phd opportunity in artificial intelligence for pet imaging and medical image analysis",
     "university": "Apply Kite",
     "country": "Canada",
@@ -461,7 +568,7 @@
     "url": "https://www.applykite.com/positions/phd-opportunity-in-artificial-intelligence-for-pet-imaging-and-medical-image-analysis-m6btcfmbao",
     "source_url": "https://www.applykite.com/positions/phd-opportunity-in-artificial-intelligence-for-pet-imaging-and-medical-image-analysis-m6btcfmbao",
     "posted": "",
-    "description": "NTU AI-for-X Postdoctoral Fellowship is a postdoctoral opportunity hosted at the\nUniversity of British Columbia\nin\nCanada\n, with a location listed as Vancouver, British Columbia.\nThis prestigious fellowship, launched in partnership with Singapore’s National Research Foundation (NRF), supports outstanding early-career researchers who want to apply\nArtificial Intelligence (AI)\nto accelerate scientific discovery across\n",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "source": "ApplyKite",
     "evidence": [
       {
@@ -473,7 +580,7 @@
       },
       {
         "claim": "Detail page fetched and parsed",
-        "value": "503 chars of description, country=Canada",
+        "value": "231 chars of description, country=Canada",
         "source_url": "https://www.applykite.com/positions/phd-opportunity-in-artificial-intelligence-for-pet-imaging-and-medical-image-analysis-m6btcfmbao",
         "source_type": "official",
         "confidence": 0.9
@@ -481,7 +588,52 @@
     ]
   },
   {
-    "id": "pd-012",
+    "id": "pd-015",
+    "title": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
+    "university": "ResearchJobsEurope",
+    "country": "Denmark",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "Deadline 4 Oct 2026",
+    "deadline_date": "2026-10-04",
+    "deadline_status": "open",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
+    "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
+    "posted": "",
+    "description": "PhD Save PhD scholarship in Modelling of Ionospheric Currents - DTU Space Technical University of Denmark Kongens Lyngby, Denmark Deadline 4 Oct 2026 If you are seeking to establish your career as a physicist working with polar space physics and ionospheric electrodynamics, this PhD project offers the opportunity to develop new methods for extracting information about ionospheric dynamics from ground-based magnetic m",
+    "source": "ResearchJobsEurope",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
+        "value": "PhD scholarship in Modelling of Ionospheric Currents - DTU Space",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
+        "source_type": "aggregator",
+        "confidence": 0.75
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "0 chars of description, country=Denmark",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Application deadline found on the page",
+        "value": "Deadline 4 Oct 2026",
+        "source_url": "https://www.researchjobseurope.com/jobs/phd-scholarship-in-modelling-of-ionospheric-currents-dtu-space",
+        "source_type": "official",
+        "confidence": 0.75
+      }
+    ]
+  },
+  {
+    "id": "pd-016",
     "title": "PhD in Fast Controlled Photonic Integrated Switches for High Performance Artificial Intelligence Compute Clusters",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -526,7 +678,7 @@
     ]
   },
   {
-    "id": "pd-013",
+    "id": "pd-017",
     "title": "Doctoral Researcher / Väitöskirjatutkija (Deep Learning for High-Frequency Financial Data Modeling)",
     "university": "ResearchJobsEurope",
     "country": "N/A",
@@ -544,7 +696,7 @@
     "url": "https://www.researchjobseurope.com/jobs/doctoral-researcher-vaitoskirjatutkija-deep-learning-for-high-frequency-financial-data-modeling",
     "source_url": "https://www.researchjobseurope.com/jobs/doctoral-researcher-vaitoskirjatutkija-deep-learning-for-high-frequency-financial-data-modeling",
     "posted": "",
-    "description": "We are looking for a Doctoral Researcher to work on deep learning methodologies for high-frequency financial data modeling.  The selected applicant will be member of the Computational Intelligence group led by Professor Alexandros Iosifidis , and closely collaborate with the Financial Data Science group led by Professor Juho Kanniainen , at the Unit of Computing Sciences of Tampere University. The position is full-ti",
+    "description": "The PhD student will work within GEOMANIP, an ERC Starting Grant project that aims to revolutionize the robotic manipulation of deformable objects by uncovering and exploiting their fundamental geometric nature. GEOMANIP proposes a paradigm shift that integrates the differential geometric structure of deformable objects into novel continuum physics-inspired neural representations, serving as the bedrock of a physical",
     "source": "ResearchJobsEurope",
     "evidence": [
       {
@@ -556,7 +708,7 @@
       },
       {
         "claim": "Detail page fetched and parsed",
-        "value": "576 chars of description",
+        "value": "600 chars of description",
         "source_url": "https://www.researchjobseurope.com/jobs/doctoral-researcher-vaitoskirjatutkija-deep-learning-for-high-frequency-financial-data-modeling",
         "source_type": "official",
         "confidence": 0.9
@@ -571,52 +723,7 @@
     ]
   },
   {
-    "id": "pd-014",
-    "title": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
-    "university": "ResearchJobsEurope",
-    "country": "Denmark",
-    "department": "N/A",
-    "pi_name": "See official posting",
-    "pi_email": "",
-    "funding": "See official posting",
-    "application_deadline": "Deadline 7 Oct 2026",
-    "deadline_date": "2026-10-07",
-    "deadline_status": "open",
-    "opportunity_type": "FUNDED_PHD",
-    "research_domain": "Biomechanics / Human Movement",
-    "research_fit_score": 59,
-    "contact_priority": "MEDIUM",
-    "url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
-    "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
-    "posted": "",
-    "description": "Aalto University is a community of bold thinkers where science and art meet technology and business. We are committed to identifying and solving grand societal challenges and building an innovative future. Aalto has six schools with 14 000 students and a staff of 5000, of which more than 400 are professors. Our main campus is located in Espoo, Finland. Diversity is part of who we are, and we actively work to ensure o",
-    "source": "ResearchJobsEurope",
-    "evidence": [
-      {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "PhD fellowship in Artificial Intelligence for Monitoring and Decision Support at Animal and Herd Level",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
-        "source_type": "aggregator",
-        "confidence": 0.75
-      },
-      {
-        "claim": "Detail page fetched and parsed",
-        "value": "560 chars of description, country=Denmark",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
-        "source_type": "official",
-        "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "Deadline 7 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-fellowship-in-artificial-intelligence-for-monitoring-and-decision-support-at-animal-and-herd-level",
-        "source_type": "official",
-        "confidence": 0.75
-      }
-    ]
-  },
-  {
-    "id": "pd-015",
+    "id": "pd-018",
     "title": "PhD Position in Generative Modeling of Human Development and Disease",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -634,7 +741,7 @@
     "url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
     "source_url": "https://academicpositions.com/ad/university-of-basel/2026/phd-position-in-generative-modeling-of-human-development-and-disease/253168",
     "posted": "",
-    "description": "University of Basel Basel, Switzerland PhD Position in Generative Modeling of Human Development and Disease Fully funded 4-year PhD: build generative models on single-cell & spatial genomics to study development/disease. Need quantitative MSc, strong Python + PyTorch/JAX, GitHub. Published 1 week ago Closing on: 2026-10-16 (Europe/Zurich) PhD",
+    "description": "University of Basel Basel, Switzerland PhD Position in Generative Modeling of Human Development and Disease Fully funded 4-year PhD: build generative models on single-cell & spatial genomics to study development/disease. Need quantitative MSc, strong Python + PyTorch/JAX, GitHub. Published 2 weeks ago Closing on: 2026-10-16 (Europe/Zurich) PhD",
     "source": "AcademicPositions",
     "evidence": [
       {
@@ -647,7 +754,218 @@
     ]
   },
   {
-    "id": "pd-016",
+    "id": "pd-019",
+    "title": "Doctoral student in Machine Learning for Integrated Resources Modelling",
+    "university": "ResearchJobsEurope",
+    "country": "Sweden",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "Deadline 10 Oct 2026",
+    "deadline_date": "2026-10-10",
+    "deadline_status": "open",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-machine-learning-for-integrated-resources-modelling",
+    "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-machine-learning-for-integrated-resources-modelling",
+    "posted": "",
+    "description": "The division of Energy Systems (dES) within the Department of Energy Technology at KTH has been driving the advancement of energy systems and integrated resource assessment methodologies for supporting integrated resource planning in developed and developing countries, through funding from UK Aid, UN and European Union. The division is now hiring a PhD student who shall work on a step change in the methodologies by u",
+    "source": "ResearchJobsEurope",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
+        "value": "Doctoral student in Machine Learning for Integrated Resources Modelling",
+        "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-machine-learning-for-integrated-resources-modelling",
+        "source_type": "aggregator",
+        "confidence": 0.75
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "994 chars of description, country=Sweden",
+        "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-machine-learning-for-integrated-resources-modelling",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Application deadline found on the page",
+        "value": "Deadline 10 Oct 2026",
+        "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-machine-learning-for-integrated-resources-modelling",
+        "source_type": "official",
+        "confidence": 0.75
+      }
+    ]
+  },
+  {
+    "id": "pd-020",
+    "title": "PhD Studentship: Richard Elphick Studentship in Modelling Progression Risks in Barrett's Oesophagus",
+    "university": "Jobs.ac.uk",
+    "country": "United Kingdom",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "Funding evidence on page",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+    "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+    "posted": "",
+    "description": "Oesophageal adenocarcinoma (OAC), the most common oesophageal cancer in the UK and US, has a 5-year survival rate below 20%, though outcomes improve with early detection. Barrett's oesophagus, an asymptomatic precursor, is monitored to detect and treat dysplasia before cancer develops or to identify cancer at an earlier stage. However, most cases remain undiagnosed. The Cytosponge, developed by Prof Fitzgerald's lab,",
+    "source": "Jobs.ac.uk (UK)",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on Jobs.ac.uk (UK)",
+        "value": "PhD Studentship: Richard Elphick Studentship in Modelling Progression Risks in Barrett's Oesophagus",
+        "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+        "source_type": "official",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "552 chars of description, country=United Kingdom",
+        "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Funding or salary language present",
+        "value": "Yes",
+        "source_url": "https://www.jobs.ac.uk/job/DTD316/phd-studentship-richard-elphick-studentship-in-modelling-progression-risks-in-barretts-oesophagus",
+        "source_type": "official",
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "id": "pd-021",
+    "title": "Doctoral Candidate (PhD) in Social-ecological Modelling and Biodiversity Policy",
+    "university": "University of Zurich Jobs",
+    "country": "Switzerland",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 59,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.jobs.uzh.ch/en/jobs/2e68807c-7c78-4827-a827-6cbb778f60cf",
+    "source_url": "https://www.jobs.uzh.ch/en/jobs/2e68807c-7c78-4827-a827-6cbb778f60cf",
+    "posted": "",
+    "description": "Als grösste Universität der Schweiz bietet die Universität Zürich eine Vielzahl von attraktiven Berufen in verschiedenen Fachbereichen. Mit rund 10'000 Mitarbeitenden und 12 Berufsprofilen für Lernende bietet die Universität ein inspirierendes Arbeitsumfeld in der Spitzenforschung und Bildung. Setzen Sie Ihr Talent und Ihre Fähigkeiten bei uns ein. Erfahren Sie mehr über die UZH als Arbeitgeberin!",
+    "source": "University of Zurich Jobs",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on University of Zurich Jobs",
+        "value": "Doctoral Candidate (PhD) in Social-ecological Modelling and Biodiversity Policy",
+        "source_url": "https://www.jobs.uzh.ch/en/jobs/2e68807c-7c78-4827-a827-6cbb778f60cf",
+        "source_type": "aggregator",
+        "confidence": 0.7
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "400 chars of description, country=Switzerland",
+        "source_url": "https://www.jobs.uzh.ch/en/jobs/2e68807c-7c78-4827-a827-6cbb778f60cf",
+        "source_type": "official",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-022",
+    "title": "Doctoral student in next-generation targeted biotherapeutics",
+    "university": "ResearchJobsEurope",
+    "country": "Sweden",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "Deadline 10 Oct 2026",
+    "deadline_date": "2026-10-10",
+    "deadline_status": "open",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 55,
+    "contact_priority": "MEDIUM",
+    "url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-next-generation-targeted-biotherapeutics",
+    "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-next-generation-targeted-biotherapeutics",
+    "posted": "",
+    "description": "Only those admitted to postgraduate education may be employed as a doctoral student. The total length of employment may not be longer than what corresponds to full-time doctoral education in four years' time. An employed doctoral student can, to a limited extent (maximum 20%), perform certain tasks within their role, e.g. training and administration. A new position as a doctoral student is for a maximum of one year, ",
+    "source": "ResearchJobsEurope",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
+        "value": "Doctoral student in next-generation targeted biotherapeutics",
+        "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-next-generation-targeted-biotherapeutics",
+        "source_type": "aggregator",
+        "confidence": 0.75
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "688 chars of description, country=Sweden",
+        "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-next-generation-targeted-biotherapeutics",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Application deadline found on the page",
+        "value": "Deadline 10 Oct 2026",
+        "source_url": "https://www.researchjobseurope.com/jobs/kth-doctoral-student-in-next-generation-targeted-biotherapeutics",
+        "source_type": "official",
+        "confidence": 0.75
+      }
+    ]
+  },
+  {
+    "id": "pd-023",
+    "title": "PHD Program Admissions",
+    "university": "MUVi Apply",
+    "country": "Austria",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "See official posting",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 52,
+    "contact_priority": "LOW",
+    "url": "https://apply.modul.ac.at/login",
+    "source_url": "https://apply.modul.ac.at/login",
+    "posted": "",
+    "description": "PHD Program Admissions When applying to Modul University Vienna for a PhD, you will need to meet the following admissions entry requirements and provide your  documents in English through our online portal . Curriculum Vitae Motivation Statement Research Proposal* Bachelor (3-year) and Master (2-year) diploma Bachelor and Master Transcripts including supplements One example of a research publication or report (option",
+    "source": "MODUL University Vienna",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on MODUL University Vienna",
+        "value": "PHD Program Admissions",
+        "source_url": "https://apply.modul.ac.at/login",
+        "source_type": "aggregator",
+        "confidence": 0.7
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "0 chars of description, country=Austria",
+        "source_url": "https://apply.modul.ac.at/login",
+        "source_type": "official",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "id": "pd-024",
     "title": "Doctoral Position in Advanced Bioelectronic & Electrical Conversion Research",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -678,7 +996,7 @@
     ]
   },
   {
-    "id": "pd-017",
+    "id": "pd-025",
     "title": "PhD position (4-year funded) Full-time brain Cellular neuroscience clinical neuroscience Hospital del Mar Research Institute, Barcelona Spain Barcelona on 18 Se",
     "university": "jobRxiv",
     "country": "N/A",
@@ -730,10 +1048,10 @@
     ]
   },
   {
-    "id": "pd-018",
-    "title": "Doctoral Position for Synthetic Biology-Inspired Therapies",
-    "university": "AcademicPositions",
-    "country": "N/A",
+    "id": "pd-026",
+    "title": "PhD Program Mental Health and Neuroscience",
+    "university": "Karl Landsteiner University of Health Sciences",
+    "country": "Austria",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
@@ -745,75 +1063,68 @@
     "research_domain": "Biomechanics / Human Movement",
     "research_fit_score": 41,
     "contact_priority": "LOW",
-    "url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-    "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+    "url": "https://www.kl.ac.at/de/studium-weiterbildung/phd-program-mental-health-and-neuroscience",
+    "source_url": "https://www.kl.ac.at/de/studium-weiterbildung/phd-program-mental-health-and-neuroscience",
     "posted": "",
-    "description": "The D-BSSE is the first truly interdisciplinary research department, uniting theoretical and experimental biology with advanced bioengineering and fostering close collaborations with leaders in material science, physics, and chemistry to drive transformative advances in systems biology, biotechnology, and synthetic biology. Situated in Basel, Switzerland, at the heart of the BioValley, a tri-national region that host",
-    "source": "AcademicPositions",
+    "description": "Sigmar Stricker, Regenerationsforscher Victor Zevallos, Professor für Ernährungswissenschaften mit besonderer Berücksichtigung der Mikrobiomforschung Silvia Exenberger-Vanham, Klinische und Gesundheitspsychologin Markus Stock, Medizinphysiker Johannes Streicher, Anatom Anna Höflich, Fachärztin für Psychiatrie, Neurologie und psychotherapeutische Medizin Juliane Burghardt, Psychologin Josef Singer, Onkologe und Immuno",
+    "source": "Karl Landsteiner University of Health Sciences",
     "evidence": [
       {
-        "claim": "Listed as a doctoral opening on AcademicPositions",
-        "value": "Doctoral Position for Synthetic Biology-Inspired Therapies",
-        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
-        "source_type": "official",
-        "confidence": 0.9
+        "claim": "Listed as a doctoral opening on Karl Landsteiner University of Health Sciences",
+        "value": "PhD Program Mental Health and Neuroscience",
+        "source_url": "https://www.kl.ac.at/de/studium-weiterbildung/phd-program-mental-health-and-neuroscience",
+        "source_type": "aggregator",
+        "confidence": 0.7
       },
       {
         "claim": "Detail page fetched and parsed",
-        "value": "647 chars of description",
-        "source_url": "https://academicpositions.com/ad/eth-zurich/2026/doctoral-position-for-synthetic-biology-inspired-therapies/253251",
+        "value": "1840 chars of description, country=Austria",
+        "source_url": "https://www.kl.ac.at/de/studium-weiterbildung/phd-program-mental-health-and-neuroscience",
         "source_type": "official",
         "confidence": 0.9
       }
     ]
   },
   {
-    "id": "pd-019",
-    "title": "PhD in Computational Geometry and Computational Topology",
-    "university": "ResearchJobsEurope",
-    "country": "N/A",
+    "id": "pd-027",
+    "title": "PhD Programme \"Systems Neuroscience\"",
+    "university": "Stiftung Tierärztliche Hochschule Hannover",
+    "country": "Germany",
     "department": "N/A",
     "pi_name": "See official posting",
     "pi_email": "",
     "funding": "See official posting",
-    "application_deadline": "Deadline 2 Oct 2026",
-    "deadline_date": "2026-10-02",
-    "deadline_status": "open",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
     "opportunity_type": "FUNDED_PHD",
     "research_domain": "Biomechanics / Human Movement",
     "research_fit_score": 41,
     "contact_priority": "LOW",
-    "url": "https://www.researchjobseurope.com/jobs/phd-in-computational-geometry-and-computational-topology",
-    "source_url": "https://www.researchjobseurope.com/jobs/phd-in-computational-geometry-and-computational-topology",
+    "url": "https://www.tiho-hannover.de/studium-lehre/phd-graduate-school/phd-programme-systems-neuroscience",
+    "source_url": "https://www.tiho-hannover.de/studium-lehre/phd-graduate-school/phd-programme-systems-neuroscience",
     "posted": "",
-    "description": "Computational geometry and computational topology are areas of research focused on the design and analysis of algorithms for spatial data. These algorithms typically leverage geometric and topological structure present in the data to obtain efficient solutions. This project focuses on computing similarities between networks in a spatial context, such as networks embedded in the Euclidean plane, or on a terrain. We in",
-    "source": "ResearchJobsEurope",
+    "description": "PhD Programme \"Systems Neuroscience\"",
+    "source": "University of Veterinary Medicine Hannover",
     "evidence": [
       {
-        "claim": "Listed as a doctoral opening on ResearchJobsEurope",
-        "value": "PhD in Computational Geometry and Computational Topology",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-in-computational-geometry-and-computational-topology",
+        "claim": "Listed as a doctoral opening on University of Veterinary Medicine Hannover",
+        "value": "PhD Programme \"Systems Neuroscience\"",
+        "source_url": "https://www.tiho-hannover.de/studium-lehre/phd-graduate-school/phd-programme-systems-neuroscience",
         "source_type": "aggregator",
-        "confidence": 0.75
+        "confidence": 0.7
       },
       {
         "claim": "Detail page fetched and parsed",
-        "value": "621 chars of description",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-in-computational-geometry-and-computational-topology",
+        "value": "0 chars of description, country=Germany",
+        "source_url": "https://www.tiho-hannover.de/studium-lehre/phd-graduate-school/phd-programme-systems-neuroscience",
         "source_type": "official",
         "confidence": 0.9
-      },
-      {
-        "claim": "Application deadline found on the page",
-        "value": "Deadline 2 Oct 2026",
-        "source_url": "https://www.researchjobseurope.com/jobs/phd-in-computational-geometry-and-computational-topology",
-        "source_type": "official",
-        "confidence": 0.75
       }
     ]
   },
   {
-    "id": "pd-020",
+    "id": "pd-028",
     "title": "PhD Positions in Neurosciences and Translational Psychiatry research, including a residency/PhD track option for medical doctors",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -844,7 +1155,7 @@
     ]
   },
   {
-    "id": "pd-021",
+    "id": "pd-029",
     "title": "PhD Positions in Neuroscience and Translational Psychiatry, with a Residency/PhD track for medical doctors",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -875,7 +1186,7 @@
     ]
   },
   {
-    "id": "pd-022",
+    "id": "pd-030",
     "title": "PhD position – Computational Neuroscience and Systems Biology. Theme: Neural dynamics underlying survival behaviors",
     "university": "AcademicPositions",
     "country": "N/A",
@@ -906,7 +1217,97 @@
     ]
   },
   {
-    "id": "pd-023",
+    "id": "pd-031",
+    "title": "PhD Studentship in the NIHR Applied Research Collaboration (ARC): North East and North Cumbria (NENC): Researching Equity, Access and Place-based-health: Community-based Diagnostic",
+    "university": "Jobs.ac.uk",
+    "country": "United Kingdom",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "Funding evidence on page",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 41,
+    "contact_priority": "LOW",
+    "url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+    "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+    "posted": "",
+    "description": "The researcher will work closely with a supervisory team that includes expertise of health inequalities, service access, equity diversity and inclusion, place-based-health and statistical analysis. Research inclusion will be embedded throughout, mainly through the close collaborative working with external partners (the Great North Healthcare Alliance) and public contributors across the North East of England. The proj",
+    "source": "Jobs.ac.uk (UK)",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on Jobs.ac.uk (UK)",
+        "value": "PhD Studentship in the NIHR Applied Research Collaboration (ARC): North East and North Cumbria (NENC): Researching Equity, Access and Place-based-health: Community-based Diagnostic",
+        "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+        "source_type": "official",
+        "confidence": 0.95
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "683 chars of description, country=United Kingdom",
+        "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Funding or salary language present",
+        "value": "Yes",
+        "source_url": "https://www.jobs.ac.uk/job/DTD357/phd-studentship-in-the-nihr-applied-research-collaboration-arc-north-east-and-north-cumbria-nenc-researching-equity-access-and-place-based-health-community-based-diagnostics",
+        "source_type": "official",
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "id": "pd-032",
+    "title": "PhD position in cognitive neuroscience for 4 years",
+    "university": "University of Zurich Jobs",
+    "country": "Switzerland",
+    "department": "N/A",
+    "pi_name": "See official posting",
+    "pi_email": "",
+    "funding": "Funding evidence on page",
+    "application_deadline": "See official posting",
+    "deadline_date": "",
+    "deadline_status": "unknown",
+    "opportunity_type": "FUNDED_PHD",
+    "research_domain": "Biomechanics / Human Movement",
+    "research_fit_score": 41,
+    "contact_priority": "LOW",
+    "url": "https://www.jobs.uzh.ch/en/jobs/98e532aa-c0c3-4d73-9b1a-366d7d478c45",
+    "source_url": "https://www.jobs.uzh.ch/en/jobs/98e532aa-c0c3-4d73-9b1a-366d7d478c45",
+    "posted": "",
+    "description": "Als grösste Universität der Schweiz bietet die Universität Zürich eine Vielzahl von attraktiven Berufen in verschiedenen Fachbereichen. Mit rund 10'000 Mitarbeitenden und 12 Berufsprofilen für Lernende bietet die Universität ein inspirierendes Arbeitsumfeld in der Spitzenforschung und Bildung. Setzen Sie Ihr Talent und Ihre Fähigkeiten bei uns ein. Erfahren Sie mehr über die UZH als Arbeitgeberin!",
+    "source": "University of Zurich Jobs",
+    "evidence": [
+      {
+        "claim": "Listed as a doctoral opening on University of Zurich Jobs",
+        "value": "PhD position in cognitive neuroscience for 4 years",
+        "source_url": "https://www.jobs.uzh.ch/en/jobs/98e532aa-c0c3-4d73-9b1a-366d7d478c45",
+        "source_type": "aggregator",
+        "confidence": 0.75
+      },
+      {
+        "claim": "Detail page fetched and parsed",
+        "value": "400 chars of description, country=Switzerland",
+        "source_url": "https://www.jobs.uzh.ch/en/jobs/98e532aa-c0c3-4d73-9b1a-366d7d478c45",
+        "source_type": "official",
+        "confidence": 0.9
+      },
+      {
+        "claim": "Funding or salary language present",
+        "value": "Yes",
+        "source_url": "https://www.jobs.uzh.ch/en/jobs/98e532aa-c0c3-4d73-9b1a-366d7d478c45",
+        "source_type": "official",
+        "confidence": 0.6
+      }
+    ]
+  },
+  {
+    "id": "pd-033",
     "title": "PhD positions in Germany Full-time AI applied mathematics behavioral neuroscience $70,000 - $75,000 MAX PLANCK Institute for Human Cognitive and Brain Sciences Germa",
     "university": "jobRxiv",
     "country": "N/A",
@@ -915,8 +1316,8 @@
     "pi_email": "",
     "funding": "Funding evidence on page",
     "application_deadline": "December 1",
-    "deadline_date": "2026-12-01",
-    "deadline_status": "open",
+    "deadline_date": "",
+    "deadline_status": "unknown",
     "opportunity_type": "FUNDED_PHD",
     "research_domain": "Biomechanics / Human Movement",
     "research_fit_score": 41,
